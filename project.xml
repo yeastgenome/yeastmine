@@ -1,0 +1,181 @@
+<project type="bio">
+  <property name="target.model" value="genomic"/>
+  <property name="common.os.prefix" value="common"/>
+  <property name="intermine.properties.file" value="yeastmine.properties"/>
+  <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
+  
+  <sources>
+    
+    <source name="sgd" type="sgd">      
+      <property name="source.db.name" value="sgd"/>
+      <property name="dataSourceName" value="SGD"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.SgdConverter"/>
+    </source>
+    
+    <source name="sgd-gff" type="sgd-gff">
+      <property name="gff3.taxonId" value="4932"/>
+      <property name="gff3.dataSourceName" value="SGD Transcriptome v1.0"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Preliminary Transcripts"/>
+      <property name="src.data.dir" location="/data/intermine/gff"/>
+    </source> 
+    
+    <source name="sgd-gff-utr" type="sgd-gff-utr">
+      <property name="src.data.dir" location="/data/intermine/gff-utr"/>
+    </source>
+    
+    <source name="eco" type="eco">
+      <property name="src.data.file" location="/data/intermine/eco/eco.obo"/>
+    </source>
+        
+    <source name="spell-expression" type="spell-expression">
+      <property name="source.db.name" value="yeast"/>
+      <property name="dataSourceName" value="yeast"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.SpellExpressionConverter"/>
+    </source> 
+    
+    <source name="sgd-complementation" type="sgd-complementation">
+      <property name="src.data.dir" location="/data/intermine/yeast_complementation"/>
+    </source>
+    
+    <source name="fungi-homologs" type="fungi-homologs">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/fungidb"/>
+    </source>
+    
+    <source name="cgob-homologs" type="cgob-homologs">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/CGOB"/>
+    </source>
+    
+    <source name="cglabrata-homologs" type="cglabrata-homologs">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/C.glabrata"/>
+    </source>
+    
+    <source name="pombe-homologs" type="pombe-homologs">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/pombe"/>
+    </source>
+    
+    <source name="homolog-genes" type="homolog-genes">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/homolog_genes"/>
+    </source>
+    
+    <source name="ncbi-gene" type="ncbi-gene">
+      <property name="src.data.dir" location="/data/intermine/ncbi"/>
+      <property name="organisms" value="9606"/>
+    </source>
+    
+    <source name="mgi-identifiers" type="mgi-identifiers">
+      <property name="src.data.dir" location="/data/intermine/mgi-identifiers"/>
+    </source>
+    
+    <source name="rgd-identifiers" type="rgd-identifiers">
+      <property name="src.data.dir" location="/data/intermine/rgd-identifiers"/>
+    </source> 
+    
+    <source name="omim" type="omim">
+      <property name="src.data.dir" location="/data/intermine/omim"/>
+    </source>
+    <source name="treefam" type="treefam">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/treefam"/>
+      <property name="src.data.dir.includes" value="ortholog.txt.table"/>
+      <property name="geneFile" value="/data/intermine/yeast_orthologs/treefam/genes.txt.table"/>
+      <property name="treefam.organisms" value="4932"/> 
+      <property name="treefam.homologues" value="7227 6239 7165 9606 10090 10116 7955"/>
+    </source>
+    
+    <source name="panther" type="panther">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/panther"/>
+      <property name="panther.organisms" value="4932"/>   
+      <property name="panther.homologues" value="7227 9606 10090 10116 7955 6239 4932"/>
+    </source>
+    
+    <source name="homologene" type="homologene">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/homologene"/>
+      <property name="homologene.organisms" value="4932"/>   
+      <property name="homologene.homologues" value="7227 9606 10090 10116 7955 6239 4932"/>
+    </source>
+    
+    <source name="ensembl-compara" type="ensembl-compara">
+      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/ensembl_compara"/>
+      <property name="ensemblcompara.organisms" value="4932"/>
+      <property name="ensemblcompara.homologues" value="9606 7227 6239 10090 10116 7955"/>
+    </source>
+    
+    <source name="psi-mi-ontology" type="psi-mi-ontology">
+      <property name="src.data.file" location="/share/intermine/psi/ontology/current/psi-mi.obo"/>
+    </source> 
+    
+    <source name="go" type="go">
+      <property name="src.data.file" location="/share/intermine/go/gene_ontology_edit.obo"/>
+    </source>
+    
+    <source name="go-slim" type="go-slim">
+      <property name="src.data.file" location="/share/intermine/go/goslim_yeast.obo"/>
+    </source>
+    
+    <source name="go-annotation" type="go-annotation">
+      <property name="ontologyfile" location="/share/intermine/go/gene_ontology_edit.obo"/>
+      <property name="src.data.dir" location="/share/intermine/go"/>
+      <property name="src.data.dir.includes" value="gene_association.sgd-yeastmine"/>
+    </source> 
+
+    <source name="go-annotation-db" type="go-annotation-db">
+      <property name="source.db.name" value="sgd"/>
+      <property name="dataSourceName" value="SGD"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.GoAnnotationDbConverter"/>
+    </source>
+   
+    <source name="do" type="do">
+      <property name="src.data.file" location="/share/intermine/do/doid.obo"/>
+    </source>
+
+    <source name="disease" type="disease">
+      <property name="source.db.name" value="sgd"/>
+      <property name="dataSourceName" value="SGD"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.DiseaseConverter"/>
+    </source>
+
+    <source name="psi-complexes" type="psi-complexes">
+      <property name="src.data.dir" location="/share/intermine/psi/intact/complexes/psi25"/>
+      <property name="intact.organisms" value="4932"/>
+      <property name="complexes.source" value="sgd"/>
+    </source>
+    
+    <source name="sgd-protein-properties" type="sgd-protein-properties">
+      <property name="src.data.dir" location="/data/intermine/protein-properties"/>
+    </source>
+    
+    <source name="sgd-protein-ntermini" type="sgd-protein-ntermini">
+      <property name="src.data.dir" location="/data/intermine/protein-ntermini"/>
+    </source>
+    
+    <source name="update-publications" type="update-publications">
+      <property name="src.data.file" location="publications.xml"/>
+    </source>
+    
+    <source name="entrez-organism" type="entrez-organism">
+      <property name="src.data.file" location="organisms.xml"/>
+    </source>
+    
+    <source name="so" type="so">
+      <property name="src.data.file" location="so.obo"/>
+    </source>
+    
+  </sources>
+  
+  <post-processing>
+    <post-process name="create-references"/>
+    <post-process name="do-sources"/>
+    <post-process name="create-intergenic-region-features"/>
+    <!--<post-process name="create-bioseg-location-index"/>-->
+    <post-process name="create-location-overlap-index"/>
+    <post-process name="create-overlap-view"/>
+    <post-process name="create-gene-flanking-features"/>
+    <post-process name="populate-child-features"/>
+    <post-process name="transfer-sequences"/>
+    <post-process name="create-search-index"/>
+    <post-process name="create-attribute-indexes"/>
+    <post-process name="summarise-objectstore"/>
+    <post-process name="create-autocomplete-index"/>
+  </post-processing>
+  
+</project>

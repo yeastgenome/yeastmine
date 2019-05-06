@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.intermine.org/lib/imbedding/0.2/imbedding.js"></script>
+        <link rel="stylesheet" type="text/css" title="light" href="http://intermine.org/lib/imbedding/0.2/style/light.css">
+        <script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.13.custom.css">
+        <script type="text/javascript" src="js/jquery.multiselect.js"></script>
+        <script type="text/javascript" src="js/jquery.multiselect.filter.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/jquery.multiselect.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery.multiselect.filter.css">
+    </head>
+    <body>
+        <form id="master-form">
+            <fieldset>
+                <label for="feature-type-selector">Select Chromosomal Feature</label>
+                <select id="feature-type-selector" multiple="true">
+                </select>
+            </fieldset>
+            <label for="annotation-props" onclick="$('#annotation-props').slideToggle();">Annotation/Sequence Properties</label>
+            <fieldset id="annotation-props">
+                <input type="checkbox" class="carer" id="care-about-dubiosity" toggles="orf-dubiosity">
+                <label for="orf-dubiosity">Is an ORF that is</label>
+                <select id="orf-dubiosity" multiple="true" disabled>
+                    <option value="dubious">Dubious</option>
+                    <option value="Uncharacterized">Uncharacterized</option>
+                    <option value="Verified">Verified</option>
+                </select>
+                <br/>
+                <input type="checkbox" class="carer" id="care-about-silence" toggles="is-silenced">
+                <label for="is-silenced">Is a silenced gene</label>
+                <input type="checkbox" disabled id="is-silenced">
+                <br/>
+                <input type="checkbox" class="carer" id="care-about-orf-introns" toggles="introns-in-orf">
+                <label for="introns-in-orf">There are introns in ORF sequences</label>
+                <input type="checkbox" disabled id="introns-in-orf">
+                <br/>
+                <input type="checkbox" class="carer" id="care-about-5prime-introns" toggles="introns-in-5prime">
+                <label for="introns-in-5prime">There are introns in the 5'UTR sequences</label>
+                <input type="checkbox" disabled id="introns-in-5prime">
+                <br/>
+                <input type="checkbox" class="carer" id="care-about-translation" toggles="involves-translation">
+                <label for="involves-translation">Involves frameshift translation</label>
+                <input type="checkbox" disabled id="involves-translation">
+                <br/>
+                <input type="checkbox" class="carer" id="care-about-chromosomes" toggles="chrom-selector">
+                <label for="chrom-selector">Is on the following chromosomes</label>
+                <select multiple disabled id="chrom-selector">
+                </select>
+            </fieldset>
+            <label for="protein-props" onclick="$('#protein-props').slideToggle();">Protein Properties</label>
+            <fieldset id="protein-props">
+                <input type="checkbox" class="carer" id="care-about-daltons" toggles="daltons">
+                <label for="daltons">Molecular weight</label>
+                <input disabled type="text" id="daltons" style="border:0; color:#f6931f;font-weight:bold;text-align:right;">
+                <span>Kilo-Daltons</span>
+                <div id="daltons-range"></div>
+
+                <input type="checkbox" class="carer" id="care-about-amino-acids" toggles="amino-acids">
+                <label for="amino-acids">Protein length</label>
+                <input disabled type="text" id="amino-acids" style="border:0; color:#f6931f;font-weight:bold;text-align:right;">
+                <span>Amino acids</span>
+                <div id="amino-acids-range"></div>
+
+                <input type="checkbox" class="carer" id="care-about-pl" toggles="pl">
+                <label for="pl">pl (Calculated)</label>
+                <input disabled type="text" id="pl" style="border:0; color:#f6931f;font-weight:bold;text-align:right;">
+                <div id="pl-range"></div>
+            </fieldset>
+        </form>
+        <button id="show-results">Show Results</button>
+        <span id="query"></span>
+        <div id="placeholder"></div>
+    </body>
+    <script type="text/javascript">
+$BASE = "http://yeastmine.yeastgenome.org/yeastmine";
+jQuery(function() {
+    $('select').multiselect({selectedList: 3, minWidth: 400});
+    $('input.carer').change(function() {
+        var isChecked = $(this).attr('checked');
+        var toToggle = $('#' + $(this).attr("toggles"));
+        if (toToggle[0].tagName == "SELECT") {
+            if (isChecked) {
+                toToggle.multiselect('enable');
+            } else {
+                toToggle.multiselect('disable');
+            }
+        } else {
+            toToggle.attr('disabled', !isChecked);
+        }
+    });
+
+    var getTextBoxChangeFn = function(subj) {
+        return function() {
+            var text = $('#' + subj).val();
+            var parts = text.split('-');
+            $('#' + subj + '-range').slider('values', 0, parts[0]).slider('values', 1, parts[1]);
+        }
+    };
+    var getCheckboxChangeFn = function(subj) {
+        return function() {
+            var isChecked = $('#care-about-' + subj).attr('checked');
+            var slider = $('#' + subj + '-range');
+            if (isChecked) {
+                slider.slider('enable');
+            } else {
+                slider.slider('disable');
+            }
+        }
+    };
+    var getSliderFn = function(subj) {
+        return function(event, ui) {
+            $('#' + subj).val( ui.values[0] + " - " + ui.values[1]);
+        }
+    };
+
+    var ranges = ['daltons', 'amino-acids', 'pl'];
+    for (var i in ranges) {
+        var subj = ranges[i];
+        var max = (subj == 'pl') ? 10 : 10000;
+        var lower = (subj == 'pl') ? 3 : 3000;
+        var upper = lower * 2;
+
+        $('#' + subj + '-range').slider({
+            range: true,
+            min: 0,
+            max: max,
+            values: [lower, upper],
+            slide: getSliderFn(subj)
+        }).slider('disable');
+        $('#' + subj).val( $('#' + subj + '-range').slider('values', 0) + " - " + $('#' + subj + '-range').slider('values', 1) );
+        $('#' + subj).change(getTextBoxChangeFn(subj));
+        $('#care-about-' + subj).change(getCheckboxChangeFn(subj));
+    }
+
+    var query = {
+        select: ["Gene.featureType"],
+        from: "genomic"
+    }
+    IMBedding.loadQuery(query, {format: "jsonprows"}, function(resultset) {
+        var genes = resultset.results;
+        var seenTypes = {};
+        for (i in genes) {
+            var ft = genes[i][0].value;
+            if (ft == null || seenTypes[ft]) {
+                continue;
+            }
+
+            var opt = $('<option></option>');
+            opt.attr("value", ft);
+            opt.html(ft);
+            jQuery('#feature-type-selector').append(opt);
+            seenTypes[ft] = true;
+        }
+        $('#feature-type-selector').multiselect('refresh');
+        var query2 = {
+            select: ["Chromosome.primaryIdentifier"],
+            from: "genomic"
+        };
+        IMBedding.loadQuery(query2, {format: "jsonprows"}, function(resultset) {
+            var chroms = resultset.results;
+            for (i in chroms) {
+                var pi = chroms[i][0].value;
+
+                var opt = $('<option></option>');
+                opt.attr("value", pi);
+                opt.html(pi);
+                jQuery('#chrom-selector').append(opt);
+            }
+            $('#chrom-selector').multiselect('refresh');
+            }, {baseUrl: $BASE});
+    }, {baseUrl: $BASE});
+
+    jQuery('#show-results').click(function() {
+            var featureTypes = jQuery('#feature-type-selector').multiselect('getChecked')
+                                            .map(function() {return this.value})
+                                            .get();
+
+            var ftConstraint = {}, orfDub = {}, silencedCon = {}, descs = [];;
+
+            var view = ["Gene.primaryIdentifier", "Gene.secondaryIdentifier", "Gene.symbol", "Gene.name", "Gene.sgdAlias", "Gene.organism.shortName", "Gene.qualifier",
+            "Gene.goAnnotation.ontologyTerm.identifier", "Gene.goAnnotation.ontologyTerm.name", "Gene.goAnnotation.qualifier", 
+            "Gene.goAnnotation.evidence.code.annotType", "Gene.spellExpressionScores.spelldataset.author"];
+
+            var tempView = ["Gene.primaryIdentifier", "Gene.symbol", "Gene.name", "Gene.sgdAlias", "Gene.featureType", "Gene.organism.shortName", "Gene.qualifier"];
+
+            var constraints = [];
+            if (featureTypes.length) {
+                ftConstraint = {path: "Gene.featureType", op: "ONE OF", values: featureTypes};
+                descs.push("FeatureTypes = " + featureTypes.join(', ' ));
+                constraints.push(ftConstraint);
+            }
+
+            if (jQuery('#care-about-dubiosity').attr('checked')) {
+                var qualifiers = jQuery('#orf-dubiosity').multiselect('getChecked').map(function() {return this.value}).get();
+                orfDub = {path: "Gene.qualifier", op: "ONE OF", values: qualifiers};
+                descs.push("qualifiers = " + qualifiers.join(', '));
+                constraints.push(orfDub);
+            }
+
+            if (jQuery('#care-about-silence').attr('checked')) {
+                var isSilenced = jQuery('#is-silenced').val();
+                silencedCon = {path: "Gene.status", op: "!=", value: "Active"};
+                descs.push("is-silent");
+                constraints.push(silencedCon);
+            }
+
+            if (jQuery('#care-about-chromosomes').attr('checked')) {
+                var chroms = jQuery('#chrom-selector').multiselect('getChecked').map(function() {return this.value}).get();
+                var chromCon = {path: "Gene.chromosome.primaryIdentifier", op: "ONE OF", values: chroms};
+                descs.push("chroms = " + chroms.join(', '));
+                constraints.push(chromCon);
+                tempView.push("Gene.chromosome.primaryIdentifier");
+            }
+
+            if (jQuery('#care-about-daltons').attr('checked')) {
+                var daltons = jQuery('#daltons').val();
+                var parts = daltons.split('-');
+                var dalBottom = parseInt(parts[0]);
+                var dalTop = parseInt(parts[1]);
+                var dalBotCon = {path: "Gene.proteins.molecularWeight", op: ">=", value: dalBottom};
+                var dalTopCon = {path: "Gene.proteins.molecularWeight", op: "<=", value: dalTop};
+                constraints.push(dalBotCon);
+                constraints.push(dalTopCon);
+                descs.push(dalBottom + " to " + dalTop + " kilo-daltons");
+                tempView.push("Gene.proteins.molecularWeight");
+            }
+
+            jQuery('#query').text(descs.join("; "));
+
+            var query = {
+                select: tempView,
+                from: "genomic",
+                where: constraints
+                };
+
+            console.log(query);
+
+            IMBedding.loadQuery(query, {size: 10}, '#placeholder', {baseUrl: $BASE, queryTitleText: "Results From SGD", resultsDescriptionText: "SGD Master Query"});
+    });
+});
+    </script>
+</html>

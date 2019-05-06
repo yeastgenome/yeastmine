@@ -1,0 +1,1517 @@
+<?xml version="1.0"?>
+<userprofile>
+	<items />
+	<bags />
+	<queries>
+	</queries>
+
+	<template-queries>
+<template name="A_IdentifierSynonym_Object" title="Identifier or synonym --&gt; Database object." longDescription="Find an entry in the database using any identifier or synonym." comment="This is the template that the quick search runs.  If the name is changed it also has to be changed for the quick search configuration - Rachel. Removed tags so no longer displayed - just used for quick search now.  Rachel.">
+  <query name="A_IdentifierSynonym_Object" model="genomic" view="Synonym.subject.primaryIdentifier Synonym.subject.secondaryIdentifier Synonym.subject.symbol Synonym.value Synonym.subject.sgdAlias Synonym.subject.organism.name" longDescription="Find an entry in the database using any identifier or synonym." sortOrder="Synonym.subject.primaryIdentifier asc">
+    <node path="Synonym" type="Synonym">
+    </node>
+    <node path="Synonym.value" type="String">
+      <constraint op="=" value="act1" description="" identifier="Synonym.value.1" editable="true" code="A">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="AllGene_ChromosomalFeatures" title="All genes in organism --&gt; All Chromosomal Features" longDescription="List all chromosomal features for the selected organism. Features include Uncharacterized and Verified ORFs, pseudogenes, transposable elements and transposable element genes, RNAs, telomeric regions, centromeres, ARS, genes Not in Systematic Sequence of S228C, and genes Not Physically Mapped." comment="">
+  <query name="AllGene_ChromosomalFeatures" model="genomic" view="LocatedSequenceFeature.primaryIdentifier LocatedSequenceFeature.featureType LocatedSequenceFeature.secondaryIdentifier LocatedSequenceFeature.description LocatedSequenceFeature.sgdAlias" longDescription="List all chromosomal features for the selected organism. Features include Uncharacterized and Verified ORFs, pseudogenes, transposable elements and transposable element genes, RNAs, telomeric regions, centromeres, ARS, genes Not in Systematic Sequence of S228C, and genes Not Physically Mapped." sortOrder="LocatedSequenceFeature.primaryIdentifier asc" constraintLogic="(A or B or C or D or E or F or G or H or I or J or K or L or M or N or O or P or Q or R or S) and T and U and (V or W)">
+    <node path="LocatedSequenceFeature" type="LocatedSequenceFeature">
+    </node>
+    <node path="LocatedSequenceFeature.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" code="A" extraValue="">
+      </constraint>
+      <constraint op="=" value="ARS" description="" identifier="" code="B" extraValue="">
+      </constraint>
+      <constraint op="=" value="X_element_combinatorial_repeats" description="" identifier="" code="C" extraValue="">
+      </constraint>
+      <constraint op="=" value="X_element_core_sequence" description="" identifier="" code="D" extraValue="">
+      </constraint>
+      <constraint op="=" value="Y'_element" description="" identifier="" code="E" extraValue="">
+      </constraint>
+      <constraint op="=" value="centromere" description="" identifier="" code="F" extraValue="">
+      </constraint>
+      <constraint op="=" value="long_terminal_repeat" description="" identifier="" code="G" extraValue="">
+      </constraint>
+      <constraint op="=" value="ncRNA" description="" identifier="" code="H" extraValue="">
+      </constraint>
+      <constraint op="=" value="not in systematic sequence of S288C" description="" identifier="" code="I" extraValue="">
+      </constraint>
+      <constraint op="=" value="not physically mapped" description="" identifier="" code="J" extraValue="">
+      </constraint>
+      <constraint op="=" value="pseudogene" description="" identifier="" code="K" extraValue="">
+      </constraint>
+      <constraint op="=" value="rRNA" description="" identifier="" code="L" extraValue="">
+      </constraint>
+      <constraint op="=" value="retrotransposon" description="" identifier="" code="M" extraValue="">
+      </constraint>
+      <constraint op="=" value="snRNA" description="" identifier="" code="N" extraValue="">
+      </constraint>
+      <constraint op="=" value="snoRNA" description="" identifier="" code="O" extraValue="">
+      </constraint>
+      <constraint op="=" value="tRNA" description="" identifier="" code="P" extraValue="">
+      </constraint>
+      <constraint op="=" value="telomere" description="" identifier="" code="Q" extraValue="">
+      </constraint>
+      <constraint op="=" value="telomeric_repeat" description="" identifier="" code="R" extraValue="">
+      </constraint>
+      <constraint op="=" value="transposable_element_gene" description="" identifier="" code="S" extraValue="">
+      </constraint>
+    </node>
+    <node path="LocatedSequenceFeature.organism" type="Organism">
+    </node>
+    <node path="LocatedSequenceFeature.organism.name" type="String">
+      <constraint op="=" value="Saccharomyces cerevisiae" description="" identifier="" editable="true" code="T" extraValue="">
+      </constraint>
+    </node>
+    <node path="LocatedSequenceFeature.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="U" extraValue="">
+      </constraint>
+    </node>
+    <node path="LocatedSequenceFeature.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="V">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="W">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="AllGenes_Topic_Literature" title="All genes in organism --&gt;Topic--&gt;Literature" longDescription="Show all genes associated with a certain topic." comment="">
+  <query name="AllGenes_Topic_Literature" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.sgdAlias Gene.organism.shortName Gene.publicationAnnotations.publication.pubMedId Gene.publicationAnnotations.publication.citation Gene.publicationAnnotations.publication.title Gene.publicationAnnotations.publication.journal Gene.publicationAnnotations.literatureTopics.name" longDescription="Show all genes associated with a certain topic." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.publicationAnnotations" type="PublicationAnnotation">
+    </node>
+    <node path="Gene.publicationAnnotations.literatureTopics" type="LiteratureTopic">
+    </node>
+    <node path="Gene.publicationAnnotations.literatureTopics.name" type="String">
+      <constraint op="=" value="Industrial Applications" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" code="B">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="ChromosomeRegion_AllGenes" title="Chromosomal Region --&gt; All genes" longDescription="List all genes located within the specified chromosome and coordinate range. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, and RNAs." comment="">
+  <query name="ChromosomeRegion_AllGenes" model="genomic" view="Gene.chromosome.primaryIdentifier Gene.primaryIdentifier Gene.secondaryIdentifier Gene.featureType Gene.symbol Gene.name Gene.sgdAlias Gene.organism.shortName Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.chromosomeLocation.strand Gene.description" longDescription="List all genes located within the specified chromosome and coordinate range. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, and RNAs." sortOrder="Gene.primaryIdentifier asc" constraintLogic="(A or B) and C and D and E and (F or G) and I">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="A" extraValue="">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.chromosome" type="Chromosome">
+    </node>
+    <node path="Gene.chromosome.primaryIdentifier" type="String">
+      <constraint op="=" value="14" description="" identifier="" editable="true" code="C" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.chromosomeLocation" type="Location">
+    </node>
+    <node path="Gene.chromosomeLocation.start" type="Integer">
+      <constraint op="&gt;=" value="1" description="" identifier="" editable="true" code="D">
+      </constraint>
+    </node>
+    <node path="Gene.chromosomeLocation.end" type="Integer">
+      <constraint op="&lt;=" value="20000" description="" identifier="" editable="true" code="E">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="F">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="G">
+      </constraint>
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="!=" value="not in systematic sequence of S288C" description="" identifier="" code="I">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Chromosome_Gene" title="Chromosome --&gt; All genes." longDescription="List all genes located on the selected chromosome. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Chromosome_Gene" model="genomic" view="Gene.chromosome.primaryIdentifier Gene.primaryIdentifier Gene.secondaryIdentifier Gene.featureType Gene.symbol Gene.sgdAlias Gene.qualifier Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.chromosomeLocation.strand Gene.description" longDescription="List all genes located on the selected chromosome. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and (B or C) and (D or E)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.chromosome" type="Chromosome">
+    </node>
+    <node path="Gene.chromosome.primaryIdentifier" type="String">
+      <constraint op="=" value="3" description="Show genes located on chromosome" identifier="chromosome.primaryIdentifier" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="B" extraValue="">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="D">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="E">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Chromosome_Gene_FeatureType" title="Chromosome--&gt;Genes of a selected Feature Type" longDescription="List genes of a selected Feature Type located on the selected chromosome. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Chromosome_Gene_FeatureType" model="genomic" view="Gene.chromosome.primaryIdentifier Gene.primaryIdentifier Gene.secondaryIdentifier Gene.featureType Gene.symbol Gene.name Gene.organism.shortName Gene.description" longDescription="List genes of a selected Feature Type located on the selected chromosome. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.featureType asc" constraintLogic="A and B and (C or D) and (E or F)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.chromosome" type="Chromosome">
+    </node>
+    <node path="Gene.chromosome.primaryIdentifier" type="String">
+      <constraint op="=" value="1" description="" identifier="" editable="true" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="C">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="D">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="E">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="F">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Chromosome_IntergenicSequence" title="Chromosome--&gt;All intergenic regions." longDescription="For a specified chromosome show all intergenic regions with their chromosomal locations and lengths." comment="">
+  <query name="Chromosome_IntergenicSequence" model="genomic" view="IntergenicRegion.primaryIdentifier IntergenicRegion.length IntergenicRegion.chromosomeLocation.object.primaryIdentifier IntergenicRegion.chromosomeLocation.start IntergenicRegion.chromosomeLocation.end IntergenicRegion.chromosomeLocation.strand IntergenicRegion:adjacentGenes.primaryIdentifier IntergenicRegion:adjacentGenes.secondaryIdentifier IntergenicRegion:adjacentGenes.symbol" longDescription="For a specified chromosome show all intergenic regions with their chromosomal locations and lengths." sortOrder="IntergenicRegion.primaryIdentifier asc" constraintLogic="A and B and C and D">
+    <pathDescription pathString="IntergenicRegion.evidence" description="Dataset">
+    </pathDescription>
+    <pathDescription pathString="IntergenicRegion.chromosomeLocation.object" description="Chromosome">
+    </pathDescription>
+    <node path="IntergenicRegion" type="IntergenicRegion">
+    </node>
+    <node path="IntergenicRegion.organism" type="Organism">
+    </node>
+    <node path="IntergenicRegion.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="Select an organism:" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="IntergenicRegion.chromosomeLocation" type="Location">
+    </node>
+    <node path="IntergenicRegion.chromosomeLocation.object" type="Chromosome">
+    </node>
+    <node path="IntergenicRegion.chromosomeLocation.object.primaryIdentifier" type="String">
+      <constraint op="=" value="1" description="Show intergenic regions for chromosome:" identifier="" editable="true" code="B">
+      </constraint>
+    </node>
+    <node path="IntergenicRegion.length" type="Integer">
+      <constraint op="&lt;=" value="10000" description="" identifier="" editable="true" code="C">
+      </constraint>
+    </node>
+    <node path="IntergenicRegion:adjacentGenes" type="Gene">
+    </node>
+    <node path="IntergenicRegion:adjacentGenes.featureType" type="String">
+      <constraint op="!=" value="not in systematic sequence of S288C" description="" identifier="" code="D">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Chromosome_Telomeres" title="Chromosome--&gt;Telomeric Regions" longDescription="List telomeres and telomeric regions on the selected chromosome." comment="">
+  <query name="Chromosome_Telomeres" model="genomic" view="Telomere.chromosome.primaryIdentifier Telomere.primaryIdentifier Telomere.secondaryIdentifier Telomere.featureType Telomere.organism.shortName Telomere.chromosomeLocation.start Telomere.chromosomeLocation.end Telomere.chromosomeLocation.strand Telomere.description" longDescription="List telomeres and telomeric regions on the selected chromosome." sortOrder="Telomere.primaryIdentifier asc">
+    <node path="Telomere" type="Telomere">
+    </node>
+    <node path="Telomere.chromosome" type="Chromosome">
+    </node>
+    <node path="Telomere.chromosome.primaryIdentifier" type="String">
+      <constraint op="=" value="1" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="FeatureType_Gene" title="FeatureType--&gt;Genes" longDescription="List genes of a selected Feature Type. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="FeatureType_Gene" model="genomic" view="Gene:chromosome.primaryIdentifier Gene.primaryIdentifier Gene.secondaryIdentifier Gene.featureType Gene.name Gene.sgdAlias Gene.organism.shortName Gene:chromosomeLocation.start Gene:chromosomeLocation.end Gene:chromosomeLocation.strand Gene.description" longDescription="List genes of a selected Feature Type. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="(A or B) and C and (D or E)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="A" extraValue="">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" editable="true" code="C" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.symbol" type="String">
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="D">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="E">
+      </constraint>
+    </node>
+    <node path="Gene:chromosome" type="Chromosome">
+    </node>
+    <node path="Gene:chromosomeLocation" type="Location">
+    </node>
+  </query>
+</template>
+<template name="GOSlimTerm_FeatureType_Gene" title="GO SlimTerm--&gt;Genes of a selected Feature Type" longDescription="List genes of a selected Feature Type that are annotated to selected GO Slim term and to GO terms that are children of that selected GO Slim Term. Only manually curated and high-throughput GO annotations are included. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="GOSlimTerm_FeatureType_Gene" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.parents.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.goEvidenceCodes.code Gene.organism.shortName Gene.goAnnotation.goEvidenceCodes.annotType Gene.qualifier" longDescription="List genes of a selected Feature Type that are annotated to selected GO Slim term and to GO terms that are children of that selected GO Slim Term. Only manually curated and high-throughput GO annotations are included. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B and (C or D) and (E or F) and (G or H) and (I or J)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.goAnnotation" type="GOAnnotation">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm" type="OntologyTerm">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.parents" type="GOSlimTerm">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.parents.name" type="String">
+      <constraint op="=" value="DNA binding" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation.goEvidenceCodes" type="GOEvidenceCode">
+    </node>
+    <node path="Gene.goAnnotation.goEvidenceCodes.annotType" type="String">
+      <constraint op="=" value="high-throughput" description="" identifier="" code="C">
+      </constraint>
+      <constraint op="=" value="manually curated" description="" identifier="" code="D">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation.qualifier" type="String">
+      <constraint op="!=" value="NOT" description="" identifier="" code="I">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="J">
+      </constraint>
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" editable="true" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="E">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="F">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="G">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="H">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="GOTerm_GeneOrganism" title="GO Term name [and children of this term] --&gt;All genes in organism." longDescription="List all genes that are annotated to the specified GO term and to GO terms that are children of that specified GO Term. Wild card queries (such as *ascospore*) are supported. Only manually curated and high-throughput GO annotations are included. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="GOTerm_GeneOrganism" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.goAnnotation.ontologyTerm.parents.name Gene.goAnnotation.ontologyTerm.parents.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.goEvidenceCodes.annotType Gene.qualifier Gene.goAnnotation.ontologyTerm.namespace" longDescription="List all genes that are annotated to the specified GO term and to GO terms that are children of that specified GO Term. Wild card queries (such as *ascospore*) are supported. Only manually curated and high-throughput GO annotations are included. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B and (C or D) and (E or F) and (G or H) and (I or J)">
+    <pathDescription pathString="Gene.goAnnotation.ontologyTerm.parents" description="GO annotation">
+    </pathDescription>
+    <pathDescription pathString="Gene.goAnnotation.ontologyTerm" description="GO annotation &gt; child term">
+    </pathDescription>
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.goAnnotation" type="GOAnnotation">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm" type="GOTerm">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.parents" type="GOTerm">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.parents.name" type="String">
+      <constraint op="=" value="*ascospore*" description="Show genes annotated with GO term (and any children of this GO term):" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation.goEvidenceCodes" type="GOEvidenceCode">
+    </node>
+    <node path="Gene.goAnnotation.goEvidenceCodes.annotType" type="String">
+      <constraint op="=" value="high-throughput" description="" identifier="" code="C">
+      </constraint>
+      <constraint op="=" value="manually curated" description="" identifier="" code="D">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation.qualifier" type="String">
+      <constraint op="!=" value="NOT" description="" identifier="" code="I">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="J">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.name" type="String">
+      <constraint op="=" value="Saccharomyces cerevisiae" description="from organism:" identifier="" editable="true" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="E">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="F">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="G">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="H">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="GOTerm_Genes" title="GO Term --&gt; All genes" longDescription="List all genes annotated to a specified GO Term.  Manually curated, high-throughput, and computational GO annotations are included.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="GOTerm_Genes" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.featureType Gene.symbol Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.ontologyTerm.description Gene.name Gene.sgdAlias Gene.qualifier Gene.status Gene.description Gene.goAnnotation.goEvidenceCodes.annotType Gene.goAnnotation.qualifier" longDescription="List all genes annotated to a specified GO Term.  Manually curated, high-throughput, and computational GO annotations are included.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.symbol asc" constraintLogic="A and (B or C)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.goAnnotation" type="GOAnnotation">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm" type="GOTerm">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.name" type="String">
+      <constraint op="=" value="sporulation" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation.qualifier" type="String">
+      <constraint op="!=" value="NOT" description="" identifier="" code="B">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="C">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="GOname_GOidentifier" title="GO Term name --&gt; GO Term identifier." longDescription="List the GO Term identifier and description for a specified GO Term name.  Wild card queries (such as *ascospore*) are supported." comment="">
+  <query name="GOname_GOidentifier" model="genomic" view="GOTerm.name GOTerm.identifier GOTerm.description GOTerm.namespace" longDescription="List the GO Term identifier and description for a specified GO Term name.  Wild card queries (such as *ascospore*) are supported." sortOrder="GOTerm.name asc" constraintLogic="A and (B or C)">
+    <node path="GOTerm" type="GOTerm">
+    </node>
+    <node path="GOTerm.name" type="String">
+      <constraint op="=" value="*ascospore*" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="GOTerm.obsolete" type="Boolean">
+      <constraint op="=" value="false" description="" identifier="" code="B">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="C">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="GOtermidentifier_name" title="GO Term identifier --&gt; GO Term name." longDescription="List the GO Term names and descriptions for a specified GO Term identifier.  Note that the query must contain either an entire identifier (such as GO:0007350) or the numerical value preceded by a wild card (such as *30437)." comment="">
+  <query name="GOtermidentifier_name" model="genomic" view="GOTerm.identifier GOTerm.name GOTerm.description GOTerm.name GOTerm.namespace" longDescription="List the GO Term names and descriptions for a specified GO Term identifier.  Note that the query must contain either an entire identifier (such as GO:0007350) or the numerical value preceded by a wild card (such as *30437)." sortOrder="GOTerm.identifier asc" constraintLogic="A and (B or C)">
+    <node path="GOTerm" type="GOTerm">
+    </node>
+    <node path="GOTerm.identifier" type="String">
+      <constraint op="=" value="GO:0030437" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="GOTerm.obsolete" type="Boolean">
+      <constraint op="=" value="false" description="" identifier="" code="B">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="C">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_ChromosomeLocation" title="Gene -&gt; Chromosomal location" longDescription="List the chromosomal location for a specified gene.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, and RNAs." comment="">
+  <query name="Gene_ChromosomeLocation" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.chromosomeLocation.strand" longDescription="List the chromosomal location for a specified gene.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, and RNAs." sortOrder="Gene.primaryIdentifier asc">
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="act1" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_FeatureType_Introns" title="All genes of a selected Feature Type--&gt;Genes with introns" longDescription="List genes of a selected Feature Type that have introns. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Gene_FeatureType_Introns" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.name Gene.description Gene.featureType Gene.qualifier Gene.sgdAlias Gene.organism.shortName" longDescription="List genes of a selected Feature Type that have introns. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="B and C and (D or E) and (F or G) and A and (H or I)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.introns" type="Intron">
+    </node>
+    <node path="Gene.introns.primaryIdentifier" type="String">
+      <constraint op="IS NOT NULL" value="null" description="" identifier="" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.introns.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="H">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="I">
+      </constraint>
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" editable="true" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="D">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="E">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="F">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="G">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_GO" title="Gene --&gt; GO Terms." longDescription="List all GO annotations for a specified gene. Searches for the primaryIdentifier (SGDID), secondaryIdentifier (Systematic Name), symbol (Standard Gene Name) and wild card queries (such as *YAL*) are supported.  Manually curated, high-throughput, and computational GO annotations are included. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Gene_GO" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.goEvidenceCodes.code Gene.goAnnotation.ontologyTerm.namespace Gene.goAnnotation.qualifier" longDescription="List all GO annotations for a specified gene. Searches for the primaryIdentifier (SGDID), secondaryIdentifier (Systematic Name), symbol (Standard Gene Name) and wild card queries (such as *YAL*) are supported.  Manually curated, high-throughput, and computational GO annotations are included. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and (B or C) and (D or E)">
+    <pathDescription pathString="Gene.goAnnotation" description="GO annotation">
+    </pathDescription>
+    <pathDescription pathString="Gene.goAnnotation.goEvidenceCodes" description="GO annotation &gt; evidence">
+    </pathDescription>
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="YAL018C" description="Show GO annotations for gene:" identifier="Gene.class" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation" type="GOAnnotation">
+    </node>
+    <node path="Gene.goAnnotation.goEvidenceCodes" type="GOEvidenceCode">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm" type="OntologyTerm">
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="B">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="D">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="E">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_Interaction" title="All genes of selected Annotation Type --&gt; Genes with Interactions" longDescription="List genes which have interaction." comment="">
+  <query name="Gene_Interaction" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.featureType Gene.interactions.interactionType Gene.interactions.experimentType Gene.interactions.annotationType Gene.interactions.experimentType Gene.interactions.interactingGeneAction Gene.interactions.interactingGeneName Gene.interactions.interactingGeneFeatureName" longDescription="List genes which have interaction." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B and D and E and C">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="B" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.interactions" type="Interaction">
+    </node>
+    <node path="Gene.interactions.interactionType" type="String">
+      <constraint op="=" value="genetic interactions" description="" identifier="" editable="true" code="C" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.interactions.annotationType" type="String">
+      <constraint op="=" value="manually curated" description="" identifier="" editable="true" code="E">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" code="D" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_Interaction_2" title="All genes of a selected Experiment and Annotation Type--&gt;Genes with Interactions" longDescription="List genes with interactions of the selected annotation and experiment type." comment="">
+  <query name="Gene_Interaction_2" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.featureType Gene.interactions.interactionType Gene.interactions.experimentType Gene.interactions.annotationType" longDescription="List genes with interactions of the selected annotation and experiment type." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B and D and E and C">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="B" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.interactions" type="Interaction">
+    </node>
+    <node path="Gene.interactions.interactionType" type="String">
+    </node>
+    <node path="Gene.interactions.annotationType" type="String">
+      <constraint op="=" value="manually curated" description="" identifier="" editable="true" code="E">
+      </constraint>
+    </node>
+    <node path="Gene.interactions.experimentType" type="String">
+      <constraint op="=" value="Affinity Capture-Luminescence" description="" identifier="" editable="true" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" code="D" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_Interaction_ASLike" title="All genes of a selected Experiment and Annotation Type--&gt;Genes with Interactions (AS like**)" longDescription="List genes with interactions of the selected annotation and experiment type." comment="">
+  <query name="Gene_Interaction_ASLike" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.featureType" longDescription="List genes with interactions of the selected annotation and experiment type." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B and D and E and C">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="B" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.interactions" type="Interaction">
+    </node>
+    <node path="Gene.interactions.interactionType" type="String">
+    </node>
+    <node path="Gene.interactions.annotationType" type="String">
+      <constraint op="=" value="manually curated" description="" identifier="" editable="true" code="E">
+      </constraint>
+    </node>
+    <node path="Gene.interactions.experimentType" type="String">
+      <constraint op="=" value="Affinity Capture-Luminescence" description="" identifier="" editable="true" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" code="D" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_Interaction_Single" title="Gene--&gt;Interactions" longDescription="List all interactions for a specified gene.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C.  Caution: all reciprocal interactions will be duplicated." comment="">
+  <query name="Gene_Interaction_Single" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.interactions.experimentType Gene.interactions.interactionType Gene.interactions.annotationType Gene.interactions.phenotype Gene.interactions.source Gene.interactions.description Gene.interactions.interactingGeneAction Gene.interactions.interactingGeneFeatureName Gene.interactions.interactingGeneName" longDescription="List all interactions for a specified gene.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C.  Caution: all reciprocal interactions will be duplicated." sortOrder="Gene.primaryIdentifier asc">
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="act1" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_Introns" title="All genes in organism--&gt;All genes with introns" longDescription="List genes of a selected Feature Type that have introns. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Gene_Introns" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.featureType Gene.qualifier Gene.description" longDescription="List genes of a selected Feature Type that have introns. Available Feature Types include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="(A or B) and C and D and (E or F) and (G or H)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.introns" type="Intron">
+    </node>
+    <node path="Gene.introns.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="A">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.introns.primaryIdentifier" type="String">
+      <constraint op="IS NOT NULL" value="null" description="" identifier="" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" editable="true" code="D">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="E">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="F">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="G">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="H">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_LiteratureTopics" title="Gene--&gt;LiteratureTopics" longDescription="Show all references curated to a literature topic for a gene. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Gene_LiteratureTopics" model="genomic" view="Gene.publicationAnnotations.publication.pubMedId Gene.publicationAnnotations.publication.citation Gene.publicationAnnotations.publication.year Gene.publicationAnnotations.literatureTopics.name Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name" longDescription="Show all references curated to a literature topic for a gene. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="HEM2" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" editable="true" code="B" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_OverlappingGenes" title="All genes in organism --&gt; All overlapping genes" longDescription="Show all overlapping genes. Genes include Dubious, Uncharacterized, Verified ORFs, pseudogenes, transposable element genes, RNA genes. Caution: since the relationships are reciprocal, each gene in an overlapping pair has a separate line in the output file." comment="">
+  <query name="Gene_OverlappingGenes" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.qualifier Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.chromosomeLocation.strand Gene.overlappingFeatures.primaryIdentifier Gene.overlappingFeatures.secondaryIdentifier Gene.overlappingFeatures.symbol Gene.overlappingFeatures.qualifier Gene.overlappingFeatures.chromosomeLocation.start Gene.overlappingFeatures.chromosomeLocation.end Gene.overlappingFeatures.chromosomeLocation.strand" longDescription="Show all overlapping genes. Genes include Dubious, Uncharacterized, Verified ORFs, pseudogenes, transposable element genes, RNA genes. Caution: since the relationships are reciprocal, each gene in an overlapping pair has a separate line in the output file." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and C and G and B and D">
+    <pathDescription pathString="Gene.overlappingFeatures.chromosome" description="Overlapping gene  &gt; chromosome">
+    </pathDescription>
+    <pathDescription pathString="Gene.overlappingFeatures" description="Overlapping gene">
+    </pathDescription>
+    <pathDescription pathString="Gene.overlappingFeatures.chromosomeLocation" description="Overlapping feature &gt; chromosome gene">
+    </pathDescription>
+    <pathDescription pathString="Gene.overlappingFeatures.evidence" description="Dataset">
+    </pathDescription>
+    <pathDescription pathString="Gene.chromosomeLocation" description="Gene &gt; chromosome location">
+    </pathDescription>
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.overlappingFeatures" type="Gene">
+    </node>
+    <node path="Gene.overlappingFeatures.qualifier" type="String">
+    </node>
+    <node path="Gene.overlappingFeatures.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="G">
+      </constraint>
+    </node>
+    <node path="Gene.overlappingFeatures.featureType" type="String">
+      <constraint op="!=" value="not in systematic sequence of S288C" description="" identifier="" code="D">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="S.cerevisiae" description="" identifier="" editable="true" code="C" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="!=" value="not in systematic sequence of S288C" description="" identifier="" code="B">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_Phenotype" title="Gene --&gt; Phenotype" longDescription="Show all phenotypes for a specified gene.  Genes include Dubious, Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Gene_Phenotype" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.sgdAlias Gene.qualifier Gene.phenotypes.experimentType Gene.phenotypes.mutantType Gene.phenotypes.observable Gene.phenotypes.qualifier Gene.phenotypes.allele Gene.phenotypes.strainBackground Gene.phenotypes.chemical Gene.phenotypes.condition Gene.phenotypes.details Gene.phenotypes.reporter Gene.phenotypes:publications.pubMedId Gene.phenotypes:publications.citation" longDescription="Show all phenotypes for a specified gene.  Genes include Dubious, Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc">
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="rad54" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.phenotypes" type="Phenotype">
+    </node>
+    <node path="Gene.phenotypes:publications" type="Publication">
+    </node>
+  </query>
+</template>
+<template name="Gene_Protein" title="Gene --&gt; Proteins." longDescription="List length, molecular weight, calculated pI for a specified gene in the selected organism.  Protein information is available for Uncharacterized and Verified ORFs, pseudogenes, and transposable element genes." comment="06.06.07 updated to work from gene class - Philip">
+  <query name="Gene_Protein" model="genomic" view="Gene.primaryIdentifier Gene.proteins.symbol Gene.sgdAlias Gene.proteins.length Gene.proteins.molecularWeight Gene.proteins.pI Gene.featureType Gene.qualifier Gene.description" longDescription="List length, molecular weight, calculated pI for a specified gene in the selected organism.  Protein information is available for Uncharacterized and Verified ORFs, pseudogenes, and transposable element genes." sortOrder="Gene.primaryIdentifier asc">
+    <pathDescription pathString="Gene.proteins" description="Protein">
+    </pathDescription>
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="act1" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.proteins" type="Protein">
+    </node>
+  </query>
+</template>
+<template name="Gene_To_Protein_Type_Converter" title="Gene to protein type converter" longDescription="" comment="">
+  <query name="Gene_To_Protein_Type_Converter" model="genomic" view="Gene.id Gene.proteins.id" longDescription="" sortOrder="Gene.id asc">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.id" type="Integer">
+      <constraint op="=" value="0" description="Gene.id" identifier="Gene.id" editable="true" code="A">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_Topic_Literature" title="Gene--&gt;Topic--&gt;Literature" longDescription="Show references associated with the selected literature topic for a given gene.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Gene_Topic_Literature" model="genomic" view="Gene.publicationAnnotations.publication.pubMedId Gene.publicationAnnotations.publication.citation Gene.publicationAnnotations.publication.year Gene.publicationAnnotations.literatureTopics.name Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name" longDescription="Show references associated with the selected literature topic for a given gene.  Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="HEM2" description="" identifier="" editable="true" code="B" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.publicationAnnotations" type="PublicationAnnotation">
+    </node>
+    <node path="Gene.publicationAnnotations.literatureTopics" type="LiteratureTopic">
+    </node>
+    <node path="Gene.publicationAnnotations.literatureTopics.name" type="String">
+      <constraint op="=" value="Function/Process" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Gene_UpstreamIntergenic" title="Gene--&gt;Upstream intergenic region." longDescription="For a given gene show its upstream intergenic region with its length and chromosomal location." comment="">
+  <query name="Gene_UpstreamIntergenic" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.upstreamIntergenicRegion.primaryIdentifier Gene.upstreamIntergenicRegion.length Gene.upstreamIntergenicRegion.chromosome.primaryIdentifier Gene.upstreamIntergenicRegion.chromosomeLocation.start Gene.upstreamIntergenicRegion.chromosomeLocation.end Gene.upstreamIntergenicRegion.chromosomeLocation.strand" longDescription="For a given gene show its upstream intergenic region with its length and chromosomal location." sortOrder="Gene.primaryIdentifier asc">
+    <pathDescription pathString="Gene.upstreamIntergenicRegion.chromosomeLocation" description="Upstream intergenic region &gt; chromosome location">
+    </pathDescription>
+    <pathDescription pathString="Gene.upstreamIntergenicRegion" description="Upstream intergenic region">
+    </pathDescription>
+    <pathDescription pathString="Gene.upstreamIntergenicRegion.chromosome" description="Chromosome">
+    </pathDescription>
+    <pathDescription pathString="Gene.upstreamIntergenicRegion.evidence" description="Dataset">
+    </pathDescription>
+    <node path="Gene" type="Gene">
+      <constraint op="LOOKUP" value="act1" description="Show upstream intergenic region for gene:" identifier="Gene.class" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Gene.upstreamIntergenicRegion" type="IntergenicRegion">
+    </node>
+  </query>
+</template>
+<template name="Genes_Proteins_Length" title="All genes--&gt;Proteins in a size range" longDescription="List length, molecular weight, calculated pI for a specified gene in the selected organism.  Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." comment="">
+  <query name="Genes_Proteins_Length" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.featureType Gene.proteins.primaryIdentifier Gene.proteins.secondaryIdentifier Gene.proteins.symbol Gene.proteins.molecularWeight Gene.proteins.pI Gene.proteins.length" longDescription="List length, molecular weight, calculated pI for a specified gene in the selected organism.  Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." sortOrder="Gene.proteins.length desc" constraintLogic="(A or H) and G and B and C and D and (E or F)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" code="A" extraValue="">
+      </constraint>
+      <constraint op="!=" value="pseudogene" description="" identifier="" code="G">
+      </constraint>
+      <constraint op="=" value="transposable_element_gene" description="" identifier="" code="H">
+      </constraint>
+    </node>
+    <node path="Gene.proteins" type="Protein">
+    </node>
+    <node path="Gene.proteins.length" type="Integer">
+      <constraint op="&gt;=" value="500" description="" identifier="" editable="true" code="B" extraValue="">
+      </constraint>
+      <constraint op="&lt;=" value="1000" description="" identifier="" editable="true" code="C" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="D" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="E" extraValue="">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="F">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Genes_Proteins_MolWt" title="All genes--&gt;Proteins in a molecular weight range." longDescription="List genes that have proteins of the selected molecular weight range. Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." comment="">
+  <query name="Genes_Proteins_MolWt" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.proteins.symbol Gene.proteins.molecularWeight Gene.proteins.pI Gene.featureType Gene.description" longDescription="List genes that have proteins of the selected molecular weight range. Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." sortOrder="Gene.proteins.molecularWeight desc" constraintLogic="A and B and (C or H) and G and D and (E or F)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.proteins" type="Protein">
+    </node>
+    <node path="Gene.proteins.molecularWeight" type="Integer">
+      <constraint op="&gt;=" value="30000" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+      <constraint op="&lt;=" value="50000" description="" identifier="" editable="true" code="B" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="!=" value="pseudogene" description="" identifier="" code="G">
+      </constraint>
+      <constraint op="=" value="ORF" description="" identifier="" code="C" extraValue="">
+      </constraint>
+      <constraint op="=" value="transposable_element_gene" description="" identifier="" code="H">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="D" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="E" extraValue="">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="F">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Genes_Proteins_pI" title="All genes--&gt;Proteins in a pI range" longDescription="List genes of a selected Feature Type that have proteins of the selected calculated protein pI range. Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." comment="">
+  <query name="Genes_Proteins_pI" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.featureType Gene.proteins.symbol Gene.proteins.molecularWeight Gene.organism.shortName Gene.description Gene.proteins.pI" longDescription="List genes of a selected Feature Type that have proteins of the selected calculated protein pI range. Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." sortOrder="Gene.proteins.pI desc" constraintLogic="(A or H) and G and D and (E or F) and B and C">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.featureType" type="String">
+      <constraint op="=" value="ORF" description="" identifier="" code="A" extraValue="">
+      </constraint>
+      <constraint op="!=" value="pseudogene" description="" identifier="" code="G">
+      </constraint>
+      <constraint op="=" value="transposable_element_gene" description="" identifier="" code="H">
+      </constraint>
+    </node>
+    <node path="Gene.proteins" type="Protein">
+    </node>
+    <node path="Gene.proteins.pI" type="Float">
+      <constraint op="&gt;=" value="4.0" description="" identifier="" editable="true" code="B">
+      </constraint>
+      <constraint op="&lt;=" value="8.0" description="" identifier="" editable="true" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="D" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="E" extraValue="">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="F">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="GoSlimTerm_Gene" title="GO Slim Term --&gt; Gene" longDescription="List all genes that are annotated to the selected GO Slim term and to GO terms that are children of that selected GO Slim Term. Only manually curated and high-throughput GO annotations are included. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="GoSlimTerm_Gene" model="genomic" view="Gene.primaryIdentifier Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.parents.identifier Gene.goAnnotation.ontologyTerm.name Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.goAnnotation.goEvidenceCodes.annotType Gene.goAnnotation.qualifier Gene.qualifier Gene.featureType Gene.qualifier" longDescription="List all genes that are annotated to the selected GO Slim term and to GO terms that are children of that selected GO Slim Term. Only manually curated and high-throughput GO annotations are included. Genes include Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and (B or C) and (D or E) and (F or G) and (H or J)">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.goAnnotation" type="GOAnnotation">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm" type="OntologyTerm">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.parents" type="GOSlimTerm">
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.parents.name" type="String">
+      <constraint op="=" value="DNA binding" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation.ontologyTerm.ontologyAnnotations" type="OntologyAnnotation">
+    </node>
+    <node path="Gene.goAnnotation.goEvidenceCodes" type="GOEvidenceCode">
+    </node>
+    <node path="Gene.goAnnotation.goEvidenceCodes.annotType" type="String">
+      <constraint op="=" value="high-throughput" description="" identifier="" code="B">
+      </constraint>
+      <constraint op="=" value="manually curated" description="" identifier="" code="C">
+      </constraint>
+    </node>
+    <node path="Gene.goAnnotation.qualifier" type="String">
+      <constraint op="!=" value="NOT" description="" identifier="" code="D">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="E">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="F">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="G">
+      </constraint>
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="H">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="J">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Literature_Gene" title="Literature--&gt;Genes" longDescription="Show all genes curated to a PubMed ID." comment="">
+  <query name="Literature_Gene" model="genomic" view="PublicationAnnotation.genes.primaryIdentifier PublicationAnnotation.genes.secondaryIdentifier PublicationAnnotation.genes.symbol PublicationAnnotation.genes.sgdAlias PublicationAnnotation.genes.name PublicationAnnotation.publication.pubMedId PublicationAnnotation.publication.citation PublicationAnnotation.publication.year" longDescription="Show all genes curated to a PubMed ID." sortOrder="PublicationAnnotation.publication.pubMedId asc">
+    <node path="PublicationAnnotation" type="PublicationAnnotation">
+    </node>
+    <node path="PublicationAnnotation.publication" type="Publication">
+    </node>
+    <node path="PublicationAnnotation.publication.pubMedId" type="String">
+      <constraint op="=" value="19703468" description="" identifier="" editable="true" code="A" extraValue="">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Organism_Genes" title="All genes in organism --&gt; All chromosomal locations" longDescription="List all genes for the selected organism and their chromosomal locations, nomenclature, sequence lengths, and descriptions." comment="">
+  <query name="Organism_Genes" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.length Gene.qualifier Gene.sgdAlias Gene:chromosome.primaryIdentifier Gene:chromosomeLocation.start Gene:chromosomeLocation.end Gene:chromosomeLocation.strand Gene.organism.name Gene.description" longDescription="List all genes for the selected organism and their chromosomal locations, nomenclature, sequence lengths, and descriptions." sortOrder="Gene.primaryIdentifier asc" constraintLogic="(A or B) and (C or D) and E">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="A">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="B">
+      </constraint>
+    </node>
+    <node path="Gene.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="C">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="D">
+      </constraint>
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.name" type="String">
+      <constraint op="=" value="Saccharomyces cerevisiae" description="" identifier="" editable="true" code="E">
+      </constraint>
+    </node>
+    <node path="Gene:chromosome" type="Chromosome">
+    </node>
+    <node path="Gene:chromosomeLocation" type="Location">
+    </node>
+  </query>
+</template>
+<template name="Organism_IntergenicRegions" title="Organism--&gt;All intergenic regions." longDescription="For a particular organism, show all intergenic regions with their chromosomal locations, lengths and adjacent genes. " comment="">
+  <query name="Organism_IntergenicRegions" model="genomic" view="IntergenicRegion.primaryIdentifier IntergenicRegion.length IntergenicRegion.chromosome.primaryIdentifier IntergenicRegion.chromosomeLocation.start IntergenicRegion.chromosomeLocation.end IntergenicRegion:adjacentGenes.primaryIdentifier IntergenicRegion.chromosomeLocation.strand IntergenicRegion:adjacentGenes.secondaryIdentifier IntergenicRegion:adjacentGenes.symbol" longDescription="For a particular organism, show all intergenic regions with their chromosomal locations, lengths and adjacent genes. " sortOrder="IntergenicRegion.primaryIdentifier asc" constraintLogic="A and B and C">
+    <pathDescription pathString="IntergenicRegion.evidence" description="Dataset">
+    </pathDescription>
+    <node path="IntergenicRegion" type="IntergenicRegion">
+    </node>
+    <node path="IntergenicRegion.organism" type="Organism">
+    </node>
+    <node path="IntergenicRegion.organism.name" type="String">
+      <constraint op="=" value="Saccharomyces cerevisiae" description="Restrict to organism:" identifier="Organism.name" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="IntergenicRegion.length" type="Integer">
+      <constraint op="&lt;=" value="10000" description="" identifier="" editable="true" code="B">
+      </constraint>
+    </node>
+    <node path="IntergenicRegion:adjacentGenes" type="Gene">
+    </node>
+    <node path="IntergenicRegion:adjacentGenes.featureType" type="String">
+      <constraint op="!=" value="not in systematic sequence of S288C" description="" identifier="" code="C">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Organism_Protein" title="Organism --&gt; All proteins." longDescription="List length, molecular weight, calculated pI for all genes in the selected organism. Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." comment="">
+  <query name="Organism_Protein" model="genomic" view="Protein.genes.primaryIdentifier Protein.genes.secondaryIdentifier Protein.symbol Protein.length Protein.molecularWeight Protein.pI Protein.genes.featureType Protein.genes.sgdAlias Protein.genes.description" longDescription="List length, molecular weight, calculated pI for all genes in the selected organism. Protein information is available for Uncharacterized and Verified ORFs and transposable element genes." sortOrder="Protein.symbol asc" constraintLogic="A and (B or C) and D and E and (F or G)">
+    <node path="Protein" type="Protein">
+    </node>
+    <node path="Protein.organism" type="Organism">
+    </node>
+    <node path="Protein.organism.name" type="String">
+      <constraint op="=" value="Saccharomyces cerevisiae" description="Show all the proteins from the organism:" identifier="Organism.name" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Protein.genes" type="Gene">
+    </node>
+    <node path="Protein.genes.qualifier" type="String">
+      <constraint op="!=" value="Dubious" description="" identifier="" code="B">
+      </constraint>
+      <constraint op="IS NULL" value="null" description="" identifier="" code="C">
+      </constraint>
+    </node>
+    <node path="Protein.genes.status" type="String">
+      <constraint op="=" value="Active" description="" identifier="" code="D">
+      </constraint>
+    </node>
+    <node path="Protein.genes.featureType" type="String">
+      <constraint op="!=" value="pseudogene" description="" identifier="" code="E">
+      </constraint>
+      <constraint op="=" value="ORF" description="" identifier="" code="F">
+      </constraint>
+      <constraint op="=" value="transposable_element_gene" description="" identifier="" code="G">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="Phenotype_Genes" title="Phenotype --&gt; Genes" longDescription=" List genes that are annotated to selected phenotypes. Genes include Dubious, Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." comment="">
+  <query name="Phenotype_Genes" model="genomic" view="Phenotype.genes.primaryIdentifier Phenotype.genes.secondaryIdentifier Phenotype.genes.symbol Phenotype.genes.qualifier Phenotype.genes.sgdAlias Phenotype.experimentType Phenotype.mutantType Phenotype.observable Phenotype.qualifier Phenotype.allele Phenotype.strainBackground Phenotype.chemical Phenotype.condition Phenotype.details Phenotype.reporter Phenotype:publications.pubMedId Phenotype:publications.citation" longDescription=" List genes that are annotated to selected phenotypes. Genes include Dubious, Uncharacterized and Verified ORFs, pseudogenes, transposable element genes, RNAs, and genes Not in Systematic Sequence of S228C." sortOrder="Phenotype.experimentType asc">
+    <node path="Phenotype" type="Phenotype">
+    </node>
+    <node path="Phenotype.observable" type="String">
+      <constraint op="=" value="Resistance to chemicals" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="Phenotype.genes" type="Gene">
+    </node>
+    <node path="Phenotype:publications" type="Publication">
+    </node>
+  </query>
+</template>
+<template name="Publications_Literature" title="Topic--&gt;Literature" longDescription="show publications associated with a certain topic both associated with and without a gene." comment="">
+  <query name="Publications_Literature" model="genomic" view="Publication.pubMedId Publication.citation Publication.title Publication.journal Publication:genes.organism.shortName Publication.literatureTopics.name" longDescription="show publications associated with a certain topic both associated with and without a gene." sortOrder="Publication.pubMedId asc" constraintLogic="A and B">
+    <node path="Publication" type="Publication">
+    </node>
+    <node path="Publication:genes" type="Gene">
+    </node>
+    <node path="Publication:genes.primaryIdentifier" type="String">
+      <constraint op="IS NULL" value="null" description="" identifier="" code="B">
+      </constraint>
+    </node>
+    <node path="Publication.literatureTopics" type="LiteratureTopic">
+    </node>
+    <node path="Publication.literatureTopics.name" type="String">
+      <constraint op="=" value="Genomic co-immunoprecipitation study" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="gene_overlapping_flanking_regions" title=" Gene--&gt;Features within a specific distance. " longDescription="Find any annotated features at least partially within a specified distance from the 5' or 3' end of a given gene." comment="">
+  <query name="gene_overlapping_flanking_regions" model="genomic" view="GeneFlankingRegion.gene.primaryIdentifier GeneFlankingRegion.gene.secondaryIdentifier GeneFlankingRegion.gene.symbol GeneFlankingRegion.overlappingFeatures.primaryIdentifier GeneFlankingRegion.overlappingFeatures.secondaryIdentifier GeneFlankingRegion.overlappingFeatures.symbol GeneFlankingRegion.overlappingFeatures.featureType GeneFlankingRegion.distance GeneFlankingRegion.direction" longDescription="Find any annotated features at least partially within a specified distance from the 5' or 3' end of a given gene." sortOrder="GeneFlankingRegion.gene.primaryIdentifier asc" constraintLogic="B and D and E and A">
+    <pathDescription pathString="GeneFlankingRegion.overlappingFeatures" description="Overlapping Feature">
+    </pathDescription>
+    <node path="GeneFlankingRegion" type="GeneFlankingRegion">
+    </node>
+    <node path="GeneFlankingRegion.gene" type="Gene">
+      <constraint op="LOOKUP" value="his3" description="Gene" identifier="" editable="true" code="B" extraValue="">
+      </constraint>
+    </node>
+    <node path="GeneFlankingRegion.distance" type="String">
+      <constraint op="=" value="2.0kb" description="Distance interval options" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+    <node path="GeneFlankingRegion.direction" type="String">
+      <constraint op="=" value="upstream" description="Upstream/Downstream" identifier="" editable="true" code="D" extraValue="">
+      </constraint>
+    </node>
+    <node path="GeneFlankingRegion.overlappingFeatures" type="LocatedSequenceFeature">
+    </node>
+    <node path="GeneFlankingRegion.overlappingFeatures.featureType" type="String">
+      <constraint op="=" value="ORF" description="Feature Type" identifier="" editable="true" code="E">
+      </constraint>
+    </node>
+    <node path="GeneFlankingRegion.organism" type="Organism">
+    </node>
+    <node path="GeneFlankingRegion.organism.name" type="String">
+    </node>
+    <node path="GeneFlankingRegion.length" type="Integer">
+    </node>
+  </query>
+</template>
+<template name="im_available_homologues" title="Homologue mapping query" longDescription="Returns organisms with orthologues and their datasets" comment="used for linking to other intermines">
+  <query name="im_available_homologues" model="genomic" view="Gene.organism.shortName" longDescription="Returns organisms with orthologues and their datasets" sortOrder="Gene.organism.shortName asc">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.primaryIdentifier" type="String">
+      <constraint op="=" value="*" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="im_available_organisms" title="All genes --&gt; Organisms" longDescription="For all genes, list the Organisms available.  Used by webservice to construct links to other intermines." comment="used for displaying links to other intermines">
+  <query name="im_available_organisms" model="genomic" view="Gene.organism.shortName" longDescription="For all genes, list the Organisms available.  Used by webservice to construct links to other intermines.">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.curated" type="Boolean">
+    </node>
+    <node path="Gene.primaryIdentifier" type="String">
+      <constraint op="=" value="*" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+  </query>
+</template>
+<template name="im_orthologue_converter" title="Orthologue converter" longDescription="used for mapping to other intermines" comment="don't delete please">
+  <query name="im_orthologue_converter" model="genomic" view="" longDescription="used for mapping to other intermines">
+    <node path="Gene" type="Gene">
+    </node>
+    <node path="Gene.organism" type="Organism">
+    </node>
+    <node path="Gene.organism.shortName" type="String">
+      <constraint op="=" value="D. melanogaster" description="" identifier="" editable="true" code="A">
+      </constraint>
+    </node>
+  </query>
+</template>
+</template-queries>
+<tags>
+  <tag name="im:aspect:Comparative Genomics" objectIdentifier="Gene_OrthologueGO" type="template">
+  </tag>
+  <tag name="im:aspect:Comparative Genomics" objectIdentifier="Gene_OrthologueOrganism_new" type="template">
+  </tag>
+  <tag name="im:aspect:Comparative Genomics" objectIdentifier="Gene_Orthologue" type="template">
+  </tag>
+  <tag name="im:aspect:Comparative Genomics" objectIdentifier="Gene_OrthologueGO_new" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="org.intermine.model.bio.Gene" type="class">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene_GO" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GOTerm_GeneOrganism" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene_GOSlim_GO" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GOtermidentifier_name" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GOSlimTerm_FeatureType_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GOTerm_Genes" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene.goAnnotation" type="collection">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene_GOSlimTerm" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GoSlimTerm_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GOSlimTerm_Genes" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene_particularGoannotation" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Organism_GoTerm_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene_FeatureType_GOSlimTerm" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="ChromosomeLocation_GO" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GOname_GOidentifier" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene_GOSlim" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="GOSlimTerm_Direct_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Chromosome_Genes_GOSlim" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="Gene_allGOTerms2" type="template">
+  </tag>
+  <tag name="im:aspect:Gene Ontology" objectIdentifier="organism_GOtermsOrthologues" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_FeatureType" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.sequence" type="reference">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="ChromosomeRegion_AllGenes" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Chromosome" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="ChromosomeLocation_AllGenes" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="gene_overlapping_flanking_regions" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_OverlappingGenes" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_FeatureType_Introns" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_ChromosomeLocation" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.genes" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_FeatureType_FrameShifts" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_Location" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Organism_Genes" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="ChromosomeLocation_Feature" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="AllGene_FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="FeatureType_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_UpstreamIntergenic" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.chromosome" type="reference">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="AllGene_ChromosomalFeatures" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.features" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_Introns" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="AllGene_FrameShifts" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome_Gene_FeatureType" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome_Telomeres" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="AllGene_Chromosome_1" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="AllGene_Chromosome" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="ORF_Introns" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_FST" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome_IntergenicSequence" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="ORF_FrameShifts" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Gene" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Telomeres_Chromosome" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="All_Gene_Introns" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_FrameShifts" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_FeatureType_FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome to NcRNAs" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="AllGene_Introns" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Organism_IntergenicRegions" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="ORF _FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.chromosomeLocation" type="reference">
+  </tag>
+  <tag name="im:aspect:Interactions" objectIdentifier="Gene_Interaction_ASLike" type="template">
+  </tag>
+  <tag name="im:aspect:Interactions" objectIdentifier="Gene_Interaction_Single" type="template">
+  </tag>
+  <tag name="im:aspect:Interactions" objectIdentifier="Gene_Interaction_2" type="template">
+  </tag>
+  <tag name="im:aspect:Interactions" objectIdentifier="Gene_Interaction" type="template">
+  </tag>
+  <tag name="im:aspect:Literature" objectIdentifier="Gene_LiteratureTopics" type="template">
+  </tag>
+  <tag name="im:aspect:Literature" objectIdentifier="Publications_Literature" type="template">
+  </tag>
+  <tag name="im:aspect:Literature" objectIdentifier="Literature_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Literature" objectIdentifier="AllGenes_Topic_Literature" type="template">
+  </tag>
+  <tag name="im:aspect:Literature" objectIdentifier="Gene_Topic_Literature" type="template">
+  </tag>
+  <tag name="im:aspect:Phenotypes" objectIdentifier="Phenotype_Genes" type="template">
+  </tag>
+  <tag name="im:aspect:Phenotypes" objectIdentifier="Gene_Phenotype" type="template">
+  </tag>
+  <tag name="im:aspect:Phenotypes" objectIdentifier="Gene_PhenoType" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Protein_GeneChromosomeLength" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Organism_Protein" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Genes_Proteins_Length" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Genes_Proteins_pI" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Genes_Proteins_MolWt" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Gene_Protein" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="NotPhysicallyMapped" type="bag">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="AllGene_ChromosomalFeatures" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="ORF_Introns" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Centromeres" type="bag">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="GoSlimTerm_Gene" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_Topic_Literature" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="AllGene_FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="LongTerminalRepeats" type="bag">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_FeatureType" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_PhenoType" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Telomeres" type="bag">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_GOSlim" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_LiteratureTopics" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Genes_Proteins_MolWt" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_FrameShifts" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_FeatureType_FrameShifts" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="gene_overlapping_flanking_regions" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="example list" type="bag">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="AllGenes_Topic_Literature" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Literature_Gene" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_GO" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="RetroTransposons" type="bag">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="FeatureType_Gene" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Chromosome to NcRNAs" type="template">
+  </tag>
+  <tag name="im:hidden" objectIdentifier="BioEntity.objects" type="collection">
+  </tag>
+  <tag name="im:hidden" objectIdentifier="BioEntity.relations" type="collection">
+  </tag>
+  <tag name="im:hidden" objectIdentifier="BioEntity.subjects" type="collection">
+  </tag>
+  <tag name="im:hidden" objectIdentifier="Evidence.relations" type="collection">
+  </tag>
+  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Gene" type="class">
+  </tag>
+  <tag name="im:public" objectIdentifier="Chromosome to NcRNAs" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_PhenoType" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Centromeres" type="bag">
+  </tag>
+  <tag name="im:public" objectIdentifier="Protein_GeneChromosomeLength" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ChromosomeRegion_AllGenes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_OrthologueGO" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOTerm_Genes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOSlimTerm_FeatureType_Gene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FeatureType_FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene _FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ChromosomeLocation_GO" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="AllGene_Chromosome_1" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FST" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Genes_Proteins_MolWt" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Chromosome_Telomeres" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOSlimTerm_Direct_Gene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="AllGene_FrameShifts" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Phenotype_Genes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GoSlimTerm_Gene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="NotPhysicallyMapped" type="bag">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FeatureType_FrameShifts" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_OverlappingGenes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="RetroTransposons" type="bag">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Introns" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Phenotype" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Telomeres_Chromosome" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_UpstreamIntergenic" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOname_GOidentifier" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FeatureType_GOSlimTerm" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_allGOTerms2" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Organism_Genes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Literature_Gene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ChromosomeLocation_Feature" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FeatureType_Introns" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOtermidentifier_name" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="All_Gene_Introns" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FrameShifts" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ORF_Introns" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FeatureType" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Genes_Proteins_pI" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="gene_overlapping_flanking_regions" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Organism_IntergenicRegions" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="LongTerminalRepeats" type="bag">
+  </tag>
+  <tag name="im:public" objectIdentifier="Organism_Protein" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ARSs" type="bag">
+  </tag>
+  <tag name="im:public" objectIdentifier="AllGene_Chromosome" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="example list" type="bag">
+  </tag>
+  <tag name="im:public" objectIdentifier="Telomeres" type="bag">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOSlimTerm_Genes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_GOSlimTerm" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ORF _FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Interaction_Single" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Genes_Proteins_Length" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_LiteratureTopics" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="AllGene_Introns" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Protein" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOTerm_GeneOrganism" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="FeatureType_Gene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ORF_FrameShifts" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ChromosomeLocation_AllGenes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_OrthologueGO_new" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_ChromosomeLocation" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="organism_GOtermsOrthologues" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Identifiers" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="AllGene_ChromosomalFeatures" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Chromosome_Gene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Chromosome_IntergenicSequence" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_GO" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="AllGenes_Topic_Literature" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Topic_Literature" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Publications_Literature" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="AllGene_FivePrimeUTRIntron" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Chromosome_Gene_FeatureType" type="template">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.plusonetranslationalframeshifts" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.interactions" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.CDSs" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="NcRNA_Gene.nontranscribedregions" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="LocatedSequenceFeature.sequence" type="reference">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.introns" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene_GO" type="template">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.phenotypes" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.proteins" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="NcRNA_Gene.internaltranscribedspacerregions" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.goAnnotation" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.fiveprimeutrintrons" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="NcRNA_Gene.noncodingexons" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="NcRNA_Gene.externaltranscribedspacerregions" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="BioEntity.organism" type="reference">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Gene.phenotypeAnnotations" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="BioEntity.synonyms" type="collection">
+  </tag>
+</tags>
+	
+
+
+</userprofile>

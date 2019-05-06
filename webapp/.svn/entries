@@ -1,0 +1,89 @@
+10
+
+dir
+21795
+svn://subversion.flymine.org/branches/intermine_0_93/yeastmine/webapp
+svn://subversion.flymine.org
+
+
+
+2010-01-13T11:03:24.016326Z
+20507
+julie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+37e1b716-f2f3-0310-95ce-c813c9c44928
+
+.classpath
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+78c0119177f468bcddbcb7d84bd06de6
+2009-04-30T16:10:16.588788Z
+18998
+julie
+
+.project
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+5b1adfd5c687b29f37a866cede0cde8c
+2009-09-11T11:43:35.881634Z
+19710
+julie
+
+build.xml
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+58559f5e8eae5735c0b135db3ebd8a17
+2009-04-30T16:10:16.588788Z
+18998
+julie
+
+lib
+dir
+
+project.properties
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+3b7a92b3ad88be6bdffd5d1cc2419cc8
+2009-04-30T16:10:16.588788Z
+18998
+julie
+
+resources
+dir
+
+src
+dir
+
+
+
+delete
+

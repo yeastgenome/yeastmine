@@ -1,0 +1,85 @@
+10
+
+dir
+21795
+svn://subversion.flymine.org/branches/intermine_0_93/yeastmine/dbmodel
+svn://subversion.flymine.org
+
+
+
+2009-11-13T10:36:01.927127Z
+20144
+julie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+37e1b716-f2f3-0310-95ce-c813c9c44928
+
+.classpath
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+b4b76cd106df6e1d8cc1e7f6ab2f395e
+2009-08-20T10:43:54.997860Z
+19571
+julie
+
+project.properties
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+3216717375d29a71e2f9eab2525cb6aa
+2009-04-30T16:10:16.588788Z
+18998
+julie
+
+.project
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+b7d935ed7fde12e99d99c46e88ac4dfe
+2009-09-11T11:43:35.881634Z
+19710
+julie
+
+lib
+dir
+
+src
+dir
+
+resources
+dir
+
+build.xml
+file
+
+
+
+
+2009-11-19T19:05:40.000000Z
+9f32bf7097c219931cc46136888b8e5f
+2009-04-30T16:10:16.588788Z
+18998
+julie
+

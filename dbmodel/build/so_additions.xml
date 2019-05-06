@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<classes>
+<class name="ARS" extends="OriginOfReplication" is-interface="true"></class>
+<class name="BindingSite" extends="BiologicalRegion" is-interface="true"></class>
+<class name="BiologicalRegion" extends="SequenceFeature" is-interface="true"></class>
+<class name="BlockedReadingFrame" extends="SequenceFeature" is-interface="true"></class>
+<class name="CDS" extends="BiologicalRegion" is-interface="true"></class>
+<class name="Centromere" extends="BiologicalRegion" is-interface="true">
+	<reference name="chromosome" referenced-type="Chromosome"/>
+</class>
+<class name="CentromereDNAElementI" extends="SequenceFeature" is-interface="true"></class>
+<class name="CentromereDNAElementII" extends="SequenceFeature" is-interface="true"></class>
+<class name="CentromereDNAElementIII" extends="SequenceFeature" is-interface="true"></class>
+<class name="Chromosome" extends="BiologicalRegion" is-interface="true"></class>
+<class name="ExternalTranscribedSpacerRegion" extends="BiologicalRegion" is-interface="true"></class>
+<class name="Insertion" extends="BiologicalRegion" is-interface="true"></class>
+<class name="IntergenicRegion" extends="BiologicalRegion" is-interface="true"></class>
+<class name="InternalTranscribedSpacerRegion" extends="BiologicalRegion" is-interface="true"></class>
+<class name="Intron" extends="BiologicalRegion" is-interface="true"></class>
+<class name="LongTerminalRepeat" extends="RepeatRegion" is-interface="true"></class>
+<class name="MatrixAttachmentSite" extends="BiologicalRegion" is-interface="true">
+	<reference name="chromosome" referenced-type="Chromosome"/>
+</class>
+<class name="NcRNAGene" extends="BiologicalRegion" is-interface="true"></class>
+<class name="NoncodingExon" extends="BiologicalRegion" is-interface="true"></class>
+<class name="NonTranscribedRegion" extends="BiologicalRegion" is-interface="true"></class>
+<class name="ORF" extends="SequenceFeature" is-interface="true"></class>
+<class name="OriginOfReplication" extends="BiologicalRegion" is-interface="true"></class>
+<class name="Plasmid" extends="BiologicalRegion" is-interface="true"></class>
+<class name="Plus1TranslationalFrameshift" extends="BiologicalRegion" is-interface="true"></class>
+<class name="ProteinCodingGene" extends="BiologicalRegion" is-interface="true"></class>
+<class name="Pseudogene" extends="BiologicalRegion" is-interface="true"></class>
+<class name="RegulatoryRegion" extends="BiologicalRegion" is-interface="true"></class>
+<class name="RepeatRegion" extends="BiologicalRegion" is-interface="true"></class>
+<class name="Retrotransposon" extends="BiologicalRegion" is-interface="true"></class>
+<class name="SAGETag" extends="SequenceFeature" is-interface="true"></class>
+<class name="SequenceFeature" is-interface="true"></class>
+<class name="SnoRNAGene" extends="NcRNAGene" is-interface="true"></class>
+<class name="SnRNAGene" extends="NcRNAGene" is-interface="true"></class>
+<class name="TelomeraseRNAGene" extends="NcRNAGene" is-interface="true"></class>
+<class name="Telomere" extends="BiologicalRegion" is-interface="true">
+	<reference name="chromosome" referenced-type="Chromosome"/>
+	<collection name="XElementCombinatorialRepeats" referenced-type="XElementCombinatorialRepeat" reverse-reference="telomere"/>
+	<collection name="telomericRepeats" referenced-type="TelomericRepeat" reverse-reference="telomere"/>
+	<collection name="YPrimeElements" referenced-type="YPrimeElement" reverse-reference="telomere"/>
+	<collection name="XElements" referenced-type="XElement" reverse-reference="telomere"/>
+</class>
+<class name="TelomericRepeat" extends="RepeatRegion" is-interface="true">
+	<reference name="telomere" referenced-type="Telomere" reverse-reference="telomericRepeats"/>
+</class>
+<class name="TFBindingSite" extends="BindingSite RegulatoryRegion" is-interface="true"></class>
+<class name="TransposableElementGene" extends="BiologicalRegion" is-interface="true"></class>
+<class name="TRNAGene" extends="NcRNAGene" is-interface="true"></class>
+<class name="XElement" extends="SequenceFeature" is-interface="true">
+	<reference name="telomere" referenced-type="Telomere" reverse-reference="XElements"/>
+</class>
+<class name="XElementCombinatorialRepeat" extends="RepeatRegion" is-interface="true">
+	<reference name="telomere" referenced-type="Telomere" reverse-reference="XElementCombinatorialRepeats"/>
+</class>
+<class name="YPrimeElement" extends="RepeatRegion" is-interface="true">
+	<reference name="telomere" referenced-type="Telomere" reverse-reference="YPrimeElements"/>
+</class>
+</classes>
