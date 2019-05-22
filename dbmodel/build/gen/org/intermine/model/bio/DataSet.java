@@ -5,6 +5,9 @@ public interface DataSet extends org.intermine.model.InterMineObject
     public java.lang.String getDescription();
     public void setDescription(final java.lang.String description);
 
+    public java.lang.String getLicence();
+    public void setLicence(final java.lang.String licence);
+
     public java.lang.String getUrl();
     public void setUrl(final java.lang.String url);
 

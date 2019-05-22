@@ -55,10 +55,6 @@ public interface Gene extends org.intermine.model.bio.SequenceFeature
     public void setProteins(final java.util.Set<org.intermine.model.bio.Protein> proteins);
     public void addProteins(final org.intermine.model.bio.Protein arg);
 
-    public java.util.Set<org.intermine.model.bio.DiseaseAnnotation> getDiseaseAnnotation();
-    public void setDiseaseAnnotation(final java.util.Set<org.intermine.model.bio.DiseaseAnnotation> diseaseAnnotation);
-    public void addDiseaseAnnotation(final org.intermine.model.bio.DiseaseAnnotation arg);
-
     public java.util.Set<org.intermine.model.bio.CDS> getcDSs();
     public void setcDSs(final java.util.Set<org.intermine.model.bio.CDS> CDSs);
     public void addcDSs(final org.intermine.model.bio.CDS arg);

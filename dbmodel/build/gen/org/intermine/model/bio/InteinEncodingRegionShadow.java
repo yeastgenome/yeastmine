@@ -99,12 +99,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
     public void setProteins(final java.util.Set<org.intermine.model.bio.Protein> proteins) { this.proteins = proteins; }
     public void addProteins(final org.intermine.model.bio.Protein arg) { proteins.add(arg); }
 
-    // Col: org.intermine.model.bio.Gene.diseaseAnnotation
-    protected java.util.Set<org.intermine.model.bio.DiseaseAnnotation> diseaseAnnotation = new java.util.HashSet<org.intermine.model.bio.DiseaseAnnotation>();
-    public java.util.Set<org.intermine.model.bio.DiseaseAnnotation> getDiseaseAnnotation() { return diseaseAnnotation; }
-    public void setDiseaseAnnotation(final java.util.Set<org.intermine.model.bio.DiseaseAnnotation> diseaseAnnotation) { this.diseaseAnnotation = diseaseAnnotation; }
-    public void addDiseaseAnnotation(final org.intermine.model.bio.DiseaseAnnotation arg) { diseaseAnnotation.add(arg); }
-
     // Col: org.intermine.model.bio.Gene.CDSs
     protected java.util.Set<org.intermine.model.bio.CDS> CDSs = new java.util.HashSet<org.intermine.model.bio.CDS>();
     public java.util.Set<org.intermine.model.bio.CDS> getcDSs() { return CDSs; }
@@ -221,13 +215,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
     protected java.lang.String featAttribute;
     public java.lang.String getFeatAttribute() { return featAttribute; }
     public void setFeatAttribute(final java.lang.String featAttribute) { this.featAttribute = featAttribute; }
-
-    // Ref: org.intermine.model.bio.SequenceFeature.strain
-    protected org.intermine.model.InterMineObject strain;
-    public org.intermine.model.bio.Strain getStrain() { if (strain instanceof org.intermine.objectstore.proxy.ProxyReference) { return ((org.intermine.model.bio.Strain) ((org.intermine.objectstore.proxy.ProxyReference) strain).getObject()); }; return (org.intermine.model.bio.Strain) strain; }
-    public void setStrain(final org.intermine.model.bio.Strain strain) { this.strain = strain; }
-    public void proxyStrain(final org.intermine.objectstore.proxy.ProxyReference strain) { this.strain = strain; }
-    public org.intermine.model.InterMineObject proxGetStrain() { return strain; }
 
     // Ref: org.intermine.model.bio.SequenceFeature.sequenceOntologyTerm
     protected org.intermine.model.InterMineObject sequenceOntologyTerm;
@@ -356,7 +343,7 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
 
     @Override public boolean equals(Object o) { return (o instanceof InteinEncodingRegion && id != null) ? id.equals(((InteinEncodingRegion)o).getId()) : this == o; }
     @Override public int hashCode() { return (id != null) ? id.hashCode() : super.hashCode(); }
-    @Override public String toString() { return "InteinEncodingRegion [briefDescription=" + (briefDescription == null ? "null" : "\"" + briefDescription + "\"") + ", chromosome=" + (chromosome == null ? "null" : (chromosome.getId() == null ? "no id" : chromosome.getId().toString())) + ", chromosomeLocation=" + (chromosomeLocation == null ? "null" : (chromosomeLocation.getId() == null ? "no id" : chromosomeLocation.getId().toString())) + ", cytoLocation=" + (cytoLocation == null ? "null" : "\"" + cytoLocation + "\"") + ", description=" + (description == null ? "null" : "\"" + description + "\"") + ", downstreamIntergenicRegion=" + (downstreamIntergenicRegion == null ? "null" : (downstreamIntergenicRegion.getId() == null ? "no id" : downstreamIntergenicRegion.getId().toString())) + ", featAttribute=" + (featAttribute == null ? "null" : "\"" + featAttribute + "\"") + ", featureType=" + (featureType == null ? "null" : "\"" + featureType + "\"") + ", functionSummary=" + (functionSummary == null ? "null" : "\"" + functionSummary + "\"") + ", geneSummary=" + (geneSummary == null ? "null" : "\"" + geneSummary + "\"") + ", id=" + id + ", length=" + length + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", orf=" + (orf == null ? "null" : (orf.getId() == null ? "no id" : orf.getId().toString())) + ", organism=" + (organism == null ? "null" : (organism.getId() == null ? "no id" : organism.getId().toString())) + ", phenotypeSummary=" + (phenotypeSummary == null ? "null" : "\"" + phenotypeSummary + "\"") + ", plasmid=" + (plasmid == null ? "null" : (plasmid.getId() == null ? "no id" : plasmid.getId().toString())) + ", plasmidLocation=" + (plasmidLocation == null ? "null" : (plasmidLocation.getId() == null ? "no id" : plasmidLocation.getId().toString())) + ", primaryIdentifier=" + (primaryIdentifier == null ? "null" : "\"" + primaryIdentifier + "\"") + ", qualifier=" + (qualifier == null ? "null" : "\"" + qualifier + "\"") + ", regulationSummary=" + (regulationSummary == null ? "null" : (regulationSummary.getId() == null ? "no id" : regulationSummary.getId().toString())) + ", score=" + score + ", scoreType=" + (scoreType == null ? "null" : "\"" + scoreType + "\"") + ", secondaryIdentifier=" + (secondaryIdentifier == null ? "null" : "\"" + secondaryIdentifier + "\"") + ", sequence=" + (sequence == null ? "null" : (sequence.getId() == null ? "no id" : sequence.getId().toString())) + ", sequenceOntologyTerm=" + (sequenceOntologyTerm == null ? "null" : (sequenceOntologyTerm.getId() == null ? "no id" : sequenceOntologyTerm.getId().toString())) + ", sgdAlias=" + (sgdAlias == null ? "null" : "\"" + sgdAlias + "\"") + ", status=" + (status == null ? "null" : "\"" + status + "\"") + ", strain=" + (strain == null ? "null" : (strain.getId() == null ? "no id" : strain.getId().toString())) + ", symbol=" + (symbol == null ? "null" : "\"" + symbol + "\"") + ", upstreamIntergenicRegion=" + (upstreamIntergenicRegion == null ? "null" : (upstreamIntergenicRegion.getId() == null ? "no id" : upstreamIntergenicRegion.getId().toString())) + "]"; }
+    @Override public String toString() { return "InteinEncodingRegion [briefDescription=" + (briefDescription == null ? "null" : "\"" + briefDescription + "\"") + ", chromosome=" + (chromosome == null ? "null" : (chromosome.getId() == null ? "no id" : chromosome.getId().toString())) + ", chromosomeLocation=" + (chromosomeLocation == null ? "null" : (chromosomeLocation.getId() == null ? "no id" : chromosomeLocation.getId().toString())) + ", cytoLocation=" + (cytoLocation == null ? "null" : "\"" + cytoLocation + "\"") + ", description=" + (description == null ? "null" : "\"" + description + "\"") + ", downstreamIntergenicRegion=" + (downstreamIntergenicRegion == null ? "null" : (downstreamIntergenicRegion.getId() == null ? "no id" : downstreamIntergenicRegion.getId().toString())) + ", featAttribute=" + (featAttribute == null ? "null" : "\"" + featAttribute + "\"") + ", featureType=" + (featureType == null ? "null" : "\"" + featureType + "\"") + ", functionSummary=" + (functionSummary == null ? "null" : "\"" + functionSummary + "\"") + ", geneSummary=" + (geneSummary == null ? "null" : "\"" + geneSummary + "\"") + ", id=" + id + ", length=" + length + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", orf=" + (orf == null ? "null" : (orf.getId() == null ? "no id" : orf.getId().toString())) + ", organism=" + (organism == null ? "null" : (organism.getId() == null ? "no id" : organism.getId().toString())) + ", phenotypeSummary=" + (phenotypeSummary == null ? "null" : "\"" + phenotypeSummary + "\"") + ", plasmid=" + (plasmid == null ? "null" : (plasmid.getId() == null ? "no id" : plasmid.getId().toString())) + ", plasmidLocation=" + (plasmidLocation == null ? "null" : (plasmidLocation.getId() == null ? "no id" : plasmidLocation.getId().toString())) + ", primaryIdentifier=" + (primaryIdentifier == null ? "null" : "\"" + primaryIdentifier + "\"") + ", qualifier=" + (qualifier == null ? "null" : "\"" + qualifier + "\"") + ", regulationSummary=" + (regulationSummary == null ? "null" : (regulationSummary.getId() == null ? "no id" : regulationSummary.getId().toString())) + ", score=" + score + ", scoreType=" + (scoreType == null ? "null" : "\"" + scoreType + "\"") + ", secondaryIdentifier=" + (secondaryIdentifier == null ? "null" : "\"" + secondaryIdentifier + "\"") + ", sequence=" + (sequence == null ? "null" : (sequence.getId() == null ? "no id" : sequence.getId().toString())) + ", sequenceOntologyTerm=" + (sequenceOntologyTerm == null ? "null" : (sequenceOntologyTerm.getId() == null ? "no id" : sequenceOntologyTerm.getId().toString())) + ", sgdAlias=" + (sgdAlias == null ? "null" : "\"" + sgdAlias + "\"") + ", status=" + (status == null ? "null" : "\"" + status + "\"") + ", symbol=" + (symbol == null ? "null" : "\"" + symbol + "\"") + ", upstreamIntergenicRegion=" + (upstreamIntergenicRegion == null ? "null" : (upstreamIntergenicRegion.getId() == null ? "no id" : upstreamIntergenicRegion.getId().toString())) + "]"; }
     public Object getFieldValue(final String fieldName) throws IllegalAccessException {
         if ("orf".equals(fieldName)) {
             if (orf instanceof ProxyReference) {
@@ -424,9 +411,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         if ("proteins".equals(fieldName)) {
             return proteins;
         }
-        if ("diseaseAnnotation".equals(fieldName)) {
-            return diseaseAnnotation;
-        }
         if ("CDSs".equals(fieldName)) {
             return CDSs;
         }
@@ -489,13 +473,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         }
         if ("featAttribute".equals(fieldName)) {
             return featAttribute;
-        }
-        if ("strain".equals(fieldName)) {
-            if (strain instanceof ProxyReference) {
-                return ((ProxyReference) strain).getObject();
-            } else {
-                return strain;
-            }
         }
         if ("sequenceOntologyTerm".equals(fieldName)) {
             if (sequenceOntologyTerm instanceof ProxyReference) {
@@ -628,9 +605,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         if ("proteins".equals(fieldName)) {
             return proteins;
         }
-        if ("diseaseAnnotation".equals(fieldName)) {
-            return diseaseAnnotation;
-        }
         if ("CDSs".equals(fieldName)) {
             return CDSs;
         }
@@ -693,9 +667,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         }
         if ("featAttribute".equals(fieldName)) {
             return featAttribute;
-        }
-        if ("strain".equals(fieldName)) {
-            return strain;
         }
         if ("sequenceOntologyTerm".equals(fieldName)) {
             return sequenceOntologyTerm;
@@ -794,8 +765,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
             introns = (java.util.Set) value;
         } else if ("proteins".equals(fieldName)) {
             proteins = (java.util.Set) value;
-        } else if ("diseaseAnnotation".equals(fieldName)) {
-            diseaseAnnotation = (java.util.Set) value;
         } else if ("CDSs".equals(fieldName)) {
             CDSs = (java.util.Set) value;
         } else if ("homologues".equals(fieldName)) {
@@ -838,8 +807,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
             qualifier = (java.lang.String) value;
         } else if ("featAttribute".equals(fieldName)) {
             featAttribute = (java.lang.String) value;
-        } else if ("strain".equals(fieldName)) {
-            strain = (org.intermine.model.InterMineObject) value;
         } else if ("sequenceOntologyTerm".equals(fieldName)) {
             sequenceOntologyTerm = (org.intermine.model.InterMineObject) value;
         } else if ("chromosomeLocation".equals(fieldName)) {
@@ -933,9 +900,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         if ("proteins".equals(fieldName)) {
             return java.util.Set.class;
         }
-        if ("diseaseAnnotation".equals(fieldName)) {
-            return java.util.Set.class;
-        }
         if ("CDSs".equals(fieldName)) {
             return java.util.Set.class;
         }
@@ -998,9 +962,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         }
         if ("featAttribute".equals(fieldName)) {
             return java.lang.String.class;
-        }
-        if ("strain".equals(fieldName)) {
-            return org.intermine.model.bio.Strain.class;
         }
         if ("sequenceOntologyTerm".equals(fieldName)) {
             return org.intermine.model.bio.SOTerm.class;
@@ -1264,9 +1225,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
                     string = string.substring(delimPosition + 3);
                 }
             }
-        }
-        if (strain != null) {
-            sb.append("$_^rstrain$_^").append(strain.getId());
         }
         if (sequenceOntologyTerm != null) {
             sb.append("$_^rsequenceOntologyTerm$_^").append(sequenceOntologyTerm.getId());
@@ -1533,11 +1491,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
                 featAttribute = string == null ? notXml[i] : string.toString();
                 i++;
             }
-            if ((i < notXml.length) &&"rstrain".equals(notXml[i])) {
-                i++;
-                strain = new ProxyReference(os, Integer.valueOf(notXml[i]), org.intermine.model.bio.Strain.class);
-                i++;
-            };
             if ((i < notXml.length) &&"rsequenceOntologyTerm".equals(notXml[i])) {
                 i++;
                 sequenceOntologyTerm = new ProxyReference(os, Integer.valueOf(notXml[i]), org.intermine.model.bio.SOTerm.class);
@@ -1631,7 +1584,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         flankingRegions = new ProxyCollection<org.intermine.model.bio.GeneFlankingRegion>(os, this, "flankingRegions", org.intermine.model.bio.GeneFlankingRegion.class);
         introns = new ProxyCollection<org.intermine.model.bio.Intron>(os, this, "introns", org.intermine.model.bio.Intron.class);
         proteins = new ProxyCollection<org.intermine.model.bio.Protein>(os, this, "proteins", org.intermine.model.bio.Protein.class);
-        diseaseAnnotation = new ProxyCollection<org.intermine.model.bio.DiseaseAnnotation>(os, this, "diseaseAnnotation", org.intermine.model.bio.DiseaseAnnotation.class);
         CDSs = new ProxyCollection<org.intermine.model.bio.CDS>(os, this, "CDSs", org.intermine.model.bio.CDS.class);
         homologues = new ProxyCollection<org.intermine.model.bio.Homologue>(os, this, "homologues", org.intermine.model.bio.Homologue.class);
         exons = new ProxyCollection<org.intermine.model.bio.Exon>(os, this, "exons", org.intermine.model.bio.Exon.class);
@@ -1664,8 +1616,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
             introns.add((org.intermine.model.bio.Intron) element);
         } else if ("proteins".equals(fieldName)) {
             proteins.add((org.intermine.model.bio.Protein) element);
-        } else if ("diseaseAnnotation".equals(fieldName)) {
-            diseaseAnnotation.add((org.intermine.model.bio.DiseaseAnnotation) element);
         } else if ("CDSs".equals(fieldName)) {
             CDSs.add((org.intermine.model.bio.CDS) element);
         } else if ("homologues".equals(fieldName)) {
@@ -1730,9 +1680,6 @@ public class InteinEncodingRegionShadow implements InteinEncodingRegion, ShadowC
         }
         if ("proteins".equals(fieldName)) {
             return org.intermine.model.bio.Protein.class;
-        }
-        if ("diseaseAnnotation".equals(fieldName)) {
-            return org.intermine.model.bio.DiseaseAnnotation.class;
         }
         if ("CDSs".equals(fieldName)) {
             return org.intermine.model.bio.CDS.class;

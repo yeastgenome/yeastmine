@@ -18,6 +18,11 @@ public class DataSetShadow implements DataSet, ShadowClass
     public java.lang.String getDescription() { return description; }
     public void setDescription(final java.lang.String description) { this.description = description; }
 
+    // Attr: org.intermine.model.bio.DataSet.licence
+    protected java.lang.String licence;
+    public java.lang.String getLicence() { return licence; }
+    public void setLicence(final java.lang.String licence) { this.licence = licence; }
+
     // Attr: org.intermine.model.bio.DataSet.url
     protected java.lang.String url;
     public java.lang.String getUrl() { return url; }
@@ -60,10 +65,13 @@ public class DataSetShadow implements DataSet, ShadowClass
 
     @Override public boolean equals(Object o) { return (o instanceof DataSet && id != null) ? id.equals(((DataSet)o).getId()) : this == o; }
     @Override public int hashCode() { return (id != null) ? id.hashCode() : super.hashCode(); }
-    @Override public String toString() { return "DataSet [dataSource=" + (dataSource == null ? "null" : (dataSource.getId() == null ? "no id" : dataSource.getId().toString())) + ", description=" + (description == null ? "null" : "\"" + description + "\"") + ", id=" + id + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", publication=" + (publication == null ? "null" : (publication.getId() == null ? "no id" : publication.getId().toString())) + ", url=" + (url == null ? "null" : "\"" + url + "\"") + ", version=" + (version == null ? "null" : "\"" + version + "\"") + "]"; }
+    @Override public String toString() { return "DataSet [dataSource=" + (dataSource == null ? "null" : (dataSource.getId() == null ? "no id" : dataSource.getId().toString())) + ", description=" + (description == null ? "null" : "\"" + description + "\"") + ", id=" + id + ", licence=" + (licence == null ? "null" : "\"" + licence + "\"") + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", publication=" + (publication == null ? "null" : (publication.getId() == null ? "no id" : publication.getId().toString())) + ", url=" + (url == null ? "null" : "\"" + url + "\"") + ", version=" + (version == null ? "null" : "\"" + version + "\"") + "]"; }
     public Object getFieldValue(final String fieldName) throws IllegalAccessException {
         if ("description".equals(fieldName)) {
             return description;
+        }
+        if ("licence".equals(fieldName)) {
+            return licence;
         }
         if ("url".equals(fieldName)) {
             return url;
@@ -103,6 +111,9 @@ public class DataSetShadow implements DataSet, ShadowClass
         if ("description".equals(fieldName)) {
             return description;
         }
+        if ("licence".equals(fieldName)) {
+            return licence;
+        }
         if ("url".equals(fieldName)) {
             return url;
         }
@@ -132,6 +143,8 @@ public class DataSetShadow implements DataSet, ShadowClass
     public void setFieldValue(final String fieldName, final Object value) {
         if ("description".equals(fieldName)) {
             description = (java.lang.String) value;
+        } else if ("licence".equals(fieldName)) {
+            licence = (java.lang.String) value;
         } else if ("url".equals(fieldName)) {
             url = (java.lang.String) value;
         } else if ("name".equals(fieldName)) {
@@ -156,6 +169,9 @@ public class DataSetShadow implements DataSet, ShadowClass
     }
     public Class<?> getFieldType(final String fieldName) {
         if ("description".equals(fieldName)) {
+            return java.lang.String.class;
+        }
+        if ("licence".equals(fieldName)) {
             return java.lang.String.class;
         }
         if ("url".equals(fieldName)) {
@@ -193,6 +209,21 @@ public class DataSetShadow implements DataSet, ShadowClass
         if (description != null) {
             sb.append("$_^adescription$_^");
             String string = description;
+            while (string != null) {
+                int delimPosition = string.indexOf("$_^");
+                if (delimPosition == -1) {
+                    sb.append(string);
+                    string = null;
+                } else {
+                    sb.append(string.substring(0, delimPosition + 3));
+                    sb.append("d");
+                    string = string.substring(delimPosition + 3);
+                }
+            }
+        }
+        if (licence != null) {
+            sb.append("$_^alicence$_^");
+            String string = licence;
             while (string != null) {
                 int delimPosition = string.indexOf("$_^");
                 if (delimPosition == -1) {
@@ -279,6 +310,17 @@ public class DataSetShadow implements DataSet, ShadowClass
                     string.append("$_^").append(notXml[i].substring(1));
                 }
                 description = string == null ? notXml[i] : string.toString();
+                i++;
+            }
+            if ((i < notXml.length) && "alicence".equals(notXml[i])) {
+                i++;
+                StringBuilder string = null;
+                while ((i + 1 < notXml.length) && (notXml[i + 1].charAt(0) == 'd')) {
+                    if (string == null) string = new StringBuilder(notXml[i]);
+                    i++;
+                    string.append("$_^").append(notXml[i].substring(1));
+                }
+                licence = string == null ? notXml[i] : string.toString();
                 i++;
             }
             if ((i < notXml.length) && "aurl".equals(notXml[i])) {

@@ -3,6 +3,7 @@ package org.intermine.model.bio;
 import org.intermine.objectstore.ObjectStore;
 import org.intermine.objectstore.intermine.NotXmlParser;
 import org.intermine.objectstore.intermine.NotXmlRenderer;
+import org.intermine.objectstore.proxy.ProxyCollection;
 import org.intermine.model.StringConstructor;
 import org.intermine.metadata.TypeUtil;
 import org.intermine.util.DynamicUtil;
@@ -21,6 +22,12 @@ public class OntologyShadow implements Ontology, ShadowClass
     public java.lang.String getName() { return name; }
     public void setName(final java.lang.String name) { this.name = name; }
 
+    // Col: org.intermine.model.bio.Ontology.dataSets
+    protected java.util.Set<org.intermine.model.bio.DataSet> dataSets = new java.util.HashSet<org.intermine.model.bio.DataSet>();
+    public java.util.Set<org.intermine.model.bio.DataSet> getDataSets() { return dataSets; }
+    public void setDataSets(final java.util.Set<org.intermine.model.bio.DataSet> dataSets) { this.dataSets = dataSets; }
+    public void addDataSets(final org.intermine.model.bio.DataSet arg) { dataSets.add(arg); }
+
     // Attr: org.intermine.model.InterMineObject.id
     protected java.lang.Integer id;
     public java.lang.Integer getId() { return id; }
@@ -35,6 +42,9 @@ public class OntologyShadow implements Ontology, ShadowClass
         }
         if ("name".equals(fieldName)) {
             return name;
+        }
+        if ("dataSets".equals(fieldName)) {
+            return dataSets;
         }
         if ("id".equals(fieldName)) {
             return id;
@@ -51,6 +61,9 @@ public class OntologyShadow implements Ontology, ShadowClass
         if ("name".equals(fieldName)) {
             return name;
         }
+        if ("dataSets".equals(fieldName)) {
+            return dataSets;
+        }
         if ("id".equals(fieldName)) {
             return id;
         }
@@ -64,6 +77,8 @@ public class OntologyShadow implements Ontology, ShadowClass
             url = (java.lang.String) value;
         } else if ("name".equals(fieldName)) {
             name = (java.lang.String) value;
+        } else if ("dataSets".equals(fieldName)) {
+            dataSets = (java.util.Set) value;
         } else if ("id".equals(fieldName)) {
             id = (java.lang.Integer) value;
         } else {
@@ -80,6 +95,9 @@ public class OntologyShadow implements Ontology, ShadowClass
         }
         if ("name".equals(fieldName)) {
             return java.lang.String.class;
+        }
+        if ("dataSets".equals(fieldName)) {
+            return java.util.Set.class;
         }
         if ("id".equals(fieldName)) {
             return java.lang.Integer.class;
@@ -170,9 +188,12 @@ public class OntologyShadow implements Ontology, ShadowClass
                 throw new IllegalArgumentException("Unknown field " + notXml[i]);
             }
         }
+        dataSets = new ProxyCollection<org.intermine.model.bio.DataSet>(os, this, "dataSets", org.intermine.model.bio.DataSet.class);
     }
     public void addCollectionElement(final String fieldName, final org.intermine.model.InterMineObject element) {
-        {
+        if ("dataSets".equals(fieldName)) {
+            dataSets.add((org.intermine.model.bio.DataSet) element);
+        } else {
             if (!org.intermine.model.bio.Ontology.class.equals(getClass())) {
                 TypeUtil.addCollectionElement(this, fieldName, element);
                 return;
@@ -181,6 +202,9 @@ public class OntologyShadow implements Ontology, ShadowClass
         }
     }
     public Class<?> getElementType(final String fieldName) {
+        if ("dataSets".equals(fieldName)) {
+            return org.intermine.model.bio.DataSet.class;
+        }
         if (!org.intermine.model.bio.Ontology.class.equals(getClass())) {
             return TypeUtil.getElementType(org.intermine.model.bio.Ontology.class, fieldName);
         }

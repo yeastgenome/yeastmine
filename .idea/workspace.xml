@@ -2,565 +2,239 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c311f57-4674-4dfb-906b-20960cb47c5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/genomic_keyDefs.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/genomic_model.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/genomic_precompute.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/genomic_priorities.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ARS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ARSConsensusSequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ARSConsensusSequenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ARSShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/AuthorShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BindingSite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BindingSiteShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BioEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BioEntityShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BiologicalRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BiologicalRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BlockedReadingFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/BlockedReadingFrameShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CDS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CDSShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CausalRelationship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CausalRelationshipShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Centromere.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CentromereDNAElementI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CentromereDNAElementII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CentromereDNAElementIII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CentromereDNAElementIIIShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CentromereDNAElementIIShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CentromereDNAElementIShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CentromereShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Chromosome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ChromosomeShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CommentShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Complement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ComplementShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Complex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ComplexShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CrossReference.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/CrossReferenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DOTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DOTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DataSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DataSetShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DataSourceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DatabaseReference.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DatabaseReferenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Disease.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DiseaseAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DiseaseAnnotationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DiseaseEvidence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DiseaseEvidenceCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DiseaseEvidenceCodeShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DiseaseEvidenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/DiseaseShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ECOTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ECOTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Exon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExonShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionCondition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionConditionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionDataSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionDataSetShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionDataSetTag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionDataSetTagShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionScore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExpressionScoreShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExternalTranscribedSpacerRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ExternalTranscribedSpacerRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/FivePrimeUTR.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/FivePrimeUTRIntron.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/FivePrimeUTRIntronShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/FivePrimeUTRShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOAnnotationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOEvidence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOEvidenceCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOEvidenceCodeShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOEvidenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOSlimTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOSlimTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GOTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Gene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GeneFlankingRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GeneFlankingRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GeneGroup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GeneGroupShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/GeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Homologue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/HomologueShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Insertion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InsertionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteinEncodingRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteinEncodingRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Interaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionDetailShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionExperiment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionExperimentShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractionTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Interactor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InteractorShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/IntergenicRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/IntergenicRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InternalTranscribedSpacerRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/InternalTranscribedSpacerRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Intron.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/IntronShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/LiteratureTopic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/LiteratureTopicShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Location.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/LocationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/LongTerminalRepeat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/LongTerminalRepeatShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MRNA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MRNAShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MatingTypeRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MatingTypeRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MatrixAttachmentSite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MatrixAttachmentSiteShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MeshTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/MeshTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NcRNAGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NcRNAGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NonTranscribedRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NonTranscribedRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NoncodingExon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NoncodingExonShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NotInSystematicSequenceOfS288C.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/NotInSystematicSequenceOfS288CShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ORF.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ORFShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Ontology.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyAnnotationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyRelation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyRelationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyTermSynonym.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OntologyTermSynonymShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Organism.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OrganismShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OriginOfReplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OriginOfReplicationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OrthologueEvidence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OrthologueEvidenceCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OrthologueEvidenceCodeShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/OrthologueEvidenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Pathway.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/PathwayShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Phenotype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/PhenotypeShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Plasmid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/PlasmidShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Plus1TranslationalFrameshift.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Plus1TranslationalFrameshiftShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Protein.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinAbundance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinAbundanceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinCodingGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinCodingGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinDomainShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinHalfLife.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinHalfLifeShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinModificationSite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinModificationSiteShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinProperty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinPropertyShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ProteinShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Pseudogene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/PseudogeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Publication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/PublicationAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/PublicationAnnotationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/PublicationShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RNA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RNAShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RRNAGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RRNAGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RegulationEvidence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RegulationEvidenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RegulationSummary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RegulationSummaryShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RegulatoryRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RegulatoryRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RepeatRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RepeatRegionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Retrotransposon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/RetrotransposonShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SAGETag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SAGETagShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SOTerm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SOTermShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Sequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SequenceCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SequenceCollectionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SequenceFeature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SequenceFeatureShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SequenceShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SequenceVariant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SequenceVariantShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SilentMatingTypeCassetteArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SilentMatingTypeCassetteArrayShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SmallMolecule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SmallMoleculeShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SnRNAGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SnRNAGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SnoRNAGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SnoRNAGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Synonym.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/SynonymShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TFBindingSite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TFBindingSiteShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TRNAGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TRNAGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TelomeraseRNAGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TelomeraseRNAGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Telomere.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TelomereShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TelomericRepeat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TelomericRepeatShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ThreePrimeUTR.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/ThreePrimeUTRShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Transcript.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TranscriptShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TransposableElementGene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/TransposableElementGeneShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/UTR.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/UTRShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/W_region.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/W_regionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/XElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/XElementCombinatorialRepeat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/XElementCombinatorialRepeatShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/XElementShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/X_region.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/X_regionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/YPrimeElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/YPrimeElementShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Y_region.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Y_regionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Z1_region.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Z1_regionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Z2_region.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/Z2_regionShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/uORF.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/org/intermine/model/bio/uORFShadow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ARS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ARSConsensusSequence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ARSConsensusSequenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ARSShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Author.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/AuthorShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BindingSite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BindingSiteShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BioEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BioEntityShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BiologicalRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BiologicalRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BlockedReadingFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/BlockedReadingFrameShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CDS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CDSShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CausalRelationship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CausalRelationshipShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Centromere.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CentromereDNAElementI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CentromereDNAElementII.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CentromereDNAElementIII.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CentromereDNAElementIIIShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CentromereDNAElementIIShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CentromereDNAElementIShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CentromereShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Chromosome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ChromosomeShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CommentShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Complement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ComplementShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Complex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ComplexShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CrossReference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/CrossReferenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DOTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DOTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DataSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DataSetShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DataSourceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DatabaseReference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DatabaseReferenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Disease.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DiseaseAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DiseaseAnnotationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DiseaseEvidence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DiseaseEvidenceCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DiseaseEvidenceCodeShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DiseaseEvidenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/DiseaseShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ECOTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ECOTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Exon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExonShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionCondition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionConditionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionDataSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionDataSetShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionDataSetTag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionDataSetTagShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionScore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExpressionScoreShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExternalTranscribedSpacerRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ExternalTranscribedSpacerRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/FivePrimeUTR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/FivePrimeUTRIntron.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/FivePrimeUTRIntronShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/FivePrimeUTRShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOAnnotationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOEvidence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOEvidenceCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOEvidenceCodeShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOEvidenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOSlimTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOSlimTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GOTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Gene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GeneFlankingRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GeneFlankingRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GeneGroup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GeneGroupShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/GeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Homologue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/HomologueShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Insertion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InsertionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteinEncodingRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteinEncodingRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Interaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionDetailShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionExperiment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionExperimentShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractionTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Interactor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InteractorShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/IntergenicRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/IntergenicRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InternalTranscribedSpacerRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/InternalTranscribedSpacerRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Intron.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/IntronShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/LiteratureTopic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/LiteratureTopicShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Location.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/LocationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/LongTerminalRepeat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/LongTerminalRepeatShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MRNA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MRNAShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MatingTypeRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MatingTypeRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MatrixAttachmentSite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MatrixAttachmentSiteShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MeshTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/MeshTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NcRNAGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NcRNAGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NonTranscribedRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NonTranscribedRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NoncodingExon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NoncodingExonShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NotInSystematicSequenceOfS288C.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/NotInSystematicSequenceOfS288CShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ORF.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ORFShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Ontology.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyAnnotationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyRelation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyRelationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyTermSynonym.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OntologyTermSynonymShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Organism.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OrganismShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OriginOfReplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OriginOfReplicationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OrthologueEvidence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OrthologueEvidenceCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OrthologueEvidenceCodeShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/OrthologueEvidenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Pathway.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/PathwayShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Phenotype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/PhenotypeShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Plasmid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/PlasmidShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Plus1TranslationalFrameshift.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Plus1TranslationalFrameshiftShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Protein.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinAbundance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinAbundanceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinCodingGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinCodingGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinDomain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinDomainShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinHalfLife.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinHalfLifeShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinModificationSite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinModificationSiteShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinProperty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinPropertyShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ProteinShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Pseudogene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/PseudogeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Publication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/PublicationAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/PublicationAnnotationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/PublicationShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RNA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RNAShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RRNAGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RRNAGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RegulationEvidence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RegulationEvidenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RegulationSummary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RegulationSummaryShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RegulatoryRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RegulatoryRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RepeatRegion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RepeatRegionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Retrotransposon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/RetrotransposonShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SAGETag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SAGETagShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SOTerm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SOTermShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Sequence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SequenceCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SequenceCollectionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SequenceFeature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SequenceFeatureShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SequenceShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SequenceVariant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SequenceVariantShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SilentMatingTypeCassetteArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SilentMatingTypeCassetteArrayShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SmallMolecule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SmallMoleculeShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SnRNAGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SnRNAGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SnoRNAGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SnoRNAGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Synonym.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/SynonymShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TFBindingSite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TFBindingSiteShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TRNAGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TRNAGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TelomeraseRNAGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TelomeraseRNAGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Telomere.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TelomereShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TelomericRepeat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TelomericRepeatShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ThreePrimeUTR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/ThreePrimeUTRShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Transcript.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TranscriptShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TransposableElementGene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/TransposableElementGeneShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/UTR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/UTRShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/W_region.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/W_regionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/XElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/XElementCombinatorialRepeat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/XElementCombinatorialRepeatShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/XElementShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/X_region.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/X_regionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/YPrimeElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/YPrimeElementShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Y_region.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Y_regionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Z1_region.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Z1_regionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Z2_region.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/Z2_regionShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/uORF.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/src/org/intermine/model/bio/uORFShadow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/main/default.intermine.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/main/intermine.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/model/genomic_keyDefs.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/build/model/genomic_model.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmodel/resources/so_term_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileContent/annotation-processors.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ARSConsensusSequenceShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ARSConsensusSequenceShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ARSShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ARSShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/BindingSiteShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/BindingSiteShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/BiologicalRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/BiologicalRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/BlockedReadingFrameShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/BlockedReadingFrameShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CDSShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CDSShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereDNAElementIIIShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereDNAElementIIIShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereDNAElementIIShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereDNAElementIIShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereDNAElementIShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereDNAElementIShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/CentromereShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ChromosomeShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ChromosomeShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DataSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DataSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DataSetShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DataSetShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DiseaseAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DiseaseAnnotationShadow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DiseaseEvidence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DiseaseEvidenceCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DiseaseEvidenceCodeShadow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/DiseaseEvidenceShadow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ExonShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ExonShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ExternalTranscribedSpacerRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ExternalTranscribedSpacerRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/FivePrimeUTRIntronShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/FivePrimeUTRIntronShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/FivePrimeUTRShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/FivePrimeUTRShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Gene.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Gene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/GeneFlankingRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/GeneFlankingRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/GeneGroupShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/GeneGroupShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/GeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/GeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/InsertionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/InsertionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/InteinEncodingRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/InteinEncodingRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/IntergenicRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/IntergenicRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/InternalTranscribedSpacerRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/InternalTranscribedSpacerRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/IntronShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/IntronShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/LongTerminalRepeatShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/LongTerminalRepeatShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/MRNAShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/MRNAShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/MatingTypeRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/MatingTypeRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/MatrixAttachmentSiteShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/MatrixAttachmentSiteShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NcRNAGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NcRNAGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NonTranscribedRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NonTranscribedRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NoncodingExonShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NoncodingExonShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NotInSystematicSequenceOfS288CShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/NotInSystematicSequenceOfS288CShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ORFShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ORFShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Ontology.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Ontology.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/OntologyShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/OntologyShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Organism.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Organism.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/OrganismShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/OrganismShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/OriginOfReplicationShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/OriginOfReplicationShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/PlasmidShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/PlasmidShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Plus1TranslationalFrameshiftShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Plus1TranslationalFrameshiftShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ProteinCodingGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ProteinCodingGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/PseudogeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/PseudogeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RRNAGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RRNAGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RegulatoryRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RegulatoryRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RepeatRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RepeatRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RetrotransposonShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/RetrotransposonShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SAGETagShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SAGETagShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SequenceFeature.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SequenceFeature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SequenceFeatureShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SequenceFeatureShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SilentMatingTypeCassetteArrayShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SilentMatingTypeCassetteArrayShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SnRNAGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SnRNAGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SnoRNAGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SnoRNAGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Strain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/StrainShadow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SyntenicRegionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/SyntenicRegionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TFBindingSiteShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TFBindingSiteShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TRNAGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TRNAGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TelomeraseRNAGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TelomeraseRNAGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TelomereShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TelomereShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TelomericRepeatShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TelomericRepeatShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ThreePrimeUTRShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/ThreePrimeUTRShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TranscriptShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TranscriptShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TransposableElementGeneShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/TransposableElementGeneShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/UTRShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/UTRShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/W_regionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/W_regionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/XElementCombinatorialRepeatShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/XElementCombinatorialRepeatShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/XElementShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/XElementShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/X_regionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/X_regionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/YPrimeElementShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/YPrimeElementShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Y_regionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Y_regionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Z1_regionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Z1_regionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Z2_regionShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/Z2_regionShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/uORFShadow.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/classes/java/main/org/intermine/model/bio/uORFShadow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ARSConsensusSequenceShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ARSConsensusSequenceShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ARSShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ARSShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/BindingSiteShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/BindingSiteShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/BiologicalRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/BiologicalRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/BlockedReadingFrameShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/BlockedReadingFrameShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CDSShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CDSShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereDNAElementIIIShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereDNAElementIIIShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereDNAElementIIShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereDNAElementIIShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereDNAElementIShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereDNAElementIShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/CentromereShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ChromosomeShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ChromosomeShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DataSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DataSetShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DataSetShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DiseaseAnnotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DiseaseAnnotationShadow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DiseaseEvidence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DiseaseEvidenceCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DiseaseEvidenceCodeShadow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/DiseaseEvidenceShadow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ExonShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ExonShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ExternalTranscribedSpacerRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ExternalTranscribedSpacerRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/FivePrimeUTRIntronShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/FivePrimeUTRIntronShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/FivePrimeUTRShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/FivePrimeUTRShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Gene.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Gene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/GeneFlankingRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/GeneFlankingRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/GeneGroupShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/GeneGroupShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/GeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/GeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/InsertionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/InsertionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/InteinEncodingRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/InteinEncodingRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/IntergenicRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/IntergenicRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/InternalTranscribedSpacerRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/InternalTranscribedSpacerRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/IntronShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/IntronShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/LongTerminalRepeatShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/LongTerminalRepeatShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/MRNAShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/MRNAShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/MatingTypeRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/MatingTypeRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/MatrixAttachmentSiteShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/MatrixAttachmentSiteShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NcRNAGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NcRNAGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NonTranscribedRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NonTranscribedRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NoncodingExonShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NoncodingExonShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NotInSystematicSequenceOfS288CShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/NotInSystematicSequenceOfS288CShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ORFShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ORFShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Ontology.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Ontology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/OntologyShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/OntologyShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Organism.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Organism.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/OrganismShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/OrganismShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/OriginOfReplicationShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/OriginOfReplicationShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/PlasmidShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/PlasmidShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Plus1TranslationalFrameshiftShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Plus1TranslationalFrameshiftShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ProteinCodingGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ProteinCodingGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/PseudogeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/PseudogeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RRNAGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RRNAGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RegulatoryRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RegulatoryRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RepeatRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RepeatRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RetrotransposonShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/RetrotransposonShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SAGETagShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SAGETagShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SequenceFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SequenceFeature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SequenceFeatureShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SequenceFeatureShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SilentMatingTypeCassetteArrayShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SilentMatingTypeCassetteArrayShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SnRNAGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SnRNAGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SnoRNAGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SnoRNAGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Strain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/StrainShadow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SyntenicRegionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/SyntenicRegionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TFBindingSiteShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TFBindingSiteShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TRNAGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TRNAGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TelomeraseRNAGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TelomeraseRNAGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TelomereShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TelomereShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TelomericRepeatShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TelomericRepeatShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ThreePrimeUTRShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/ThreePrimeUTRShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TranscriptShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TranscriptShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TransposableElementGeneShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/TransposableElementGeneShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/UTRShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/UTRShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/W_regionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/W_regionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/XElementCombinatorialRepeatShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/XElementCombinatorialRepeatShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/XElementShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/XElementShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/X_regionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/X_regionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/YPrimeElementShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/YPrimeElementShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Y_regionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Y_regionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Z1_regionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Z1_regionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Z2_regionShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/Z2_regionShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/uORFShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/gen/org/intermine/model/bio/uORFShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/libs/dbmodel.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/libs/dbmodel.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/os.production-schema.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/os.production-schema.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/resources/main/genomic_model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/resources/main/genomic_model.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/resources/main/so.obo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/so_additions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/so_additions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-cglabrata-homologs-3.1.2.jar_28g6bla3w3g951k8nwxn1z0up/cglabrata-homologs.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-cgob-homologs-3.1.2.jar_63pkcdinnooo2w5vx8a9filor/cgob-homologs.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-disease-3.1.2.jar_4yqs0oubkr4a47v0jq87349f2/disease.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-do-3.1.2.jar_dri63g7x6ha31zy59r4wleqho/do.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-eco-3.1.2.jar_2kfgyr4i6fvfp2rokd34huwq/eco.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-ensembl-compara-3.1.2.jar_4n6zb91vn7fbw305377y04h3a/ensembl-compara.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-entrez-organism-3.1.2.jar_8ncn7vzd7vflng8ni501lgwsw/entrez-organism.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-fungi-homologs-3.1.2.jar_bczyqso8pqkfk2atlcbzhs3rk/fungi-homologs.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-go-3.1.2.jar_d9owglkwodxxpfk33yzi68sis/go.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-go-annotation-3.1.2.jar_dig56xj4wqkqpnvfig868hlh9/go-annotation.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-go-annotation-db-3.1.2.jar_3bdbci547v5j78v6gmbmv2z7l/go-annotation-db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-go-slim-3.1.2.jar_b7638erv2ssyn7ca36u4fr7ds/go-slim.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-homolog-genes-3.1.2.jar_c7dokusaqlbpoh6c5uqxyrive/homolog-genes.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-homologene-3.1.2.jar_8ejcaxt5hfe2bcfmdhebll1ql/homologene.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-mgi-identifiers-3.1.2.jar_9vm7ibpopr4nbndws1cr1sqss/mgi-identifiers.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-ncbi-gene-3.1.2.jar_e6kpyugmjh8nra0i4x79i4t2a/ncbi-gene.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-omim-3.1.2.jar_eq3jqh7wyot3x9pktwyzu3fpo/omim.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-panther-3.1.2.jar_829i6bzsxc9spb4hx1gvqlt44/panther.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-pombe-homologs-3.1.2.jar_5bejt25hwzp9pvsxxc1a41yw5/pombe-homologs.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-psi-complexes-3.1.2.jar_4w76p1up72tuvc6fc10p7l6ud/psi-complexes.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-psi-mi-ontology-3.1.2.jar_a5ah0f8b9rl9x6r1389928irj/psi-mi-ontology.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-rgd-identifiers-3.1.2.jar_6gstbbfu8o4fb1qt8lz32ny3f/rgd-identifiers.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-sgd-3.1.1.jar_6tqbij52kjlrokqosfuz6thik/sgd.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-sgd-complementation-3.1.1.jar_1hoa38uab6kxjc41c9n9jpjlz/sgd-complementation.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-sgd-gff-3.1.1.jar_5g51gxpihuf1mt8wpftf3emst/sgd-gff.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-sgd-gff-utr-3.1.1.jar_5xf09cfsisi24drsmk0a35vwd/sgd-gff-utr.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-sgd-protein-ntermini-3.1.1.jar_1lnc2ryl38b3hwqlufyvm1bnv/sgd-protein-ntermini.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-sgd-protein-properties-3.1.1.jar_7xqlg6z3hceyqc914ut2mnj0r/sgd-protein-properties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-so-3.1.2.jar_b0peecz36j9fou6eyaiyo0et5/so.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-spell-expression-3.1.1.jar_bqi1ejw114nevn8jwn730fbhx/spell-expression.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-treefam-3.1.2.jar_3wffaqd0dvsl8dlfdtbtdeg6c/treefam.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/bio-source-update-publications-3.1.2.jar_3slr21jl04dwyejy7wdf9g40/update-publications.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/expandedArchives/intermine-resources-3.1.2.jar_1yxx6ltmgyixo7ljiqkolvxn0/default.intermine.production.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/report.sql.generation" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/tmp/report.sql.generation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/schema7894211799555176260xml.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmodel/build/tmp/sqldb.map" beforeDir="false" afterPath="$PROJECT_DIR$/dbmodel/build/tmp/sqldb.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/classes/org/yeastmine/web/displayer/SpellDisplayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/classes/org/yeastmine/web/displayer/SpellExpressionDisplayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/main/default.intermine.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/main/intermine.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/aspects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/classDescriptions.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/classes/InterMineWebApp.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/classes/default.intermine.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/classes/intermine.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/classes/org/yeastmine/web/displayer/SpellDisplayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/classes/org/yeastmine/web/displayer/SpellExpressionDisplayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/lib/yeastmine-dbmodel.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/objectstoresummary.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/struts-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/tiles-defs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/web.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/WEB-INF/webconfig-model.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/dataCategories.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/headMenu.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/GO.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/genomics.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/heading-bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/logo-bud-only-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/logo-bud-only-copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/logo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/progress1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/progress2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/progress3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/images/progress4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/interactions.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/literature.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/locatedSequenceFeatureImage.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/orthologues.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/pathways.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/phenotypes.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/proteins.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/publicationDisplayer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/spellDisplayer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/spellDisplayer.jsp.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/spellExpressionDisplayer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/tools.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/build/webapp/model/tools.jsp.alexy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/logic/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/logic/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/logic/results/ReportObject$TitleValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/logic/results/ReportObject$TitleValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/logic/results/ReportObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/logic/results/ReportObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/struts/BeginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/struts/BeginAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/struts/HtmlHeadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/struts/HtmlHeadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/struts/ReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/web/struts/ReportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/webservice/server/VersionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/webservice/server/VersionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/webservice/server/model/ModelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/webservice/server/model/ModelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/webservice/server/query/CodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/classes/org/intermine/webservice/server/query/CodeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/global.web.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/global.web.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/lib/bio-tools-3.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/lib/intermine-jbrowse-endpoint-3.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/css/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/htmlHead.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/htmlHead.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/explodedWebApp/report.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/explodedWebApp/report.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/props/objectstoresummary.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build/props/objectstoresummary.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/build/tmp/expandedArchives/intermine-resources-3.1.2.jar_1yxx6ltmgyixo7ljiqkolvxn0/default.intermine.production.properties" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -570,8 +244,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -579,30 +252,61 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7" />
+            <state relative-caret-position="120">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7" />
+            <state>
+              <caret column="26" selection-end-line="1" selection-end-column="27" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-751" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbmodel/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7" />
+            <state relative-caret-position="-79">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -611,10 +315,21 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Pseudogene</find>
+      <find>3.1.1</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/gradle.properties" />
+      </list>
+    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -626,10 +341,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1714" />
-    <option name="y" value="50" />
-    <option name="width" value="1708" />
-    <option name="height" value="1024" />
+    <option name="x" value="1931" />
+    <option name="y" value="365" />
+    <option name="width" value="1700" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -646,6 +361,11 @@
             <path>
               <item name="yeastmine" type="b2602c69:ProjectViewProjectNode" />
               <item name="yeastmine" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yeastmine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yeastmine" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="dbmodel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -654,15 +374,25 @@
               <item name="dbmodel" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="yeastmine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yeastmine" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yeastmine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -691,20 +421,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1714" y="50" width="1708" height="1024" extended-state="0" />
+    <frame x="1931" y="365" width="1700" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2965186" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24306393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.04506438" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -712,45 +438,24 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Build" order="10" visible="true" weight="0.044067796" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dbmodel/build/model/genomic_model.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodel/build/model/genomic_keyDefs.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodel/build/model/genomic_model.xml" />
+    <entry file="file://$PROJECT_DIR$/dbmodel/build/model/genomic_keyDefs.properties" />
     <entry file="file://$PROJECT_DIR$/dbmodel/build/so_additions.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="649">
@@ -758,9 +463,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-751" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dbmodel/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7" />
+        <state relative-caret-position="-79">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
       </provider>
     </entry>
   </component>

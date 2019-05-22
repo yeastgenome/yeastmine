@@ -69,13 +69,6 @@ public class ARSShadow implements ARS, ShadowClass
     public java.lang.String getFeatAttribute() { return featAttribute; }
     public void setFeatAttribute(final java.lang.String featAttribute) { this.featAttribute = featAttribute; }
 
-    // Ref: org.intermine.model.bio.SequenceFeature.strain
-    protected org.intermine.model.InterMineObject strain;
-    public org.intermine.model.bio.Strain getStrain() { if (strain instanceof org.intermine.objectstore.proxy.ProxyReference) { return ((org.intermine.model.bio.Strain) ((org.intermine.objectstore.proxy.ProxyReference) strain).getObject()); }; return (org.intermine.model.bio.Strain) strain; }
-    public void setStrain(final org.intermine.model.bio.Strain strain) { this.strain = strain; }
-    public void proxyStrain(final org.intermine.objectstore.proxy.ProxyReference strain) { this.strain = strain; }
-    public org.intermine.model.InterMineObject proxGetStrain() { return strain; }
-
     // Ref: org.intermine.model.bio.SequenceFeature.sequenceOntologyTerm
     protected org.intermine.model.InterMineObject sequenceOntologyTerm;
     public org.intermine.model.bio.SOTerm getSequenceOntologyTerm() { if (sequenceOntologyTerm instanceof org.intermine.objectstore.proxy.ProxyReference) { return ((org.intermine.model.bio.SOTerm) ((org.intermine.objectstore.proxy.ProxyReference) sequenceOntologyTerm).getObject()); }; return (org.intermine.model.bio.SOTerm) sequenceOntologyTerm; }
@@ -203,7 +196,7 @@ public class ARSShadow implements ARS, ShadowClass
 
     @Override public boolean equals(Object o) { return (o instanceof ARS && id != null) ? id.equals(((ARS)o).getId()) : this == o; }
     @Override public int hashCode() { return (id != null) ? id.hashCode() : super.hashCode(); }
-    @Override public String toString() { return "ARS [briefDescription=" + (briefDescription == null ? "null" : "\"" + briefDescription + "\"") + ", chromosome=" + (chromosome == null ? "null" : (chromosome.getId() == null ? "no id" : chromosome.getId().toString())) + ", chromosomeLocation=" + (chromosomeLocation == null ? "null" : (chromosomeLocation.getId() == null ? "no id" : chromosomeLocation.getId().toString())) + ", description=" + (description == null ? "null" : "\"" + description + "\"") + ", featAttribute=" + (featAttribute == null ? "null" : "\"" + featAttribute + "\"") + ", featureType=" + (featureType == null ? "null" : "\"" + featureType + "\"") + ", geneSummary=" + (geneSummary == null ? "null" : "\"" + geneSummary + "\"") + ", id=" + id + ", length=" + length + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", organism=" + (organism == null ? "null" : (organism.getId() == null ? "no id" : organism.getId().toString())) + ", primaryIdentifier=" + (primaryIdentifier == null ? "null" : "\"" + primaryIdentifier + "\"") + ", qualifier=" + (qualifier == null ? "null" : "\"" + qualifier + "\"") + ", score=" + score + ", scoreType=" + (scoreType == null ? "null" : "\"" + scoreType + "\"") + ", secondaryIdentifier=" + (secondaryIdentifier == null ? "null" : "\"" + secondaryIdentifier + "\"") + ", sequence=" + (sequence == null ? "null" : (sequence.getId() == null ? "no id" : sequence.getId().toString())) + ", sequenceOntologyTerm=" + (sequenceOntologyTerm == null ? "null" : (sequenceOntologyTerm.getId() == null ? "no id" : sequenceOntologyTerm.getId().toString())) + ", sgdAlias=" + (sgdAlias == null ? "null" : "\"" + sgdAlias + "\"") + ", status=" + (status == null ? "null" : "\"" + status + "\"") + ", strain=" + (strain == null ? "null" : (strain.getId() == null ? "no id" : strain.getId().toString())) + ", symbol=" + (symbol == null ? "null" : "\"" + symbol + "\"") + "]"; }
+    @Override public String toString() { return "ARS [briefDescription=" + (briefDescription == null ? "null" : "\"" + briefDescription + "\"") + ", chromosome=" + (chromosome == null ? "null" : (chromosome.getId() == null ? "no id" : chromosome.getId().toString())) + ", chromosomeLocation=" + (chromosomeLocation == null ? "null" : (chromosomeLocation.getId() == null ? "no id" : chromosomeLocation.getId().toString())) + ", description=" + (description == null ? "null" : "\"" + description + "\"") + ", featAttribute=" + (featAttribute == null ? "null" : "\"" + featAttribute + "\"") + ", featureType=" + (featureType == null ? "null" : "\"" + featureType + "\"") + ", geneSummary=" + (geneSummary == null ? "null" : "\"" + geneSummary + "\"") + ", id=" + id + ", length=" + length + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", organism=" + (organism == null ? "null" : (organism.getId() == null ? "no id" : organism.getId().toString())) + ", primaryIdentifier=" + (primaryIdentifier == null ? "null" : "\"" + primaryIdentifier + "\"") + ", qualifier=" + (qualifier == null ? "null" : "\"" + qualifier + "\"") + ", score=" + score + ", scoreType=" + (scoreType == null ? "null" : "\"" + scoreType + "\"") + ", secondaryIdentifier=" + (secondaryIdentifier == null ? "null" : "\"" + secondaryIdentifier + "\"") + ", sequence=" + (sequence == null ? "null" : (sequence.getId() == null ? "no id" : sequence.getId().toString())) + ", sequenceOntologyTerm=" + (sequenceOntologyTerm == null ? "null" : (sequenceOntologyTerm.getId() == null ? "no id" : sequenceOntologyTerm.getId().toString())) + ", sgdAlias=" + (sgdAlias == null ? "null" : "\"" + sgdAlias + "\"") + ", status=" + (status == null ? "null" : "\"" + status + "\"") + ", symbol=" + (symbol == null ? "null" : "\"" + symbol + "\"") + "]"; }
     public Object getFieldValue(final String fieldName) throws IllegalAccessException {
         if ("geneSummary".equals(fieldName)) {
             return geneSummary;
@@ -237,13 +230,6 @@ public class ARSShadow implements ARS, ShadowClass
         }
         if ("featAttribute".equals(fieldName)) {
             return featAttribute;
-        }
-        if ("strain".equals(fieldName)) {
-            if (strain instanceof ProxyReference) {
-                return ((ProxyReference) strain).getObject();
-            } else {
-                return strain;
-            }
         }
         if ("sequenceOntologyTerm".equals(fieldName)) {
             if (sequenceOntologyTerm instanceof ProxyReference) {
@@ -367,9 +353,6 @@ public class ARSShadow implements ARS, ShadowClass
         if ("featAttribute".equals(fieldName)) {
             return featAttribute;
         }
-        if ("strain".equals(fieldName)) {
-            return strain;
-        }
         if ("sequenceOntologyTerm".equals(fieldName)) {
             return sequenceOntologyTerm;
         }
@@ -461,8 +444,6 @@ public class ARSShadow implements ARS, ShadowClass
             qualifier = (java.lang.String) value;
         } else if ("featAttribute".equals(fieldName)) {
             featAttribute = (java.lang.String) value;
-        } else if ("strain".equals(fieldName)) {
-            strain = (org.intermine.model.InterMineObject) value;
         } else if ("sequenceOntologyTerm".equals(fieldName)) {
             sequenceOntologyTerm = (org.intermine.model.InterMineObject) value;
         } else if ("chromosomeLocation".equals(fieldName)) {
@@ -546,9 +527,6 @@ public class ARSShadow implements ARS, ShadowClass
         }
         if ("featAttribute".equals(fieldName)) {
             return java.lang.String.class;
-        }
-        if ("strain".equals(fieldName)) {
-            return org.intermine.model.bio.Strain.class;
         }
         if ("sequenceOntologyTerm".equals(fieldName)) {
             return org.intermine.model.bio.SOTerm.class;
@@ -749,9 +727,6 @@ public class ARSShadow implements ARS, ShadowClass
                     string = string.substring(delimPosition + 3);
                 }
             }
-        }
-        if (strain != null) {
-            sb.append("$_^rstrain$_^").append(strain.getId());
         }
         if (sequenceOntologyTerm != null) {
             sb.append("$_^rsequenceOntologyTerm$_^").append(sequenceOntologyTerm.getId());
@@ -955,11 +930,6 @@ public class ARSShadow implements ARS, ShadowClass
                 featAttribute = string == null ? notXml[i] : string.toString();
                 i++;
             }
-            if ((i < notXml.length) &&"rstrain".equals(notXml[i])) {
-                i++;
-                strain = new ProxyReference(os, Integer.valueOf(notXml[i]), org.intermine.model.bio.Strain.class);
-                i++;
-            };
             if ((i < notXml.length) &&"rsequenceOntologyTerm".equals(notXml[i])) {
                 i++;
                 sequenceOntologyTerm = new ProxyReference(os, Integer.valueOf(notXml[i]), org.intermine.model.bio.SOTerm.class);

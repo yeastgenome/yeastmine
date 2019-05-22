@@ -17,7 +17,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -51,7 +50,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -81,7 +79,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -114,7 +111,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -125,15 +121,6 @@
         <column name="regulationSummaryId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="SnoRNAGene_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="Ontology">
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="url" type="LONGVARCHAR"/>
-        <column name="name" type="LONGVARCHAR"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="Ontology_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -161,7 +148,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -172,18 +158,38 @@
             <unique-column name="id"/>
         </unique>
     </table>
-    <table name="Strain">
-        <column name="sgdAlias" type="LONGVARCHAR"/>
+    <table name="Gene">
+        <column name="briefDescription" type="LONGVARCHAR"/>
+        <column name="scoreType" type="LONGVARCHAR"/>
+        <column name="description" type="LONGVARCHAR"/>
         <column name="id" type="INTEGER" required="true"/>
-        <column name="symbol" type="LONGVARCHAR"/>
-        <column name="annotationVersion" type="LONGVARCHAR"/>
-        <column name="assemblyVersion" type="LONGVARCHAR"/>
+        <column name="status" type="LONGVARCHAR"/>
+        <column name="length" type="INTEGER"/>
         <column name="name" type="LONGVARCHAR"/>
-        <column name="secondaryIdentifier" type="LONGVARCHAR"/>
+        <column name="qualifier" type="LONGVARCHAR"/>
         <column name="primaryIdentifier" type="LONGVARCHAR"/>
+        <column name="featAttribute" type="LONGVARCHAR"/>
+        <column name="score" type="DOUBLE"/>
+        <column name="geneSummary" type="LONGVARCHAR"/>
+        <column name="sgdAlias" type="LONGVARCHAR"/>
+        <column name="symbol" type="LONGVARCHAR"/>
+        <column name="featureType" type="LONGVARCHAR"/>
+        <column name="phenotypeSummary" type="LONGVARCHAR"/>
+        <column name="functionSummary" type="LONGVARCHAR"/>
+        <column name="cytoLocation" type="LONGVARCHAR"/>
+        <column name="secondaryIdentifier" type="LONGVARCHAR"/>
+        <column name="upstreamIntergenicRegionId" type="INTEGER"/>
+        <column name="downstreamIntergenicRegionId" type="INTEGER"/>
+        <column name="plasmidId" type="INTEGER"/>
+        <column name="sequenceOntologyTermId" type="INTEGER"/>
+        <column name="plasmidLocationId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
+        <column name="chromosomeLocationId" type="INTEGER"/>
+        <column name="sequenceId" type="INTEGER"/>
+        <column name="chromosomeId" type="INTEGER"/>
+        <column name="regulationSummaryId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
-        <unique name="Strain_pkey">
+        <unique name="Gene_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -211,7 +217,6 @@
         <column name="threePrimeDataSet" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="geneId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -256,7 +261,6 @@
         <column name="regulationType" type="LONGVARCHAR"/>
         <column name="datasource" type="LONGVARCHAR"/>
         <column name="regulatorId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="regEvidenceId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -309,7 +313,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -362,7 +365,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="X_regionsId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="Z2_regionsId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -374,42 +376,6 @@
         <column name="W_regionsId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="MatingTypeRegion_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="Gene">
-        <column name="briefDescription" type="LONGVARCHAR"/>
-        <column name="scoreType" type="LONGVARCHAR"/>
-        <column name="description" type="LONGVARCHAR"/>
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="status" type="LONGVARCHAR"/>
-        <column name="length" type="INTEGER"/>
-        <column name="name" type="LONGVARCHAR"/>
-        <column name="qualifier" type="LONGVARCHAR"/>
-        <column name="primaryIdentifier" type="LONGVARCHAR"/>
-        <column name="featAttribute" type="LONGVARCHAR"/>
-        <column name="score" type="DOUBLE"/>
-        <column name="geneSummary" type="LONGVARCHAR"/>
-        <column name="sgdAlias" type="LONGVARCHAR"/>
-        <column name="symbol" type="LONGVARCHAR"/>
-        <column name="featureType" type="LONGVARCHAR"/>
-        <column name="phenotypeSummary" type="LONGVARCHAR"/>
-        <column name="functionSummary" type="LONGVARCHAR"/>
-        <column name="cytoLocation" type="LONGVARCHAR"/>
-        <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="upstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
-        <column name="plasmidId" type="INTEGER"/>
-        <column name="sequenceOntologyTermId" type="INTEGER"/>
-        <column name="plasmidLocationId" type="INTEGER"/>
-        <column name="organismId" type="INTEGER"/>
-        <column name="chromosomeLocationId" type="INTEGER"/>
-        <column name="sequenceId" type="INTEGER"/>
-        <column name="chromosomeId" type="INTEGER"/>
-        <column name="regulationSummaryId" type="INTEGER"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="Gene_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -429,7 +395,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -457,7 +422,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="matingtyperegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -484,7 +448,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -522,7 +485,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -550,7 +512,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -621,7 +582,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="orfId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="telomereId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -650,7 +610,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -678,7 +637,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -705,7 +663,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -713,21 +670,6 @@
         <column name="chromosomeId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="BiologicalRegion_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="Organism">
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="species" type="LONGVARCHAR"/>
-        <column name="genus" type="LONGVARCHAR"/>
-        <column name="taxonId" type="LONGVARCHAR"/>
-        <column name="name" type="LONGVARCHAR"/>
-        <column name="annotationVersion" type="LONGVARCHAR"/>
-        <column name="assemblyVersion" type="LONGVARCHAR"/>
-        <column name="commonName" type="LONGVARCHAR"/>
-        <column name="shortName" type="LONGVARCHAR"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="Organism_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -748,7 +690,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="matingtyperegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -779,7 +720,6 @@
         <column name="includeGene" type="BIT"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="geneId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -797,6 +737,32 @@
         <column name="primaryIdentifier" type="LONGVARCHAR"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="Disease_pkey">
+            <unique-column name="id"/>
+        </unique>
+    </table>
+    <table name="SequenceFeature">
+        <column name="briefDescription" type="LONGVARCHAR"/>
+        <column name="scoreType" type="LONGVARCHAR"/>
+        <column name="description" type="LONGVARCHAR"/>
+        <column name="id" type="INTEGER" required="true"/>
+        <column name="status" type="LONGVARCHAR"/>
+        <column name="length" type="INTEGER"/>
+        <column name="name" type="LONGVARCHAR"/>
+        <column name="qualifier" type="LONGVARCHAR"/>
+        <column name="primaryIdentifier" type="LONGVARCHAR"/>
+        <column name="featAttribute" type="LONGVARCHAR"/>
+        <column name="score" type="DOUBLE"/>
+        <column name="sgdAlias" type="LONGVARCHAR"/>
+        <column name="symbol" type="LONGVARCHAR"/>
+        <column name="featureType" type="LONGVARCHAR"/>
+        <column name="secondaryIdentifier" type="LONGVARCHAR"/>
+        <column name="sequenceOntologyTermId" type="INTEGER"/>
+        <column name="organismId" type="INTEGER"/>
+        <column name="chromosomeLocationId" type="INTEGER"/>
+        <column name="sequenceId" type="INTEGER"/>
+        <column name="chromosomeId" type="INTEGER"/>
+        <column name="class" type="LONGVARCHAR"/>
+        <unique name="SequenceFeature_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -872,7 +838,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -905,7 +870,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -936,7 +900,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="xelementId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="arsId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -965,7 +928,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1021,7 +983,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="datasource" type="LONGVARCHAR"/>
         <column name="regEvidenceId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1055,7 +1016,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -1089,6 +1049,15 @@
             <unique-column name="id"/>
         </unique>
     </table>
+    <table name="Ontology">
+        <column name="id" type="INTEGER" required="true"/>
+        <column name="url" type="LONGVARCHAR"/>
+        <column name="name" type="LONGVARCHAR"/>
+        <column name="class" type="LONGVARCHAR"/>
+        <unique name="Ontology_pkey">
+            <unique-column name="id"/>
+        </unique>
+    </table>
     <table name="CentromereDNAElementIII">
         <column name="briefDescription" type="LONGVARCHAR"/>
         <column name="scoreType" type="LONGVARCHAR"/>
@@ -1106,7 +1075,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="centromereId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1133,7 +1101,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1162,7 +1129,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="ncrna_geneId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1195,7 +1161,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -1231,7 +1196,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -1306,7 +1270,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -1325,19 +1288,6 @@
         <column name="tagname" type="LONGVARCHAR"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="ExpressionDataSetTag_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="DataSet">
-        <column name="description" type="LONGVARCHAR"/>
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="url" type="LONGVARCHAR"/>
-        <column name="name" type="LONGVARCHAR"/>
-        <column name="version" type="LONGVARCHAR"/>
-        <column name="dataSourceId" type="INTEGER"/>
-        <column name="publicationId" type="INTEGER"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="DataSet_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -1374,7 +1324,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -1405,7 +1354,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1443,7 +1391,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1483,7 +1430,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1521,7 +1467,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1550,7 +1495,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="regulatorId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1559,16 +1503,6 @@
         <column name="xelementId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="BindingSite_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="DiseaseEvidence">
-        <column name="withText" type="LONGVARCHAR"/>
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="annotType" type="LONGVARCHAR"/>
-        <column name="codeId" type="INTEGER"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="DiseaseEvidence_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -1590,7 +1524,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="centromereDNAElementIsId" type="INTEGER"/>
         <column name="centromereDNAElementIIIsId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1643,7 +1576,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="geneId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -1698,7 +1630,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1737,7 +1668,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1764,7 +1694,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1827,7 +1756,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="xelementcombinatorialrepeatId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -1855,7 +1783,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="telomereId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -1865,14 +1792,6 @@
         <column name="yprimeelementId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="XElementCombinatorialRepeat_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="DiseaseEvidenceCode">
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="code" type="LONGVARCHAR"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="DiseaseEvidenceCode_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -1892,7 +1811,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -1942,7 +1860,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="ncrna_geneId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -1980,7 +1897,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="matingtyperegionId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -2020,7 +1936,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="matingtyperegionId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -2048,7 +1963,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -2081,7 +1995,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2108,7 +2021,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2194,6 +2106,20 @@
             <unique-column name="id"/>
         </unique>
     </table>
+    <table name="DataSet">
+        <column name="description" type="LONGVARCHAR"/>
+        <column name="licence" type="LONGVARCHAR"/>
+        <column name="id" type="INTEGER" required="true"/>
+        <column name="url" type="LONGVARCHAR"/>
+        <column name="name" type="LONGVARCHAR"/>
+        <column name="version" type="LONGVARCHAR"/>
+        <column name="dataSourceId" type="INTEGER"/>
+        <column name="publicationId" type="INTEGER"/>
+        <column name="class" type="LONGVARCHAR"/>
+        <unique name="DataSet_pkey">
+            <unique-column name="id"/>
+        </unique>
+    </table>
     <table name="TransposableElementGene">
         <column name="briefDescription" type="LONGVARCHAR"/>
         <column name="scoreType" type="LONGVARCHAR"/>
@@ -2216,7 +2142,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -2247,7 +2172,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="orfId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2318,7 +2242,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="transposableelementgeneId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="pseudogeneId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
@@ -2348,7 +2271,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="centromereId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2386,16 +2308,6 @@
         <column name="intermine_function" type="LONGVARCHAR"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="Complex_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="DiseaseAnnotation">
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="qualifier" type="LONGVARCHAR"/>
-        <column name="subjectId" type="INTEGER"/>
-        <column name="ontologyTermId" type="INTEGER"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="DiseaseAnnotation_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -2486,7 +2398,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2516,33 +2427,6 @@
         <column name="ontologyId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="InteractionTerm_pkey">
-            <unique-column name="id"/>
-        </unique>
-    </table>
-    <table name="SequenceFeature">
-        <column name="briefDescription" type="LONGVARCHAR"/>
-        <column name="scoreType" type="LONGVARCHAR"/>
-        <column name="description" type="LONGVARCHAR"/>
-        <column name="id" type="INTEGER" required="true"/>
-        <column name="status" type="LONGVARCHAR"/>
-        <column name="length" type="INTEGER"/>
-        <column name="name" type="LONGVARCHAR"/>
-        <column name="qualifier" type="LONGVARCHAR"/>
-        <column name="primaryIdentifier" type="LONGVARCHAR"/>
-        <column name="featAttribute" type="LONGVARCHAR"/>
-        <column name="score" type="DOUBLE"/>
-        <column name="sgdAlias" type="LONGVARCHAR"/>
-        <column name="symbol" type="LONGVARCHAR"/>
-        <column name="featureType" type="LONGVARCHAR"/>
-        <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
-        <column name="sequenceOntologyTermId" type="INTEGER"/>
-        <column name="organismId" type="INTEGER"/>
-        <column name="chromosomeLocationId" type="INTEGER"/>
-        <column name="sequenceId" type="INTEGER"/>
-        <column name="chromosomeId" type="INTEGER"/>
-        <column name="class" type="LONGVARCHAR"/>
-        <unique name="SequenceFeature_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -2576,7 +2460,6 @@
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="geneId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2619,7 +2502,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -2649,7 +2531,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2676,7 +2557,6 @@
         <column name="symbol" type="LONGVARCHAR"/>
         <column name="featureType" type="LONGVARCHAR"/>
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="organismId" type="INTEGER"/>
         <column name="chromosomeLocationId" type="INTEGER"/>
@@ -2717,6 +2597,19 @@
         <column name="codeId" type="INTEGER"/>
         <column name="class" type="LONGVARCHAR"/>
         <unique name="GOEvidence_pkey">
+            <unique-column name="id"/>
+        </unique>
+    </table>
+    <table name="Organism">
+        <column name="id" type="INTEGER" required="true"/>
+        <column name="species" type="LONGVARCHAR"/>
+        <column name="genus" type="LONGVARCHAR"/>
+        <column name="taxonId" type="LONGVARCHAR"/>
+        <column name="name" type="LONGVARCHAR"/>
+        <column name="commonName" type="LONGVARCHAR"/>
+        <column name="shortName" type="LONGVARCHAR"/>
+        <column name="class" type="LONGVARCHAR"/>
+        <unique name="Organism_pkey">
             <unique-column name="id"/>
         </unique>
     </table>
@@ -2766,7 +2659,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -2802,7 +2694,6 @@
         <column name="secondaryIdentifier" type="LONGVARCHAR"/>
         <column name="upstreamIntergenicRegionId" type="INTEGER"/>
         <column name="downstreamIntergenicRegionId" type="INTEGER"/>
-        <column name="strainId" type="INTEGER"/>
         <column name="sequenceOntologyTermId" type="INTEGER"/>
         <column name="plasmidId" type="INTEGER"/>
         <column name="plasmidLocationId" type="INTEGER"/>
@@ -2828,13 +2719,13 @@
         <column name="InteractionExperiment" type="INTEGER" required="true"/>
         <column name="ParticipantIdentificationMethods" type="INTEGER" required="true"/>
     </table>
+    <table name="DataSetsOntology">
+        <column name="Ontology" type="INTEGER" required="true"/>
+        <column name="DataSets" type="INTEGER" required="true"/>
+    </table>
     <table name="GenesPhenotypes">
         <column name="Genes" type="INTEGER" required="true"/>
         <column name="Phenotypes" type="INTEGER" required="true"/>
-    </table>
-    <table name="DiseaseEvidenceIntermine_with">
-        <column name="DiseaseEvidence" type="INTEGER" required="true"/>
-        <column name="Intermine_with" type="INTEGER" required="true"/>
     </table>
     <table name="ExpressionScoresGene">
         <column name="Gene" type="INTEGER" required="true"/>
@@ -2847,10 +2738,6 @@
     <table name="CommentsInteractionExperiment">
         <column name="InteractionExperiment" type="INTEGER" required="true"/>
         <column name="Comments" type="INTEGER" required="true"/>
-    </table>
-    <table name="OrganismStrains">
-        <column name="Organism" type="INTEGER" required="true"/>
-        <column name="Strains" type="INTEGER" required="true"/>
     </table>
     <table name="ComplementCrossReferences">
         <column name="Complement" type="INTEGER" required="true"/>
@@ -2891,10 +2778,6 @@
     <table name="GenesProteins">
         <column name="Genes" type="INTEGER" required="true"/>
         <column name="Proteins" type="INTEGER" required="true"/>
-    </table>
-    <table name="DiseaseEvidencePublications">
-        <column name="DiseaseEvidence" type="INTEGER" required="true"/>
-        <column name="Publications" type="INTEGER" required="true"/>
     </table>
     <table name="GenesIntrons">
         <column name="Introns" type="INTEGER" required="true"/>
@@ -2960,10 +2843,6 @@
         <column name="OntologyTerm" type="INTEGER" required="true"/>
         <column name="CrossReferences" type="INTEGER" required="true"/>
     </table>
-    <table name="DiseaseAnnotationGene">
-        <column name="Gene" type="INTEGER" required="true"/>
-        <column name="DiseaseAnnotation" type="INTEGER" required="true"/>
-    </table>
     <table name="AuthorsPublications">
         <column name="Authors" type="INTEGER" required="true"/>
         <column name="Publications" type="INTEGER" required="true"/>
@@ -3013,8 +2892,8 @@
         <column name="Parents" type="INTEGER" required="true"/>
     </table>
     <table name="GenesPathways">
-        <column name="Pathways" type="INTEGER" required="true"/>
         <column name="Genes" type="INTEGER" required="true"/>
+        <column name="Pathways" type="INTEGER" required="true"/>
     </table>
     <table name="DataSetsDisease">
         <column name="Disease" type="INTEGER" required="true"/>

@@ -29,11 +29,6 @@ public interface SequenceFeature extends org.intermine.model.bio.BioEntity
     public java.lang.String getFeatAttribute();
     public void setFeatAttribute(final java.lang.String featAttribute);
 
-    public org.intermine.model.bio.Strain getStrain();
-    public void setStrain(final org.intermine.model.bio.Strain strain);
-    public void proxyStrain(final org.intermine.objectstore.proxy.ProxyReference strain);
-    public org.intermine.model.InterMineObject proxGetStrain();
-
     public org.intermine.model.bio.SOTerm getSequenceOntologyTerm();
     public void setSequenceOntologyTerm(final org.intermine.model.bio.SOTerm sequenceOntologyTerm);
     public void proxySequenceOntologyTerm(final org.intermine.objectstore.proxy.ProxyReference sequenceOntologyTerm);

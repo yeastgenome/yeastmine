@@ -3,7 +3,6 @@ package org.intermine.model.bio;
 import org.intermine.objectstore.ObjectStore;
 import org.intermine.objectstore.intermine.NotXmlParser;
 import org.intermine.objectstore.intermine.NotXmlRenderer;
-import org.intermine.objectstore.proxy.ProxyCollection;
 import org.intermine.model.StringConstructor;
 import org.intermine.metadata.TypeUtil;
 import org.intermine.util.DynamicUtil;
@@ -32,16 +31,6 @@ public class OrganismShadow implements Organism, ShadowClass
     public java.lang.String getName() { return name; }
     public void setName(final java.lang.String name) { this.name = name; }
 
-    // Attr: org.intermine.model.bio.Organism.annotationVersion
-    protected java.lang.String annotationVersion;
-    public java.lang.String getAnnotationVersion() { return annotationVersion; }
-    public void setAnnotationVersion(final java.lang.String annotationVersion) { this.annotationVersion = annotationVersion; }
-
-    // Attr: org.intermine.model.bio.Organism.assemblyVersion
-    protected java.lang.String assemblyVersion;
-    public java.lang.String getAssemblyVersion() { return assemblyVersion; }
-    public void setAssemblyVersion(final java.lang.String assemblyVersion) { this.assemblyVersion = assemblyVersion; }
-
     // Attr: org.intermine.model.bio.Organism.commonName
     protected java.lang.String commonName;
     public java.lang.String getCommonName() { return commonName; }
@@ -52,12 +41,6 @@ public class OrganismShadow implements Organism, ShadowClass
     public java.lang.String getShortName() { return shortName; }
     public void setShortName(final java.lang.String shortName) { this.shortName = shortName; }
 
-    // Col: org.intermine.model.bio.Organism.strains
-    protected java.util.Set<org.intermine.model.bio.Strain> strains = new java.util.HashSet<org.intermine.model.bio.Strain>();
-    public java.util.Set<org.intermine.model.bio.Strain> getStrains() { return strains; }
-    public void setStrains(final java.util.Set<org.intermine.model.bio.Strain> strains) { this.strains = strains; }
-    public void addStrains(final org.intermine.model.bio.Strain arg) { strains.add(arg); }
-
     // Attr: org.intermine.model.InterMineObject.id
     protected java.lang.Integer id;
     public java.lang.Integer getId() { return id; }
@@ -65,7 +48,7 @@ public class OrganismShadow implements Organism, ShadowClass
 
     @Override public boolean equals(Object o) { return (o instanceof Organism && id != null) ? id.equals(((Organism)o).getId()) : this == o; }
     @Override public int hashCode() { return (id != null) ? id.hashCode() : super.hashCode(); }
-    @Override public String toString() { return "Organism [annotationVersion=" + (annotationVersion == null ? "null" : "\"" + annotationVersion + "\"") + ", assemblyVersion=" + (assemblyVersion == null ? "null" : "\"" + assemblyVersion + "\"") + ", commonName=" + (commonName == null ? "null" : "\"" + commonName + "\"") + ", genus=" + (genus == null ? "null" : "\"" + genus + "\"") + ", id=" + id + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", shortName=" + (shortName == null ? "null" : "\"" + shortName + "\"") + ", species=" + (species == null ? "null" : "\"" + species + "\"") + ", taxonId=" + (taxonId == null ? "null" : "\"" + taxonId + "\"") + "]"; }
+    @Override public String toString() { return "Organism [commonName=" + (commonName == null ? "null" : "\"" + commonName + "\"") + ", genus=" + (genus == null ? "null" : "\"" + genus + "\"") + ", id=" + id + ", name=" + (name == null ? "null" : "\"" + name + "\"") + ", shortName=" + (shortName == null ? "null" : "\"" + shortName + "\"") + ", species=" + (species == null ? "null" : "\"" + species + "\"") + ", taxonId=" + (taxonId == null ? "null" : "\"" + taxonId + "\"") + "]"; }
     public Object getFieldValue(final String fieldName) throws IllegalAccessException {
         if ("species".equals(fieldName)) {
             return species;
@@ -79,20 +62,11 @@ public class OrganismShadow implements Organism, ShadowClass
         if ("name".equals(fieldName)) {
             return name;
         }
-        if ("annotationVersion".equals(fieldName)) {
-            return annotationVersion;
-        }
-        if ("assemblyVersion".equals(fieldName)) {
-            return assemblyVersion;
-        }
         if ("commonName".equals(fieldName)) {
             return commonName;
         }
         if ("shortName".equals(fieldName)) {
             return shortName;
-        }
-        if ("strains".equals(fieldName)) {
-            return strains;
         }
         if ("id".equals(fieldName)) {
             return id;
@@ -115,20 +89,11 @@ public class OrganismShadow implements Organism, ShadowClass
         if ("name".equals(fieldName)) {
             return name;
         }
-        if ("annotationVersion".equals(fieldName)) {
-            return annotationVersion;
-        }
-        if ("assemblyVersion".equals(fieldName)) {
-            return assemblyVersion;
-        }
         if ("commonName".equals(fieldName)) {
             return commonName;
         }
         if ("shortName".equals(fieldName)) {
             return shortName;
-        }
-        if ("strains".equals(fieldName)) {
-            return strains;
         }
         if ("id".equals(fieldName)) {
             return id;
@@ -147,16 +112,10 @@ public class OrganismShadow implements Organism, ShadowClass
             taxonId = (java.lang.String) value;
         } else if ("name".equals(fieldName)) {
             name = (java.lang.String) value;
-        } else if ("annotationVersion".equals(fieldName)) {
-            annotationVersion = (java.lang.String) value;
-        } else if ("assemblyVersion".equals(fieldName)) {
-            assemblyVersion = (java.lang.String) value;
         } else if ("commonName".equals(fieldName)) {
             commonName = (java.lang.String) value;
         } else if ("shortName".equals(fieldName)) {
             shortName = (java.lang.String) value;
-        } else if ("strains".equals(fieldName)) {
-            strains = (java.util.Set) value;
         } else if ("id".equals(fieldName)) {
             id = (java.lang.Integer) value;
         } else {
@@ -180,20 +139,11 @@ public class OrganismShadow implements Organism, ShadowClass
         if ("name".equals(fieldName)) {
             return java.lang.String.class;
         }
-        if ("annotationVersion".equals(fieldName)) {
-            return java.lang.String.class;
-        }
-        if ("assemblyVersion".equals(fieldName)) {
-            return java.lang.String.class;
-        }
         if ("commonName".equals(fieldName)) {
             return java.lang.String.class;
         }
         if ("shortName".equals(fieldName)) {
             return java.lang.String.class;
-        }
-        if ("strains".equals(fieldName)) {
-            return java.util.Set.class;
         }
         if ("id".equals(fieldName)) {
             return java.lang.Integer.class;
@@ -257,36 +207,6 @@ public class OrganismShadow implements Organism, ShadowClass
         if (name != null) {
             sb.append("$_^aname$_^");
             String string = name;
-            while (string != null) {
-                int delimPosition = string.indexOf("$_^");
-                if (delimPosition == -1) {
-                    sb.append(string);
-                    string = null;
-                } else {
-                    sb.append(string.substring(0, delimPosition + 3));
-                    sb.append("d");
-                    string = string.substring(delimPosition + 3);
-                }
-            }
-        }
-        if (annotationVersion != null) {
-            sb.append("$_^aannotationVersion$_^");
-            String string = annotationVersion;
-            while (string != null) {
-                int delimPosition = string.indexOf("$_^");
-                if (delimPosition == -1) {
-                    sb.append(string);
-                    string = null;
-                } else {
-                    sb.append(string.substring(0, delimPosition + 3));
-                    sb.append("d");
-                    string = string.substring(delimPosition + 3);
-                }
-            }
-        }
-        if (assemblyVersion != null) {
-            sb.append("$_^aassemblyVersion$_^");
-            String string = assemblyVersion;
             while (string != null) {
                 int delimPosition = string.indexOf("$_^");
                 if (delimPosition == -1) {
@@ -387,28 +307,6 @@ public class OrganismShadow implements Organism, ShadowClass
                 name = string == null ? notXml[i] : string.toString();
                 i++;
             }
-            if ((i < notXml.length) && "aannotationVersion".equals(notXml[i])) {
-                i++;
-                StringBuilder string = null;
-                while ((i + 1 < notXml.length) && (notXml[i + 1].charAt(0) == 'd')) {
-                    if (string == null) string = new StringBuilder(notXml[i]);
-                    i++;
-                    string.append("$_^").append(notXml[i].substring(1));
-                }
-                annotationVersion = string == null ? notXml[i] : string.toString();
-                i++;
-            }
-            if ((i < notXml.length) && "aassemblyVersion".equals(notXml[i])) {
-                i++;
-                StringBuilder string = null;
-                while ((i + 1 < notXml.length) && (notXml[i + 1].charAt(0) == 'd')) {
-                    if (string == null) string = new StringBuilder(notXml[i]);
-                    i++;
-                    string.append("$_^").append(notXml[i].substring(1));
-                }
-                assemblyVersion = string == null ? notXml[i] : string.toString();
-                i++;
-            }
             if ((i < notXml.length) && "acommonName".equals(notXml[i])) {
                 i++;
                 StringBuilder string = null;
@@ -440,12 +338,9 @@ public class OrganismShadow implements Organism, ShadowClass
                 throw new IllegalArgumentException("Unknown field " + notXml[i]);
             }
         }
-        strains = new ProxyCollection<org.intermine.model.bio.Strain>(os, this, "strains", org.intermine.model.bio.Strain.class);
     }
     public void addCollectionElement(final String fieldName, final org.intermine.model.InterMineObject element) {
-        if ("strains".equals(fieldName)) {
-            strains.add((org.intermine.model.bio.Strain) element);
-        } else {
+        {
             if (!org.intermine.model.bio.Organism.class.equals(getClass())) {
                 TypeUtil.addCollectionElement(this, fieldName, element);
                 return;
@@ -454,9 +349,6 @@ public class OrganismShadow implements Organism, ShadowClass
         }
     }
     public Class<?> getElementType(final String fieldName) {
-        if ("strains".equals(fieldName)) {
-            return org.intermine.model.bio.Strain.class;
-        }
         if (!org.intermine.model.bio.Organism.class.equals(getClass())) {
             return TypeUtil.getElementType(org.intermine.model.bio.Organism.class, fieldName);
         }

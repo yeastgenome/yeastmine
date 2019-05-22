@@ -1,63 +1,63 @@
 <?xml version="1.0"?>
 <classes>
-<class name="ARS" extends="OriginOfReplication" is-interface="true"></class>
-<class name="BindingSite" extends="BiologicalRegion" is-interface="true"></class>
-<class name="BiologicalRegion" extends="SequenceFeature" is-interface="true"></class>
-<class name="BlockedReadingFrame" extends="SequenceFeature" is-interface="true"></class>
-<class name="CDS" extends="BiologicalRegion" is-interface="true"></class>
-<class name="Centromere" extends="BiologicalRegion" is-interface="true">
+<class name="ARS" extends="OriginOfReplication" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000436"></class>
+<class name="BindingSite" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000409"></class>
+<class name="BiologicalRegion" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001411"></class>
+<class name="BlockedReadingFrame" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000718"></class>
+<class name="CDS" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000316"></class>
+<class name="Centromere" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000577">
 	<reference name="chromosome" referenced-type="Chromosome"/>
 </class>
-<class name="CentromereDNAElementI" extends="SequenceFeature" is-interface="true"></class>
-<class name="CentromereDNAElementII" extends="SequenceFeature" is-interface="true"></class>
-<class name="CentromereDNAElementIII" extends="SequenceFeature" is-interface="true"></class>
-<class name="Chromosome" extends="BiologicalRegion" is-interface="true"></class>
-<class name="ExternalTranscribedSpacerRegion" extends="BiologicalRegion" is-interface="true"></class>
-<class name="Insertion" extends="BiologicalRegion" is-interface="true"></class>
-<class name="IntergenicRegion" extends="BiologicalRegion" is-interface="true"></class>
-<class name="InternalTranscribedSpacerRegion" extends="BiologicalRegion" is-interface="true"></class>
-<class name="Intron" extends="BiologicalRegion" is-interface="true"></class>
-<class name="LongTerminalRepeat" extends="RepeatRegion" is-interface="true"></class>
-<class name="MatrixAttachmentSite" extends="BiologicalRegion" is-interface="true">
+<class name="CentromereDNAElementI" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001493"></class>
+<class name="CentromereDNAElementII" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001494"></class>
+<class name="CentromereDNAElementIII" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001495"></class>
+<class name="Chromosome" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000340"></class>
+<class name="ExternalTranscribedSpacerRegion" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000640"></class>
+<class name="Insertion" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000667"></class>
+<class name="IntergenicRegion" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000605"></class>
+<class name="InternalTranscribedSpacerRegion" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000639"></class>
+<class name="Intron" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000188"></class>
+<class name="LongTerminalRepeat" extends="RepeatRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000286"></class>
+<class name="MatrixAttachmentSite" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000036">
 	<reference name="chromosome" referenced-type="Chromosome"/>
 </class>
-<class name="NcRNAGene" extends="BiologicalRegion" is-interface="true"></class>
-<class name="NoncodingExon" extends="BiologicalRegion" is-interface="true"></class>
-<class name="NonTranscribedRegion" extends="BiologicalRegion" is-interface="true"></class>
-<class name="ORF" extends="SequenceFeature" is-interface="true"></class>
-<class name="OriginOfReplication" extends="BiologicalRegion" is-interface="true"></class>
-<class name="Plasmid" extends="BiologicalRegion" is-interface="true"></class>
-<class name="Plus1TranslationalFrameshift" extends="BiologicalRegion" is-interface="true"></class>
-<class name="ProteinCodingGene" extends="BiologicalRegion" is-interface="true"></class>
-<class name="Pseudogene" extends="BiologicalRegion" is-interface="true"></class>
-<class name="RegulatoryRegion" extends="BiologicalRegion" is-interface="true"></class>
-<class name="RepeatRegion" extends="BiologicalRegion" is-interface="true"></class>
-<class name="Retrotransposon" extends="BiologicalRegion" is-interface="true"></class>
-<class name="SAGETag" extends="SequenceFeature" is-interface="true"></class>
-<class name="SequenceFeature" is-interface="true"></class>
-<class name="SnoRNAGene" extends="NcRNAGene" is-interface="true"></class>
-<class name="SnRNAGene" extends="NcRNAGene" is-interface="true"></class>
-<class name="TelomeraseRNAGene" extends="NcRNAGene" is-interface="true"></class>
-<class name="Telomere" extends="BiologicalRegion" is-interface="true">
+<class name="NcRNAGene" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001263"></class>
+<class name="NoncodingExon" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000198"></class>
+<class name="NonTranscribedRegion" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000183"></class>
+<class name="ORF" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000236"></class>
+<class name="OriginOfReplication" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000296"></class>
+<class name="Plasmid" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000155"></class>
+<class name="Plus1TranslationalFrameshift" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001211"></class>
+<class name="ProteinCodingGene" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001217"></class>
+<class name="Pseudogene" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000336"></class>
+<class name="RegulatoryRegion" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0005836"></class>
+<class name="RepeatRegion" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000657"></class>
+<class name="Retrotransposon" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000180"></class>
+<class name="SAGETag" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000326"></class>
+<class name="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000110"></class>
+<class name="SnoRNAGene" extends="NcRNAGene" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001267"></class>
+<class name="SnRNAGene" extends="NcRNAGene" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001268"></class>
+<class name="TelomeraseRNAGene" extends="NcRNAGene" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001643"></class>
+<class name="Telomere" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000624">
 	<reference name="chromosome" referenced-type="Chromosome"/>
 	<collection name="XElementCombinatorialRepeats" referenced-type="XElementCombinatorialRepeat" reverse-reference="telomere"/>
 	<collection name="telomericRepeats" referenced-type="TelomericRepeat" reverse-reference="telomere"/>
 	<collection name="YPrimeElements" referenced-type="YPrimeElement" reverse-reference="telomere"/>
 	<collection name="XElements" referenced-type="XElement" reverse-reference="telomere"/>
 </class>
-<class name="TelomericRepeat" extends="RepeatRegion" is-interface="true">
+<class name="TelomericRepeat" extends="RepeatRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001496">
 	<reference name="telomere" referenced-type="Telomere" reverse-reference="telomericRepeats"/>
 </class>
-<class name="TFBindingSite" extends="BindingSite RegulatoryRegion" is-interface="true"></class>
-<class name="TransposableElementGene" extends="BiologicalRegion" is-interface="true"></class>
-<class name="TRNAGene" extends="NcRNAGene" is-interface="true"></class>
-<class name="XElement" extends="SequenceFeature" is-interface="true">
+<class name="TFBindingSite" extends="BindingSite RegulatoryRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000235"></class>
+<class name="TransposableElementGene" extends="BiologicalRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000111"></class>
+<class name="TRNAGene" extends="NcRNAGene" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001272"></class>
+<class name="XElement" extends="SequenceFeature" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001497">
 	<reference name="telomere" referenced-type="Telomere" reverse-reference="XElements"/>
 </class>
-<class name="XElementCombinatorialRepeat" extends="RepeatRegion" is-interface="true">
+<class name="XElementCombinatorialRepeat" extends="RepeatRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001484">
 	<reference name="telomere" referenced-type="Telomere" reverse-reference="XElementCombinatorialRepeats"/>
 </class>
-<class name="YPrimeElement" extends="RepeatRegion" is-interface="true">
+<class name="YPrimeElement" extends="RepeatRegion" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0001485">
 	<reference name="telomere" referenced-type="Telomere" reverse-reference="YPrimeElements"/>
 </class>
 </classes>
