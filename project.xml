@@ -88,11 +88,11 @@
       <property name="panther.homologues" value="7227 9606 10090 10116 7955 6239 4932"/>
     </source>
     
-    <source name="homologene" type="homologene">
+    <!--<source name="homologene" type="homologene">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/homologene"/>
       <property name="homologene.organisms" value="4932"/>   
       <property name="homologene.homologues" value="7227 9606 10090 10116 7955 6239 4932"/>
-    </source>
+    </source>-->
     
     <source name="ensembl-compara" type="ensembl-compara">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/ensembl_compara"/>
@@ -112,11 +112,11 @@
       <property name="src.data.file" location="/share/intermine/go/goslim_yeast.obo"/>
     </source>
     
-    <source name="go-annotation" type="go-annotation">
+    <!--<source name="go-annotation" type="go-annotation">
       <property name="ontologyfile" location="/share/intermine/go/gene_ontology_edit.obo"/>
       <property name="src.data.dir" location="/share/intermine/go"/>
       <property name="src.data.dir.includes" value="gene_association.sgd-yeastmine"/>
-    </source> 
+    </source>--> 
 
     <source name="go-annotation-db" type="go-annotation-db">
       <property name="source.db.name" value="sgd"/>
