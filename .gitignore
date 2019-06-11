@@ -1,8 +1,8 @@
-
 bin/
 dist/
 client-dist/
 build/
+dbmodel/build/
 client-build/
 *.log
 *.log.*
