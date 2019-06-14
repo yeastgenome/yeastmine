@@ -490,7 +490,7 @@
 		</inlinelist>
 		<fields>
 			<fieldconfig fieldExpr="pubMedId" />
-			<fieldconfig fieldExpr="sgdDbXrefId" />
+			<fieldconfig fieldExpr="pubXrefId" />
 			<fieldconfig fieldExpr="citation" />
 			<fieldconfig fieldExpr="title" />
 			<fieldconfig fieldExpr="journal" />
@@ -675,7 +675,8 @@
 			startClass="Gene" startClassDisplay="secondaryIdentifier"
 			enrich="goAnnotation.ontologyTerm.parents.name" enrichIdentifier="goAnnotation.ontologyTerm.parents.identifier"
 			constraints="goAnnotation.ontologyTerm.parents.namespace=[Ontology],organism.name=[list],
-	                                              primaryIdentifier != null, goAnnotation.qualifier = null,
+	                                              primaryIdentifier != null, goAnnotation.qualifier != 'colocalizes_with',
+	                                              goAnnotation.qualifier != 'contributes_to', goAnnotation.qualifier != 'NOT',
 	                                              goAnnotation.ontologyTerm.parents.identifier != go:0008150,
                                               goAnnotation.ontologyTerm.parents.identifier != go:0003674,
 	                                              goAnnotation.ontologyTerm.parents.identifier != go:0005575"

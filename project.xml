@@ -111,12 +111,6 @@
     <source name="go-slim" type="go-slim">
       <property name="src.data.file" location="/share/intermine/go/goslim_yeast.obo"/>
     </source>
-    
-    <!--<source name="go-annotation" type="go-annotation">
-      <property name="ontologyfile" location="/share/intermine/go/gene_ontology_edit.obo"/>
-      <property name="src.data.dir" location="/share/intermine/go"/>
-      <property name="src.data.dir.includes" value="gene_association.sgd-yeastmine"/>
-    </source>--> 
 
     <source name="go-annotation-db" type="go-annotation-db">
       <property name="source.db.name" value="sgd"/>
@@ -166,7 +160,6 @@
     <post-process name="create-references"/>
     <post-process name="do-sources"/>
     <post-process name="create-intergenic-region-features"/>
-    <!--<post-process name="create-bioseg-location-index"/>-->
     <post-process name="create-location-overlap-index"/>
     <post-process name="create-overlap-view"/>
     <post-process name="create-gene-flanking-features"/>
