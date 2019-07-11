@@ -91,13 +91,13 @@
     <!--<source name="homologene" type="homologene">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/homologene"/>
       <property name="homologene.organisms" value="4932"/>   
-      <property name="homologene.homologues" value="7227 9606 10090 10116 7955 6239 4932"/>
+      <property name="homologene.homologues" value="7227 9606 10090 10116 7955 4932"/>
     </source>-->
     
     <source name="ensembl-compara" type="ensembl-compara">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/ensembl_compara"/>
       <property name="ensemblcompara.organisms" value="4932"/>
-      <property name="ensemblcompara.homologues" value="9606 7227 6239 10090 10116 7955"/>
+      <property name="ensemblcompara.homologues" value="9606 7227 10090 10116 6239 7955"/>
     </source>
     
     <source name="psi-mi-ontology" type="psi-mi-ontology">
