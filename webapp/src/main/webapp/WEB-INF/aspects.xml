@@ -84,5 +84,12 @@
 		<aspect-source name="Homology" url="http://yeastmine.yeastgenome.org/" />
 	</aspect>
 
+	<aspect name="Downloads">
+		<subtitle>Downloads</subtitle>
+		<intro-text> &lt;p&gt; Download data for &lt;i&gt;S. cerevisiae
+			&lt;/i&gt;. </intro-text>
+		<aspect-source name="Downloads" url="http://yeastmine.yeastgenome.org/" />
+	</aspect>
+
 
 </aspects>

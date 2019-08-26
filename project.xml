@@ -74,6 +74,7 @@
     <source name="omim" type="omim">
       <property name="src.data.dir" location="/data/intermine/omim"/>
     </source>
+
     <source name="treefam" type="treefam">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/treefam"/>
       <property name="src.data.dir.includes" value="ortholog.txt.table"/>
