@@ -18,7 +18,7 @@
 YeastMine is a flexible search interface that provides fast retrieval of chromosomal features, sequences, and GO-related annotations. 
  All data can be downloaded using the 'Export' button on the results toolbar. To view all template queries, click on the <a href="http://scone.stanford.edu:8080/yeastmine/templates.do"> 'Templates' </a> tab in the top menu bar. 
  <br>
- Please contact <a href="http://www.yeastgenome.org/cgi-bin/suggestion">yeast-curator</a> if you have any questions.
+ Please contact <a href="http://www.yeastgenome.org/suggestion">yeast-curator</a> if you have any questions.
 <br>
 </p></im:boxarea>
 
