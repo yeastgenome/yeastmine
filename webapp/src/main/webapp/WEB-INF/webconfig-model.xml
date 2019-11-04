@@ -196,9 +196,9 @@
 
 	<class className="org.intermine.model.bio.GOAnnotation">
 		<fields>
-			<!--<fieldconfig fieldExpr="Gene.secondaryIdentifier" />
-			<fieldconfig fieldExpr="Gene.name" />
-			<fieldconfig fieldExpr="Gene.symbol" />-->
+			<fieldconfig fieldExpr="subject.primaryIdentifier" />
+			<!--<fieldconfig fieldExpr="subject.name" />
+			<fieldconfig fieldExpr="subject.symbol" />-->
 			<fieldconfig fieldExpr="ontologyTerm.identifier"></fieldconfig>
 			<fieldconfig fieldExpr="ontologyTerm.name"></fieldconfig>
 			<fieldconfig showInSummary="false" fieldExpr="ontologyTerm.namespace"></fieldconfig>
