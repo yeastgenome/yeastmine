@@ -722,12 +722,16 @@
 	                                interactions.participant2.symbol,
                                    interactions.details.experiment.name" />
 
-		<!--<bagtabledisplayer id="phenotypes" title="Phenotypes" pathStrings="Gene.phenotypes.observable" 
+		<bagtabledisplayer id="phenotypes" title="Phenotypes"
+                           pathStrings="Gene.phenotypes.observable"
 			description="Genes (from the list or not) that have same observable as genes 
-			in this list." displayFields="secondaryIdentifier, name" exportField="primaryIdentifier" 
-			typeClass="Gene" columnTitle="Observable" views="secondaryIdentifier, symbol, 
-			organism.shortName, phenotypes.experimentType, phenotypes.mutantType, phenotypes.observable, 
-			phenotypes.qualifier" /> <bagtabledisplayer id="domains" title="Protein Domains" 
+			in this list."
+                           displayFields="secondaryIdentifier, name" exportField="primaryIdentifier"
+			typeClass="Gene" columnTitle="Observable" views="secondaryIdentifier, symbol,
+			organism.shortName, phenotypes.experimentType, phenotypes.mutantType, phenotypes.observable,
+			phenotypes.qualifier" />
+
+		<!--<bagtabledisplayer id="domains" title="Protein Domains"
 			pathStrings="Gene.proteins.proteinDomains.name" description="Counts of genes 
 			in list with domains." displayFields="name" exportField="primaryIdentifier" 
 			typeClass="Gene" columnTitle="Genes" views="secondaryIdentifier, symbol, 
