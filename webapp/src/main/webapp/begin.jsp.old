@@ -42,38 +42,39 @@
                                                 <option value="<c:out value="${bag}" />"><c:out value="${imf:formatPathStr(bag, INTERMINE_API, WEBCONFIG)}" /></option>
                                             </c:forEach>
                                         </select>
-                        <c:set var="defaultOrganism" value="Any"/>
-                        <c:if test="${!empty WEB_PROPERTIES['constraint.default.extra-value']}">
-                             <c:set var="defaultOrganism" value="${WEB_PROPERTIES['constraint.default.extra-value']}"/>
-                        </c:if>
-
-                        <select name="extraFieldValue">
-                             <option value="">Any</option>
-                             <c:forEach items="${extraClassFieldValues}" var="value">
-                                  <option value="${value}"<c:if test="${value == defaultOrganism}">selected="selected"</c:if>>${value}</option>
-                             </c:forEach>
-                         </select>
-
-                     <c:if test="${!empty WEB_PROPERTIES['begin.listUpload.values']}">
-                     <tr>
-                                <td align="right" class="label">
-                                             <label>
-                                                 <fmt:message key="bagBuild.extraConstraint">
-                                                             <fmt:param value="${extraBagQueryClass}"/>
-                                                 </fmt:message>
-                                             </label>
-                                     </td>
-                                     <td>
-                                         <select name="extraFieldValue">
-                                            <c:forEach var="value" items="${WEB_PROPERTIES['begin.listUpload.values']}">
-                                                <option value="<c:out value="${value}" />"><c:out value="${value}" /></option>
-                                            </c:forEach>
+                                        
+                                      <c:set var="defaultOrganism" value="Any"/>
+                                      <c:if test="${!empty WEB_PROPERTIES['constraint.default.extra-value']}">
+                                        <c:set var="defaultOrganism" value="${WEB_PROPERTIES['constraint.default.extra-value']}"/>
+                                      </c:if>
+                                        
+                                        <select name="extraFieldValue">
+                                               <option value="">Any</option>	
+                                        		<c:forEach items="${extraClassFieldValues}" var="value">
+                                        		<option value="${value}"<c:if test="${value == defaultOrganism}">selected="selected"</c:if>>${value}</option>
+                                        		</c:forEach>
                                         </select>
-                                 </td>
-                        </tr>
-                </c:if>
-
-                                        <div class="textarea">
+                                        
+                                        <c:if test="${!empty WEB_PROPERTIES['begin.listUpload.values']}">
+                                         <tr>
+                                                <td align="right" class="label">
+                                                             <label>
+                                                                 <fmt:message key="bagBuild.extraConstraint">
+                                                                    <fmt:param value="${extraBagQueryClass}"/>
+                                                                 </fmt:message>
+                                                             </label>
+                                                     </td>
+                                                     <td>
+                                                         <select name="extraFieldValue">
+                                                            <c:forEach var="value" items="${WEB_PROPERTIES['begin.listUpload.values']}">
+                                                                <option value="<c:out value="${value}" />"><c:out value="${value}" /></option>
+                                                            </c:forEach>
+                                                        </select>
+                                                 </td>
+                                         </tr>
+                                        </c:if>
+                                     
+                                       <div class="textarea">
                                             <c:choose>
                                                 <c:when test="${fn:startsWith(WEB_PROPERTIES['bag.example.identifiers'], 'e.g') == true}">
                                                     <textarea id="listInput" name="text"><c:out value="${WEB_PROPERTIES['bag.example.identifiers']}" /></textarea>
@@ -112,13 +113,8 @@
                                         <p><c:out value="${WEB_PROPERTIES['begin.thirdBox.description']}" escapeXml="false" /></p>
                                     </c:otherwise>
                                 </c:choose>
-
                                 <c:if test="${!empty WEB_PROPERTIES['begin.thirdBox.linkTitle']}">
                                     <div class="bottom">
-                                          <center>
-                                                <a class="bluegenes" target="new"  href=":5000/#/"> New UI - bluegenes</a>
-                                                 <br />
-                                          </center>
                                             <center>
                                                 <c:choose>
                                                     <c:when test="${!isNewUser && !empty (WEB_PROPERTIES['begin.thirdBox.visitedLink'])}">
@@ -409,4 +405,3 @@
 </script>
 
 <!-- /begin.jsp -->
-
