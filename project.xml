@@ -129,11 +129,18 @@
       <property name="converter.class" value="org.intermine.bio.dataconversion.DiseaseConverter"/>
     </source>
 
-    <source name="psi-complexes" type="psi-complexes">
+    
+    <source name="sgd-complexes" type="sgd-complexes">
+      <property name="source.db.name" value="sgd"/>
+      <property name="dataSourceName" value="SGD"/>
+      <property name="converter.class" value="org.intermine.bio.dataconversion.SgdComplexesConverter"/>
+    </source> 
+
+    <!--<source name="psi-complexes" type="psi-complexes">
       <property name="src.data.dir" location="/data/intermine/psi/intact/complexes/psi25"/>
       <property name="intact.organisms" value="4932"/>
       <property name="complexes.source" value="sgd"/>
-    </source>
+    </source>-->
     
     <source name="sgd-protein-properties" type="sgd-protein-properties">
       <property name="src.data.dir" location="/data/intermine/protein-properties"/>
