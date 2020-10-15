@@ -18,7 +18,7 @@
 			<fieldconfig fieldExpr="systematicName" label="Complex Systematic Name" />
 			<fieldconfig fieldExpr="goAnnotation" label="Complex GO Annotation" />
 			<fieldconfig fieldExpr="publications" label="Complex Publications" />
-			<fieldconfig fieldExpr="allInteractors" label="Complex Participant" />
+			<fieldconfig fieldExpr="interactions" label="Complex Participant" />
 
 		</fields>
 	</class>
@@ -649,9 +649,9 @@
 			jspName="model/publicationCountsDisplayer.jsp" replacesFields="publications"
 			placement="Literature" types="BioEntity" />
 
-		<reportdisplayer javaClass="org.intermine.bio.web.displayer.ComplexDisplayer"
+		<!--<reportdisplayer javaClass="org.intermine.bio.web.displayer.ComplexDisplayer"
 			jspName="model/complexDisplayer.jsp" replacesFields="" placement="summary"
-			types="Complex" />
+			types="Complex" />-->
 
 	</reportdisplayers>
 
