@@ -1,0 +1,1 @@
+intermine.setOptions({SubtableInitialState: 'open'})
