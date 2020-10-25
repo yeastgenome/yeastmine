@@ -18,8 +18,6 @@
 			<fieldconfig fieldExpr="systematicName" label="Complex Systematic Name" />
 			<fieldconfig fieldExpr="goAnnotation" label="Complex GO Annotation" />
 			<fieldconfig fieldExpr="publications" label="Complex Publications" />
-			<fieldconfig fieldExpr="interactions" label="Complex Participant" />
-
 		</fields>
 	</class>
 
