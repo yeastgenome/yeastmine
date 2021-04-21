@@ -23,7 +23,11 @@
     <source name="sgd-gff-utr" type="sgd-gff-utr">
       <property name="src.data.dir" location="/data/intermine/gff-utr"/>
     </source>
-    
+
+    <source name="sgd-db-utr" type="sgd-db-utr">
+      <property name="src.data.dir" location="data/intermine/db-utr"/>
+    </source>
+
     <source name="eco" type="eco">
       <property name="src.data.file" location="/data/intermine/eco/eco.obo"/>
     </source>
