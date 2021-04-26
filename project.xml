@@ -25,7 +25,7 @@
     </source>
 
     <source name="sgd-db-utr" type="sgd-db-utr">
-      <property name="src.data.dir" location="data/intermine/db-utr"/>
+      <property name="src.data.dir" location="/data/intermine/db-utr"/>
     </source>
 
     <source name="eco" type="eco">
