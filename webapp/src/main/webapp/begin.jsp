@@ -116,7 +116,7 @@
                                 <c:if test="${!empty WEB_PROPERTIES['begin.thirdBox.linkTitle']}">
                                     <div class="bottom">
                                           <center>
-                                                <a class="bluegenes" target="new"  href="http://bluegenes-staging.apps.intermine.org/yeastmine/"> New UI - bluegenes</a>
+                                                <a class="bluegenes" target="new"  href="https://bluegenes.yeastgenome.org/"> New UI - bluegenes</a>
                                                  <br />
                                           </center>
                                             <center>
