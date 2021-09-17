@@ -79,7 +79,7 @@
       <property name="src.data.dir" location="/data/intermine/omim"/>
     </source>
 
-    <source name="treefam" type="treefam">
+    <!--<source name="treefam" type="treefam">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/treefam"/>
       <property name="src.data.dir.includes" value="ortholog.txt.table"/>
       <property name="geneFile" value="/data/intermine/yeast_orthologs/treefam/genes.txt.table"/>
@@ -103,8 +103,13 @@
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/ensembl_compara"/>
       <property name="ensemblcompara.organisms" value="4932"/>
       <property name="ensemblcompara.homologues" value="9606 7227 10090 10116 6239 7955"/>
-    </source>
-    
+    </source> -->
+   
+   <source name="diopt-orthologs" type="diopt-orthologs">
+     <property name="src.data.dir" location="/data/intermine/yeast_orthologs/diopt"/>
+     <property name="src.data.dir.includes" value="ORTHOLOGY-ALLIANCE_COMBINED.tsv"/>
+   </source>
+  
     <source name="psi-mi-ontology" type="psi-mi-ontology">
       <property name="src.data.file" location="/data/intermine/psi/ontology/current/psi-mi.obo"/>
     </source> 
