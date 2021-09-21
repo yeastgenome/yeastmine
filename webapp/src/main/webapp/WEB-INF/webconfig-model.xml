@@ -594,7 +594,7 @@
 		<reportdisplayer javaClass="org.intermine.bio.web.displayer.HomologueDisplayer"
 			jspName="model/homologueDisplayer.jsp" replacesFields="homologues"
 			placement="Genome"
-			parameters="{'dataSets': ['Manually Curated S.Pombe Homologs', 'Panther data set', 'SGD data set']}"
+			parameters="{'dataSets': ['Manually Curated S.Pombe Homologs', 'DiOPT Orthologs data set']}"
 			types="Gene" />
 
 		<reportdisplayer
