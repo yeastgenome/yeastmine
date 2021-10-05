@@ -29,7 +29,7 @@
     </source>
 
     <source name="eco" type="eco">
-      <property name="src.data.file" location="/data/intermine/eco/eco.obo"/>
+      <property name="src.data.file" location="/data/intermine/ontology/eco.obo"/>
     </source>
         
     <source name="spell-expression" type="spell-expression">
@@ -38,10 +38,10 @@
       <property name="converter.class" value="org.intermine.bio.dataconversion.SpellExpressionConverter"/>
     </source> 
     
-    <source name="sgd-complementation" type="sgd-complementation">
+    <!--<source name="sgd-complementation" type="sgd-complementation">
       <property name="src.data.dir" location="/data/intermine/yeast_complementation"/>
-    </source>
-    
+    </source>-->
+
     <source name="fungi-homologs" type="fungi-homologs">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/fungidb"/>
     </source>
@@ -111,7 +111,7 @@
    </source>
   
     <source name="psi-mi-ontology" type="psi-mi-ontology">
-      <property name="src.data.file" location="/data/intermine/psi/ontology/current/psi-mi.obo"/>
+      <property name="src.data.file" location="/data/intermine/ontology/psi-mi.obo"/>
     </source> 
     
     <source name="go" type="go">
