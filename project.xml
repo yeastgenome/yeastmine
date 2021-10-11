@@ -36,11 +36,7 @@
       <property name="source.db.name" value="yeast"/>
       <property name="dataSourceName" value="yeast"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.SpellExpressionConverter"/>
-    </source> 
-    
-    <!--<source name="sgd-complementation" type="sgd-complementation">
-      <property name="src.data.dir" location="/data/intermine/yeast_complementation"/>
-    </source>-->
+    </source>
 
     <source name="fungi-homologs" type="fungi-homologs">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/fungidb"/>
@@ -109,7 +105,13 @@
      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/diopt"/>
      <property name="src.data.dir.includes" value="ORTHOLOGY-ALLIANCE_COMBINED.tsv"/>
    </source>
-  
+
+      <source name="sgd-complementation-db" type="sgd-complementation-db">
+          <property name="source.db.name" value="sgd"/>
+          <property name="dataSourceName" value="SGD"/>
+          <property name="converter.class" value="org.intermine.bio.dataconversion.SgdComplementationDbConverter"/>
+    </source>
+
     <source name="psi-mi-ontology" type="psi-mi-ontology">
       <property name="src.data.file" location="/data/intermine/ontology/psi-mi.obo"/>
     </source> 
