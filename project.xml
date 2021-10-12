@@ -29,19 +29,15 @@
     </source>
 
     <source name="eco" type="eco">
-      <property name="src.data.file" location="/data/intermine/eco/eco.obo"/>
+      <property name="src.data.file" location="/data/intermine/ontology/eco.obo"/>
     </source>
         
     <source name="spell-expression" type="spell-expression">
       <property name="source.db.name" value="yeast"/>
       <property name="dataSourceName" value="yeast"/>
       <property name="converter.class" value="org.intermine.bio.dataconversion.SpellExpressionConverter"/>
-    </source> 
-    
-    <source name="sgd-complementation" type="sgd-complementation">
-      <property name="src.data.dir" location="/data/intermine/yeast_complementation"/>
     </source>
-    
+
     <source name="fungi-homologs" type="fungi-homologs">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/fungidb"/>
     </source>
@@ -79,7 +75,7 @@
       <property name="src.data.dir" location="/data/intermine/omim"/>
     </source>
 
-    <source name="treefam" type="treefam">
+    <!--<source name="treefam" type="treefam">
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/treefam"/>
       <property name="src.data.dir.includes" value="ortholog.txt.table"/>
       <property name="geneFile" value="/data/intermine/yeast_orthologs/treefam/genes.txt.table"/>
@@ -103,10 +99,21 @@
       <property name="src.data.dir" location="/data/intermine/yeast_orthologs/ensembl_compara"/>
       <property name="ensemblcompara.organisms" value="4932"/>
       <property name="ensemblcompara.homologues" value="9606 7227 10090 10116 6239 7955"/>
+    </source> -->
+   
+   <source name="diopt-orthologs" type="diopt-orthologs">
+     <property name="src.data.dir" location="/data/intermine/yeast_orthologs/diopt"/>
+     <property name="src.data.dir.includes" value="ORTHOLOGY-ALLIANCE_COMBINED.tsv"/>
+   </source>
+
+      <source name="sgd-complementation-db" type="sgd-complementation-db">
+          <property name="source.db.name" value="sgd"/>
+          <property name="dataSourceName" value="SGD"/>
+          <property name="converter.class" value="org.intermine.bio.dataconversion.SgdComplementationDbConverter"/>
     </source>
-    
+
     <source name="psi-mi-ontology" type="psi-mi-ontology">
-      <property name="src.data.file" location="/data/intermine/psi/ontology/current/psi-mi.obo"/>
+      <property name="src.data.file" location="/data/intermine/ontology/psi-mi.obo"/>
     </source> 
     
     <source name="go" type="go">
