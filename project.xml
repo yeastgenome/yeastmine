@@ -74,32 +74,6 @@
     <source name="omim" type="omim">
       <property name="src.data.dir" location="/data/intermine/omim"/>
     </source>
-
-    <!--<source name="treefam" type="treefam">
-      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/treefam"/>
-      <property name="src.data.dir.includes" value="ortholog.txt.table"/>
-      <property name="geneFile" value="/data/intermine/yeast_orthologs/treefam/genes.txt.table"/>
-      <property name="treefam.organisms" value="4932"/> 
-      <property name="treefam.homologues" value="7227 6239 7165 9606 10090 10116 7955"/>
-    </source>
-    
-    <source name="panther" type="panther">
-      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/panther"/>
-      <property name="panther.organisms" value="4932"/>   
-      <property name="panther.homologues" value="7227 9606 10090 10116 7955 6239 4932"/>
-    </source>
-    
-    <source name="homologene" type="homologene">
-      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/homologene"/>
-      <property name="homologene.organisms" value="4932"/>   
-      <property name="homologene.homologues" value="7227 9606 10090 10116 6239 7955 4932"/>
-    </source>
-    
-    <source name="ensembl-compara" type="ensembl-compara">
-      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/ensembl_compara"/>
-      <property name="ensemblcompara.organisms" value="4932"/>
-      <property name="ensemblcompara.homologues" value="9606 7227 10090 10116 6239 7955"/>
-    </source> -->
    
    <source name="diopt-orthologs" type="diopt-orthologs">
      <property name="src.data.dir" location="/data/intermine/yeast_orthologs/diopt"/>
@@ -147,11 +121,6 @@
       <property name="converter.class" value="org.intermine.bio.dataconversion.SgdComplexesConverter"/>
     </source> 
 
-    <!--<source name="psi-complexes" type="psi-complexes">
-      <property name="src.data.dir" location="/data/intermine/psi/intact/complexes/psi25"/>
-      <property name="intact.organisms" value="4932"/>
-      <property name="complexes.source" value="sgd"/>
-    </source>-->
     
     <source name="sgd-protein-properties" type="sgd-protein-properties">
       <property name="src.data.dir" location="/data/intermine/protein-properties"/>
