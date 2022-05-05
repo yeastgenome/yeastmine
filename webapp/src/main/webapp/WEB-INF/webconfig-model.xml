@@ -696,7 +696,6 @@
 	                                       publications.journal, publications.year, publications.pubMedId"
 			externalLink="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=" />
 
-
 		<enrichmentwidgetdisplayer id="pathway_enrichment"
 			title="Pathway Enrichment"
 			description="Pathways enriched for genes in this list - data from KEGG and Reactome"
@@ -707,6 +706,18 @@
 			constraints="pathways.dataSets.name=[DataSet],organism.taxonId=[list], primaryIdentifier != null"
 			typeClass="Gene"
 			views="secondaryIdentifier, symbol, organism.name, pathways.identifier, pathways.name, pathways.dataSets.name" />
+
+		<enrichmentwidgetdisplayer id="prot_dom_enrichment_for_gene"
+								   title="Protein Domain Enrichment"
+								   description="Protein Domains enriched for items in this list."
+								   label="Protein Domain"
+								   startClass="Gene"
+								   startClassDisplay="primaryIdentifier"
+								   enrich="proteins.proteinDomains.name"
+								   constraints="organism.taxonId=[list]"
+								   typeClass="Gene"
+								   views="secondaryIdentifier,symbol,primaryIdentifier,organism.name,
+                                       proteins.proteinDomains.name,  proteins.proteinDomains.description" />
 
 		<bagtabledisplayer id="interactions" title="Interactions"
 			pathStrings="Gene.interactions.participant2"
@@ -733,7 +744,7 @@
 			pathStrings="Gene.proteins.proteinDomains.name" description="Counts of genes 
 			in list with domains." displayFields="name" exportField="primaryIdentifier" 
 			typeClass="Gene" columnTitle="Genes" views="secondaryIdentifier, symbol, 
-			organism.shortName, proteins.proteinDomains.name"/> -->
+			organism.shortName, proteins.proteinDomains.name"/>-->
 
 		<bagtabledisplayer id="orthologues" title="Orthologues"
 			pathStrings="Gene.homologues[type!=paralogue].homologue.organism"
