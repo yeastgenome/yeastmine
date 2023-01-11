@@ -45,3 +45,11 @@
 
 </div>
 <!-- /footer.jsp -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BX4ZG9DC05"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-BX4ZG9DC05');
+</script>
+
+<!-- new tag -->
