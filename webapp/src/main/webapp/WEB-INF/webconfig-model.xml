@@ -206,9 +206,7 @@
 	
 		<class className="org.intermine.model.bio.DiseaseAnnotation">
 		<fields>
-			<fieldconfig fieldExpr="subject.secondaryIdentifier" />
-			<fieldconfig fieldExpr="subject.name" />
-			<fieldconfig fieldExpr="subject.symbol" />
+			<fieldconfig fieldExpr="subject.primaryIdentifier" />
 			<fieldconfig fieldExpr="ontologyTerm.identifier"></fieldconfig>
 			<fieldconfig fieldExpr="ontologyTerm.name"></fieldconfig>
 			<!--<fieldconfig fieldExpr="evidence.code.code"> </fieldconfig>
@@ -545,7 +543,7 @@
 	<class className="org.intermine.model.bio.InteractionDetail">
 		<fields>
 			<fieldconfig fieldExpr="annotationType" />
-			<fieldconfig fieldExpr="experimentType" />
+			<fieldconfig fieldExpr="relationshipType" />
 			<fieldconfig fieldExpr="phenotype" />
 		</fields>
 	</class>
@@ -682,7 +680,7 @@
 			views="secondaryIdentifier,symbol,primaryIdentifier,organism.name,
 	                                       goAnnotation.ontologyTerm.identifier, goAnnotation.ontologyTerm.name,
 	                                       goAnnotation.ontologyTerm.parents.identifier,goAnnotation.ontologyTerm.parents.name"
-			externalLink="http://amigo.geneontology.org/cgi-bin/amigo/term_details?term="
+			externalLink="http://amigo.geneontology.org/amigo/term/"
 			correctionCoefficient="org.intermine.bio.web.widget.GeneLenghtCorrectionCoefficient" />
 
 		<enrichmentwidgetdisplayer id="publication_enrichment"
