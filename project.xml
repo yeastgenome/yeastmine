@@ -29,7 +29,7 @@
     </source>
 
     <source name="eco" type="eco">
-      <property name="src.data.file" location="/root/data/intermine/ontology/eco.obo"/>
+      <property name="src.data.file" location="/root/data/fms/ONTOLOGY_ECO.obo"/>
     </source>
         
     <!--<source name="spell-expression" type="spell-expression">
