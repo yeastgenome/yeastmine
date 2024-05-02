@@ -73,6 +73,13 @@
 		</fields>
 	</class>
 
+	<class className="org.intermine.model.bio.DiseaseEvidence">
+		<fields>
+			<fieldconfig fieldExpr="annotType" />
+			<fieldconfig fieldExpr="withText" />
+		</fields>
+	</class>
+
 
 	<class className="org.intermine.model.bio.Gene">
 		<headerconfig>

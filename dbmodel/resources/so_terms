@@ -4,7 +4,6 @@ biological_region
 blocked_reading_frame
 CDS
 centromere
-#point_centromere
 centromere_DNA_Element_I
 centromere_DNA_Element_II
 centromere_DNA_Element_III
