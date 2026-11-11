@@ -44,7 +44,7 @@
 <template name="AllGenes_Topic_Literature" title="All genes in organism --&gt;Topic--&gt;Literature" comment="">
   <query name="AllGenes_Topic_Literature" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.sgdAlias Gene.organism.shortName Gene.publicationAnnotations.publication.pubMedId Gene.publicationAnnotations.publication.citation Gene.publicationAnnotations.publication.title Gene.publicationAnnotations.publication.journal Gene.publicationAnnotations.literatureTopics.name" longDescription="Show all genes associated with a certain topic." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
     <constraint path="Gene.organism.shortName" code="B" editable="false" description="" op="=" value="S. cerevisiae"/>
-    <constraint path="Gene.publicationAnnotations.literatureTopics.name" code="A" editable="true" op="=" value="Industrial Applications"/>
+    <constraint path="Gene.publicationAnnotations.literatureTopics.name" code="A" editable="true" op="=" value="Reviews"/>
   </query>
 </template>
 <template name="ChromosomeRegion_AllGenes" title="Chromosomal Region --&gt; All genes" comment="">
@@ -375,16 +375,9 @@
   </query>
 </template>
 <template name="Gene_Homologs" title="Gene --&gt; Non-Fungal and S. cerevisiae Homologs" comment="">
-  <query name="Gene_Homologs" model="genomic" view="Gene.symbol Gene.secondaryIdentifier Gene.name Gene.sgdAlias Gene.homologues.homologue.organism.shortName Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.type Gene.homologues.dataSets.dataSource.name" longDescription="Retrieve all TreeFam, PantherDB, Homologene homologs for a specified &lt;i&gt;S. cerevisiae&lt;/i&gt; &lt;a href = &quot;http://www.yeastgenome.org/yeastmine-help-page#gene&quot;&gt;gene&lt;/a&gt;." sortOrder="Gene.homologues.homologue.organism.shortName asc" constraintLogic="A and B and D">
+  <query name="Gene_Homologs" model="genomic" view="Gene.symbol Gene.secondaryIdentifier Gene.name Gene.sgdAlias Gene.homologues.homologue.organism.shortName Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.type Gene.homologues.dataSets.dataSource.name" longDescription="Retrieve all DIOPT homologs for a specified &lt;i&gt;S. cerevisiae&lt;/i&gt; &lt;a href = &quot;http://www.yeastgenome.org/yeastmine-help-page#gene&quot;&gt;gene&lt;/a&gt;." sortOrder="Gene.homologues.homologue.organism.shortName asc" constraintLogic="A and B and D">
     <constraint path="Gene.homologues.dataSets.dataSource.name" code="D" editable="false" description="" op="ONE OF">
-      <value>Ensembl
-      </value>
-      <value>HomoloGene
-      </value>
-      <value>Panther
-      </value>
-      <value>TreeFam
-      </value>
+      <value>DiOPT</value>
     </constraint>
     <constraint path="Gene.organism.shortName" code="B" editable="false" description="" op="=" value="S. cerevisiae"/>
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="ACT1"/>
@@ -564,7 +557,7 @@
   <query name="Gene_Topic_Literature" model="genomic" view="Gene.publicationAnnotations.publication.pubMedId Gene.publicationAnnotations.publication.citation Gene.publicationAnnotations.publication.year Gene.publicationAnnotations.literatureTopics.name Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name" longDescription="Retrieve references associated with the selected literature topic for a given &lt;a href = &quot;http://www.yeastgenome.org/yeastmine-help-page#gene&quot;&gt;gene&lt;/a&gt;." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B and C">
     <constraint path="Gene.organism.shortName" code="C" editable="false" description="" op="=" value="S. cerevisiae"/>
     <constraint path="Gene" code="B" editable="true" op="LOOKUP" value="HEM2"/>
-    <constraint path="Gene.publicationAnnotations.literatureTopics.name" code="A" editable="true" op="=" value="Function/Process"/>
+    <constraint path="Gene.publicationAnnotations.literatureTopics.name" code="A" editable="true" op="=" value="Primary Literature"/>
   </query>
 </template>
 <template name="Gene_Transcript" title="Gene --&gt; Transcripts" comment="">
@@ -693,9 +686,9 @@
   </query>
 </template>
 <template name="HumaGene_YeastGene_Complement" title="Human Gene --&gt; Functional Complementation" comment="">
-  <query name="HumaGene_YeastGene_Complement" model="genomic" view="Gene.complements.complement.symbol Gene.complements.complement.organism.shortName Gene.complements.complement.crossReferences.identifier Gene.complements.complement.crossReferences.source.name Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.organism.shortName Gene.complements.direction Gene.complements.publication.pubMedId Gene.complements.source Gene.complements.notes" longDescription="For a given human gene(s), enter gene name or Entrez GeneID and retrieve information about cross-species functional complementation between yeast and humans." sortOrder="Gene.primaryIdentifier asc">
+  <query name="HumaGene_YeastGene_Complement" model="genomic" view="Gene.complements.complement.symbol Gene.complements.complement.organism.shortName Gene.complements.complement.crossReferences.identifier Gene.complements.complement.crossReferences.source.name Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.organism.shortName Gene.complements.direction Gene.complements.publication.pubMedId Gene.complements.source Gene.complements.notes" longDescription="For a given human gene(s), enter its HGNC ID (for example HGNC:132) and retrieve information about cross-species functional complementation between yeast and humans." sortOrder="Gene.primaryIdentifier asc">
     <join path="Gene.complements.complement.crossReferences" style="OUTER"/>
-    <constraint path="Gene.complements.complement" editable="true" op="LOOKUP" value="CCND1" extraValue="H. sapiens"/>
+    <constraint path="Gene.complements.complement" editable="true" op="LOOKUP" value="HGNC:132" extraValue="H. sapiens"/>
   </query>
 </template>
 <template name="HumanGene_YeastHomolog_Disease" title="Human Gene -&gt; Yeast Homolog(s) -&gt; OMIM Disease Phenotype" comment="">
@@ -783,7 +776,7 @@
 </template>
 <template name="Publications_Literature" title="Topic--&gt;Literature" comment="">
   <query name="Publications_Literature" model="genomic" view="Publication.pubMedId Publication.citation Publication.title Publication.journal Publication.literatureTopics.name" longDescription="Retrieve publications associated with a specified topic." sortOrder="Publication.pubMedId asc">
-    <constraint path="Publication.literatureTopics.name" editable="true" op="=" value="Genomic co-immunoprecipitation study"/>
+    <constraint path="Publication.literatureTopics.name" editable="true" op="=" value="Reviews"/>
   </query>
 </template>
 <template name="Qualifier_ORF" title="Qualifier --&gt; ORFs of selected type" comment="">
